@@ -19,7 +19,7 @@
 - [X] Import Bootstrap and design template
 - [X] Create Index.Jsp 
 - [X] Write project plan
-- [ ] Create user stories and select MVP stories that meet project obj
+- [X] Create user stories and select MVP stories that meet project obj
 - [ ] Design screens 
 - [ ] Update weekly reflection
 
