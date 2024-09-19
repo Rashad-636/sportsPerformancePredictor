@@ -1,4 +1,4 @@
-# Sports Performance Predictor - Rashad Adams
+# Sports Performance Predictor
 
 ### Presentation Overview
 With the power of AI, score/stats history and recent news my goal is to give the most likely outcome of a sports game. 

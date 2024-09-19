@@ -17,17 +17,50 @@
 
 ### Week 4 (Class topic is Hibernate)
 - [X] Import Bootstrap and design template
-- [X] create Index.Jsp 
-- [ ] Write project plan
+- [X] Create Index.Jsp 
+- [X] Write project plan
 - [ ] Create user stories and select MVP stories that meet project obj
 - [ ] Design screens 
 - [ ] Update weekly reflection
 
-For those using this as a model, continue adding weekly tasks by considering:
-1. which user story will you work on in a given week
-2. detail the tasks needed to complete that user story
-3. what we are doing in class each week and what you might add to your project as a result, either in that week or the following week
-4. add in project checkpoints/milestones and tasks to achieve them
-5. I started a few of these below as examples
-
 ### Week 5 
+#### Pick a user story to start with (something simple since we have not gotten to API just yet like create a user)
+- [ ] Design and create database (Check instructions for relationship requirements)
+- [ ] Implement Hibernate on first DAO with full CRUD
+- [ ] DAO needs to be unit tested
+- [ ] DAO has Log4J implemented 
+- [ ] Double check requirements checkpoint #2 
+- [ ] Update weekly reflection
+
+### Week 6
+- [ ] Work on screens and servlet direction
+- [ ] Start building out methods
+- [ ] Make any updates to project plan
+- [ ] Update weekly reflection
+
+### Week 7
+#### Checkpoint 2 is Due: Database designed and created, at least one DAO with full CRUD (create, read, update, delete) implemented with Hibernate, DAO is fully unit tested, Log4J is implemented (no System.out.printlns)
+
+- [ ] Double-check all checkpoint 2 items (above) are complete and visible in github.
+- [ ] Set up Authentication in indie project (more tasks coming for this)
+- [ ] Create project DB on AWS.
+- [ ] Update project config files for AWS as needed
+- [ ] Deploy project to AWS
+- [ ] Add deployed link to indie project list in student repo
+
+
+### Week 9 (Start of the team project)
+#### Checkpoint 3 is Due: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
+- [ ] Double-check all checkpoint 3 items (above) are complete and visible in github.
+
+### Week 15
+- [ ] Implement Feedback from Week 14 review
+- [ ] Final Presentation
+- [ ] Create video, add video link to readme.md
+- [ ] Finalize all documentation
+- [ ] Code quality check
+- [ ] Weekly journal entry
+
+### Week 16
+- [ ] Weekly journal entry
+- [ ] Final touches before code complete
