@@ -1,7 +1,7 @@
 # Screen Designs
 
 ## Homepage
-![Index] (wireframes/home.png)
+![HomePage](/Users/rashadadams/Documents/GitHub/enterpriseJava/projects/sportsPerformancePredictor/DesignDocuments/wireframes/home.png)
 
 ## Account Management
 ![Sign in] (wireframes/signUp.png)
