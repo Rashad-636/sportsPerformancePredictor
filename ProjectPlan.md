@@ -20,8 +20,8 @@
 - [X] Create Index.Jsp 
 - [X] Write project plan
 - [X] Create user stories and select MVP stories that meet project obj
-- [ ] Design screens 
-- [ ] Update weekly reflection
+- [X] Design screens 
+- [X] Update weekly reflection
 
 ### Week 5 
 #### Pick a user story to start with (something simple since we have not gotten to API just yet like create a user)
