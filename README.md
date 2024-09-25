@@ -13,7 +13,7 @@ than likely box score style table).
 * Security/Authentication
     * TBD
 * Database
-    * TBD
+    * MySQL 8.x
 * ORM Framework
     * Hibernate Version TBD
 * Dependency Management
@@ -24,11 +24,17 @@ than likely box score style table).
     * Log4J2
 * Tech I'd like to explore as part of this work
     * Api Integration
-    * Artificial intelligence 
+    * Artificial intelligence
+*Services/Api's potentially used
+    * Tank01 Fantasy Stats (NBA API) by tank01
+    * NFL API Data by Smart Api
+    * Sports Information by Pinto Studios (***) 
+    * Major League Baseball by Pinto Studios
+    * OpenAI API
+    * Infinite GPT
 * Unit Testing
     * JUnit tests to cover all testable logic
 * IDE: IntelliJ IDEA
-
 
 ### Design
 

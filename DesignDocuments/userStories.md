@@ -7,7 +7,7 @@
 * As a registered user, I want to log in to access and edit my account preferences
 
 ## Account Management (MVP)
-* As a logged-in user, I want my favorite teams saved to a list for quick access to their predictions
+* As a logged-in user, I want *VIEW* my favorite teams saved to a list for quick access to their predictions
 * As a user, I want to *VIEW* a list of my saved favorite teams
 * As a user, I want to *REMOVE* a team from my favorites list
 * As a user, I want to *CREATE* and save custom notes for specific games
