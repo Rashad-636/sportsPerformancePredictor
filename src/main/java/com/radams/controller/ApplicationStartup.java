@@ -33,7 +33,7 @@ public class ApplicationStartup extends HttpServlet implements PropertiesLoader 
         logger.info("ServletContext obtained");
 
         // assign properties object to the servlet context to be accessed later
-        context.setAttribute("week7properties", properties);
+        context.setAttribute("myProperties", properties);
         logger.info("Properties set in ServletContext");
 
         logger.info("Servlet initialization completed successfully");

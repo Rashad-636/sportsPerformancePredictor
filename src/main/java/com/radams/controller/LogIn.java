@@ -37,7 +37,7 @@ public class LogIn extends HttpServlet implements PropertiesLoader {
 
         // get properties for this servlet
         ServletContext context = getServletContext();
-        Properties properties = (Properties) context.getAttribute("week7properties");
+        Properties properties = (Properties) context.getAttribute("myProperties");
 
         // assign variable to property key
         String CLIENT_ID = properties.getProperty("client.id");

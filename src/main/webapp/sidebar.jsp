@@ -11,7 +11,7 @@
             <a href="#" title="Coming Soon">TBD</a>
             <a href="#" title="Coming Soon">TBD</a>
         </div>
-        <h1>Welcome to the homepage</h1>
+        <h1>Sports Performance Predictor</h1>
     </div>
 
     <div id="sidebar">
