@@ -12,7 +12,7 @@
         <a href = "logIn">Log in</a>
     </c:when>
     <c:otherwise>
-        <h3>Welcome ${userName}</h3>
+        <h3>Welcome, ${userName}!!</h3>
     </c:otherwise>
 </c:choose>
 

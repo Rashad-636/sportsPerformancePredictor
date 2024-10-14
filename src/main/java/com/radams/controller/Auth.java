@@ -67,7 +67,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
 
         // get properties for this servlet
         ServletContext context = getServletContext();
-        Properties properties = (Properties) context.getAttribute("week7properties");
+        Properties properties = (Properties) context.getAttribute("myProperties");
 
         // assign variable to property keys
         CLIENT_ID = properties.getProperty("client.id");
@@ -186,15 +186,15 @@ public class Auth extends HttpServlet implements PropertiesLoader {
 
         // Verify the token
         DecodedJWT jwt = verifier.verify(tokenResponse.getIdToken());
-        String userName = jwt.getClaim("cognito:username").asString();
-        logger.debug("here's the username: " + userName);
+        String firstName = jwt.getClaim("given_name").asString();
+        logger.debug("here's the first name: " + firstName);
 
         logger.debug("here are all the available claims: " + jwt.getClaims());
 
         // TODO decide what you want to do with the info!
         // for now, I'm just returning username for display back to the browser
 
-        return userName;
+        return firstName;
     }
 
     /** Create the auth url and use it to build the request.
