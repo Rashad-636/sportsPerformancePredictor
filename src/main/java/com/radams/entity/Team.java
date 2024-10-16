@@ -32,10 +32,10 @@ public class Team {
     private Sport sport;
 
     @OneToMany(mappedBy = "team_test", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Player> players = new ArrayList<>();
+    private List<Player> playerList = new ArrayList<>();
 
     @OneToMany(mappedBy = "team_test", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Game> games = new ArrayList<>();
+    private List<Game> gameList = new ArrayList<>();
 
     /**
      * Instantiates a new Team.
@@ -132,16 +132,16 @@ public class Team {
      * @return the games
      */
     public List<Game> getGames() {
-        return games;
+        return gameList;
     }
 
     /**
      * Sets games.
      *
-     * @param games the games
+     * @param gameList list of all games
      */
-    public void setGames(List<Game> games) {
-        this.games = games;
+    public void setGames(List<Game> gameList) {
+        this.gameList = gameList;
     }
 
     /**
@@ -150,16 +150,16 @@ public class Team {
      * @return the players
      */
     public List<Player> getPlayers() {
-        return players;
+        return playerList;
     }
 
     /**
      * Sets players.
      *
-     * @param players the players
+     * @param playerList the list of players
      */
-    public void setPlayers(List<Player> players) {
-        this.players = players;
+    public void setPlayers(List<Player> playerList) {
+        this.playerList = playerList;
     }
 
     @Override
