@@ -186,15 +186,15 @@ public class Auth extends HttpServlet implements PropertiesLoader {
 
         // Verify the token
         DecodedJWT jwt = verifier.verify(tokenResponse.getIdToken());
-        String firstName = jwt.getClaim("given_name").asString();
-        logger.debug("here's the first name: " + firstName);
+        String email = jwt.getClaim("email").asString();
+        logger.debug("here's the email: " + email);
 
         logger.debug("here are all the available claims: " + jwt.getClaims());
 
         // TODO decide what you want to do with the info!
         // for now, I'm just returning username for display back to the browser
 
-        return firstName;
+        return email;
     }
 
     /** Create the auth url and use it to build the request.

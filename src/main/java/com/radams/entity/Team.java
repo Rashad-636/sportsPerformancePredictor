@@ -48,12 +48,10 @@ public class Team {
      *
      * @param teamName the team name
      * @param city     the city
-     * @param sport    the sport
      */
-    public Team(String teamName, String city, Sport sport) {
+    public Team(String teamName, String city) {
         this.teamName = teamName;
         this.city = city;
-        this.sport = sport;
     }
 
     /**
