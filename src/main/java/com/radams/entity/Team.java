@@ -9,7 +9,7 @@ import java.util.*;
  * The type Team.
  */
 @Entity
-@Table(name = "team_test")
+@Table(name = "team")
 public class Team {
 
     // Every Entity must have a unique identifier which is annotated @Id
@@ -31,11 +31,11 @@ public class Team {
     )
     private Sport sport;
 
-    @OneToMany(mappedBy = "team_test", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Player> playerList = new ArrayList<>();
-
-    @OneToMany(mappedBy = "team_test", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Game> gameList = new ArrayList<>();
+//    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+//    private List<Player> playerList = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+//    private List<Game> gameList = new ArrayList<>();
 
     /**
      * Instantiates a new Team.
@@ -131,36 +131,36 @@ public class Team {
      *
      * @return the games
      */
-    public List<Game> getGames() {
-        return gameList;
-    }
+//    public List<Game> getGames() {
+//        return gameList;
+//    }
 
     /**
      * Sets games.
      *
      * @param gameList list of all games
      */
-    public void setGames(List<Game> gameList) {
-        this.gameList = gameList;
-    }
+//    public void setGames(List<Game> gameList) {
+//        this.gameList = gameList;
+//    }
 
     /**
      * Gets players.
      *
      * @return the players
      */
-    public List<Player> getPlayers() {
-        return playerList;
-    }
+//    public List<Player> getPlayers() {
+//        return playerList;
+//    }
 
     /**
      * Sets players.
      *
      * @param playerList the list of players
      */
-    public void setPlayers(List<Player> playerList) {
-        this.playerList = playerList;
-    }
+//    public void setPlayers(List<Player> playerList) {
+//        this.playerList = playerList;
+//    }
 
     @Override
     public String toString() {
@@ -169,8 +169,6 @@ public class Team {
                 ", teamName='" + teamName + '\'' +
                 ", city='" + city + '\'' +
                 ", sport=" + sport +
-                ", players=" + playerList +
-                ", games=" + gameList +
                 '}';
     }
 }

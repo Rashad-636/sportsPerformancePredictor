@@ -25,13 +25,13 @@ public class Game {
     private Date date;
 
     @ManyToOne
-    @JoinColumn(name = "team_id",
+    @JoinColumn(name = "home_team_id",
             foreignKey = @ForeignKey(name = "game_test_team_id_fk")
     )
     private Team homeTeam;
 
     @ManyToOne
-    @JoinColumn(name = "team_id",
+    @JoinColumn(name = "away_team_id",
             foreignKey = @ForeignKey(name = "game_test_team_id_fk")
     )
     private Team awayTeam;

@@ -14,8 +14,8 @@ class FavoriteTeamDaoTest {
     void setUp() {
         genericDao = new GenericDao<>(FavoriteTeam.class);
 
-        Database database = Database.getInstance();
-        database.runSQL("cleanDB.sql");
+//        Database database = Database.getInstance();
+//        database.runSQL("cleanDB.sql");
     }
 
     @Test
