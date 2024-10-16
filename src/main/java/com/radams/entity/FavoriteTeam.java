@@ -127,4 +127,17 @@ public class FavoriteTeam {
                 ", favoriteTeamsList=" + favoriteTeamsList +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FavoriteTeam that = (FavoriteTeam) o;
+        return id == that.id && Objects.equals(userEmail, that.userEmail) && Objects.equals(team, that.team) && Objects.equals(favoriteTeamsList, that.favoriteTeamsList);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, userEmail, team, favoriteTeamsList);
+    }
 }

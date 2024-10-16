@@ -169,8 +169,8 @@ public class Team {
                 ", teamName='" + teamName + '\'' +
                 ", city='" + city + '\'' +
                 ", sport=" + sport +
-                ", players=" + players +
-                ", games=" + games +
+                ", players=" + playerList +
+                ", games=" + gameList +
                 '}';
     }
 }
