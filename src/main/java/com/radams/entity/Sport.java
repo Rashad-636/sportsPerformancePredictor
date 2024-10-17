@@ -29,11 +29,11 @@ public class Sport {
     @Column(name = "api")
     private String apiEndpoint;
 
-//    @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-//    private List<Sport> teams = new ArrayList<>();
+    @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<Team> teams = new ArrayList<>();
 
-//    @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-//    private List<Sport> players = new ArrayList<>();
+    @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<Player> players = new ArrayList<>();
 
     /**
      * Instantiates a new Sport.
@@ -46,8 +46,9 @@ public class Sport {
      *
      * @param sportName   the sport name
      */
-    public Sport(String sportName) {
+    public Sport(String sportName, String apiEndpoint) {
         this.sportName = sportName;
+        this.apiEndpoint = apiEndpoint;
     }
 
     /**
@@ -66,6 +67,11 @@ public class Sport {
      */
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void addTeam (Team team) {
+        teams.add(team);
+        team.setSport(this); // sets current sport object by using this keyword
     }
 
     /**
@@ -146,8 +152,8 @@ public class Sport {
                 "id=" + id +
                 ", sportName='" + sportName + '\'' +
                 ", apiEndpoint='" + apiEndpoint + '\'' +
-//                ", teams=" + teams +
-//                ", players=" + players +
+                ", teams=" + teams +
+                ", players=" + players +
                 '}';
     }
 
@@ -156,11 +162,11 @@ public class Sport {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Sport sport = (Sport) o;
-        return id == sport.id && Objects.equals(sportName, sport.sportName) && Objects.equals(apiEndpoint, sport.apiEndpoint);
+        return id == sport.id && Objects.equals(sportName, sport.sportName) && Objects.equals(apiEndpoint, sport.apiEndpoint) && Objects.equals(teams, sport.teams) && Objects.equals(players, sport.players);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, sportName, apiEndpoint);
+        return Objects.hash(id, sportName, apiEndpoint, teams, players);
     }
 }

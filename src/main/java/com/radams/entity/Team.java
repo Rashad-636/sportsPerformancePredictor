@@ -32,11 +32,17 @@ public class Team {
     )
     private Sport sport;
 
-//    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-//    private List<Player> playerList = new ArrayList<>();
-//
-//    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-//    private List<Game> gameList = new ArrayList<>();
+    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<FavoriteTeam> favoriteTeams = new ArrayList<>();
+
+    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<Player> players = new ArrayList<>();
+
+    @OneToMany(mappedBy = "homeTeam", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<Game> homeGames;
+
+    @OneToMany(mappedBy = "awayTeam", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<Game> awayGames;
 
     /**
      * Instantiates a new Team.
@@ -49,10 +55,12 @@ public class Team {
      *
      * @param teamName the team name
      * @param city     the city
+     * @param sport    the sport
      */
-    public Team(String teamName, String city) {
+    public Team(String teamName, String city, Sport sport) {
         this.teamName = teamName;
         this.city = city;
+        this.sport = sport;
     }
 
     /**
@@ -128,48 +136,75 @@ public class Team {
     }
 
     /**
-     * Gets games.
+     * Gets favorite teams.
      *
-     * @return the games
+     * @return the favorite teams
      */
-//    public List<Game> getGames() {
-//        return gameList;
-//    }
+    public List<FavoriteTeam> getFavoriteTeams() {
+        return favoriteTeams;
+    }
 
     /**
-     * Sets games.
+     * Sets favorite teams.
      *
-     * @param gameList list of all games
+     * @param favoriteTeams the favorite teams
      */
-//    public void setGames(List<Game> gameList) {
-//        this.gameList = gameList;
-//    }
+    public void setFavoriteTeams(List<FavoriteTeam> favoriteTeams) {
+        this.favoriteTeams = favoriteTeams;
+    }
+
+    /**
+     * Gets home games.
+     *
+     * @return the home games
+     */
+    public List<Game> getHomeGames() {
+        return homeGames;
+    }
+
+    /**
+     * Sets home games.
+     *
+     * @param homeGames the home games
+     */
+    public void setHomeGames(List<Game> homeGames) {
+        this.homeGames = homeGames;
+    }
+
+    /**
+     * Gets away games.
+     *
+     * @return the away games
+     */
+    public List<Game> getAwayGames() {
+        return awayGames;
+    }
+
+    /**
+     * Sets away games.
+     *
+     * @param awayGames the away games
+     */
+    public void setAwayGames(List<Game> awayGames) {
+        this.awayGames = awayGames;
+    }
 
     /**
      * Gets players.
      *
      * @return the players
      */
-//    public List<Player> getPlayers() {
-//        return playerList;
-//    }
+    public List<Player> getPlayers() {
+        return players;
+    }
 
     /**
      * Sets players.
      *
-     * @param playerList the list of players
+     * @param players the players
      */
-//    public void setPlayers(List<Player> playerList) {
-//        this.playerList = playerList;
-//    }
-
-    @Override
-    public String toString() {
-        return "Team{" +
-                "id=" + id +
-                ", teamName='" + teamName + '\'' +
-                ", city='" + city + '\'' +
-                ", sport=" + sport +
-                '}';
+    public void setPlayers(List<Player> players) {
+        this.players = players;
     }
+
 }

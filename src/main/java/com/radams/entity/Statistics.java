@@ -21,8 +21,8 @@ public class Statistics {
     @Column(name = "stat_type")
     private String statType;
 
-    @Column(name = "stat_value")
-    private float statValue;
+    @Column(name = "value")
+    private Double statValue;
 
     @ManyToOne
     @JoinColumn(name = "player_id",
@@ -48,7 +48,7 @@ public class Statistics {
      * @param statType  the stat type
      * @param statValue the stat value
      */
-    public Statistics(String statType, float statValue) {
+    public Statistics(String statType, Double statValue) {
         this.statType = statType;
         this.statValue = statValue;
     }
@@ -112,7 +112,7 @@ public class Statistics {
      *
      * @return the stat value
      */
-    public float getStatValue() {
+    public Double getStatValue() {
         return statValue;
     }
 
@@ -121,7 +121,7 @@ public class Statistics {
      *
      * @param statValue the stat value
      */
-    public void setStatValue(float statValue) {
+    public void setStatValue(Double statValue) {
         this.statValue = statValue;
     }
 
