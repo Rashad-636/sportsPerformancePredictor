@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SportTest {
+class SportDaoTest {
 
     GenericDao genericDao;
     private final Logger logger = LogManager.getLogger(this.getClass());

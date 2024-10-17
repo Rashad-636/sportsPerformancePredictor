@@ -176,4 +176,17 @@ public class Player {
                 ", playerStats=" + playerStats +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return id == player.id && Objects.equals(firstName, player.firstName) && Objects.equals(lastName, player.lastName) && Objects.equals(team, player.team) && Objects.equals(sport, player.sport);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName, team, sport, playerStats);
+    }
 }

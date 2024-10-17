@@ -1,5 +1,6 @@
 package com.radams.entity;
 
+import com.radams.persistence.Database;
 import com.radams.persistence.GenericDao;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,8 +15,8 @@ class FavoriteTeamDaoTest {
     void setUp() {
         genericDao = new GenericDao<>(FavoriteTeam.class);
 
-//        Database database = Database.getInstance();
-//        database.runSQL("cleanDB.sql");
+        Database database = Database.getInstance();
+        database.runSQL("cleanDB.sql");
     }
 
     @Test

@@ -29,9 +29,6 @@ public class FavoriteTeam {
     )
     private Team team;
 
-//    @OneToMany(mappedBy = "favorite_test", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-//    private List<Team> favoriteTeamsList = new ArrayList<>();
-
     /**
      * Instantiates a new Favorite team.
      */
@@ -101,44 +98,29 @@ public class FavoriteTeam {
         this.team = team;
     }
 
-    /**
-     * Gets favorite teams list.
-     *
-     * @return the favorite teams list
-     */
-//    public List<Team> getFavoriteTeamsList() {
-//        return favoriteTeamsList;
-//    }
-
-    /**
-     * Sets favorite teams list.
-     *
-     * @param favoriteTeamsList the favorite teams list
-     */
-//    public void setFavoriteTeamsList(List<Team> favoriteTeamsList) {
-//        this.favoriteTeamsList = favoriteTeamsList;
-//    }
-
     @Override
     public String toString() {
         return "FavoriteTeam{" +
                 "id=" + id +
                 ", userEmail='" + userEmail + '\'' +
                 ", team=" + team +
-//                ", favoriteTeamsList=" + favoriteTeamsList +
                 '}';
     }
 
+    /// !!!!!!!!
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         FavoriteTeam that = (FavoriteTeam) o;
-        return id == that.id && Objects.equals(userEmail, that.userEmail) && Objects.equals(team, that.team);
+        return id == that.id &&
+                Objects.equals(userEmail, that.userEmail) &&
+                Objects.equals(team != null ? team.getId() : null, that.team != null ? that.team.getId() : null);
     }
 
+    /// !!!!!!!!!!
     @Override
     public int hashCode() {
-        return Objects.hash(id, userEmail, team);
+        return Objects.hash(id, userEmail, team != null ? team.getId() : null);
     }
 }

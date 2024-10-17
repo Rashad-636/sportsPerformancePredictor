@@ -75,42 +75,6 @@ public class Sport {
     }
 
     /**
-     * Gets players.
-     *
-     * @return the players
-     */
-//    public List<Sport> getPlayers() {
-//        return players;
-//    }
-
-    /**
-     * Sets players.
-     *
-     * @param players the players
-     */
-//    public void setPlayers(List<Sport> players) {
-//        this.players = players;
-//    }
-
-    /**
-     * Gets teams.
-     *
-     * @return the teams
-     */
-//    public List<Sport> getTeams() {
-//        return teams;
-//    }
-
-    /**
-     * Sets teams.
-     *
-     * @param teams the teams
-     */
-//    public void setTeams(List<Sport> teams) {
-//        this.teams = teams;
-//    }
-
-    /**
      * Gets api endpoint.
      *
      * @return the api endpoint
@@ -162,11 +126,14 @@ public class Sport {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Sport sport = (Sport) o;
-        return id == sport.id && Objects.equals(sportName, sport.sportName) && Objects.equals(apiEndpoint, sport.apiEndpoint) && Objects.equals(teams, sport.teams) && Objects.equals(players, sport.players);
+        return id == sport.id &&
+                Objects.equals(sportName, sport.sportName) &&
+                Objects.equals(apiEndpoint, sport.apiEndpoint);
+        // Note: Cannot compare teams and players ??
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, sportName, apiEndpoint, teams, players);
+        return Objects.hash(id, sportName, apiEndpoint);
     }
 }

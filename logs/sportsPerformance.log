@@ -1,0 +1,6 @@
+[INFO ] 2024-10-17 19:23:28.692 [main] Database - properties loaded{password=student, driver=com.mysql.cj.jdbc.Driver, url=jdbc:mysql://localhost/sport_performance_predictor, username=student}
+[INFO ] 2024-10-17 19:23:42.324 [main] Database - properties loaded{password=student, driver=com.mysql.cj.jdbc.Driver, url=jdbc:mysql://localhost/sport_performance_predictor, username=student}
+[INFO ] 2024-10-17 19:23:50.766 [main] Database - properties loaded{password=student, driver=com.mysql.cj.jdbc.Driver, url=jdbc:mysql://localhost/sport_performance_predictor, username=student}
+[INFO ] 2024-10-17 19:23:53.527 [main] SportDaoTest - Inserted sport: New Sport
+[INFO ] 2024-10-17 19:23:54.514 [main] SportDaoTest - Sport name after change: Name Change
+[INFO ] 2024-10-17 19:23:54.898 [main] SportDaoTest - The sport name that is being returned is: Football

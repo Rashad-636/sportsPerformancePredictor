@@ -143,14 +143,14 @@ public class Statistics {
         this.game = game;
     }
 
-    @Override
-    public String toString() {
-        return "Statistics{" +
-                "id=" + id +
-                ", statType='" + statType + '\'' +
-                ", statValue=" + statValue +
-                ", player=" + player +
-                ", game=" + game +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Statistics{" +
+//                "id=" + id +
+//                ", statType='" + statType + '\'' +
+//                ", statValue=" + statValue +
+//                ", player=" + player +
+//                ", game=" + game +
+//                '}';
+//    }
 }
