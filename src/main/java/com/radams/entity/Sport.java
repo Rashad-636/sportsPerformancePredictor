@@ -6,6 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * The Sport type.
@@ -17,6 +18,7 @@ public class Sport {
     // Every Entity must have a unique identifier which is annotated @Id
     // Notice there is no @Column here as the column and instance variable name are the same
     @Id
+    @Column(name = "sport_id")
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
@@ -24,14 +26,14 @@ public class Sport {
     @Column(name = "sport_name")
     private String sportName;
 
-    @Column(name = "api_endpoint")
+    @Column(name = "api")
     private String apiEndpoint;
 
-    @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Sport> teams = new ArrayList<>();
+//    @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+//    private List<Sport> teams = new ArrayList<>();
 
-    @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Sport> players = new ArrayList<>();
+//    @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+//    private List<Sport> players = new ArrayList<>();
 
     /**
      * Instantiates a new Sport.
@@ -71,36 +73,36 @@ public class Sport {
      *
      * @return the players
      */
-    public List<Sport> getPlayers() {
-        return players;
-    }
+//    public List<Sport> getPlayers() {
+//        return players;
+//    }
 
     /**
      * Sets players.
      *
      * @param players the players
      */
-    public void setPlayers(List<Sport> players) {
-        this.players = players;
-    }
+//    public void setPlayers(List<Sport> players) {
+//        this.players = players;
+//    }
 
     /**
      * Gets teams.
      *
      * @return the teams
      */
-    public List<Sport> getTeams() {
-        return teams;
-    }
+//    public List<Sport> getTeams() {
+//        return teams;
+//    }
 
     /**
      * Sets teams.
      *
      * @param teams the teams
      */
-    public void setTeams(List<Sport> teams) {
-        this.teams = teams;
-    }
+//    public void setTeams(List<Sport> teams) {
+//        this.teams = teams;
+//    }
 
     /**
      * Gets api endpoint.
@@ -144,8 +146,21 @@ public class Sport {
                 "id=" + id +
                 ", sportName='" + sportName + '\'' +
                 ", apiEndpoint='" + apiEndpoint + '\'' +
-                ", teams=" + teams +
-                ", players=" + players +
+//                ", teams=" + teams +
+//                ", players=" + players +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Sport sport = (Sport) o;
+        return id == sport.id && Objects.equals(sportName, sport.sportName) && Objects.equals(apiEndpoint, sport.apiEndpoint);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, sportName, apiEndpoint);
     }
 }

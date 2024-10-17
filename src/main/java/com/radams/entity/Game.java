@@ -11,12 +11,13 @@ import java.util.List;
  * The type Game.
  */
 @Entity
-@Table(name = "game_test")
+@Table(name = "game")
 public class Game {
 
     // Every Entity must have a unique identifier which is annotated @Id
     // Notice there is no @Column here as the column and instance variable name are the same
     @Id
+    @Column(name = "game_id")
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native",strategy = "native")
     private int id;

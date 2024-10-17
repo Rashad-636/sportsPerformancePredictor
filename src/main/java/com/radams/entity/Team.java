@@ -15,6 +15,7 @@ public class Team {
     // Every Entity must have a unique identifier which is annotated @Id
     // Notice there is no @Column here as the column and instance variable name are the same
     @Id
+    @Column(name = "team_id")
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native",strategy = "native")
     private int id;

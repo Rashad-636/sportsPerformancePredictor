@@ -7,12 +7,13 @@ import org.hibernate.annotations.GenericGenerator;
  * The type Statistics.
  */
 @Entity
-@Table(name = "stat_test")
+@Table(name = "stat")
 public class Statistics {
 
     // Every Entity must have a unique identifier which is annotated @Id
     // Notice there is no @Column here as the column and instance variable name are the same
     @Id
+    @Column(name = "stat_id")
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native",strategy = "native")
     private int id;

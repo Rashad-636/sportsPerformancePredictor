@@ -9,12 +9,13 @@ import java.util.*;
  * The type Favorite team.
  */
 @Entity
-@Table(name = "favorite_test")
+@Table(name = "favorite_team")
 public class FavoriteTeam {
 
     // Every Entity must have a unique identifier which is annotated @Id
     // Notice there is no @Column here as the column and instance variable name are the same
     @Id
+    @Column(name = "favorite_id")
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native",strategy = "native")
     private int id;
@@ -28,8 +29,8 @@ public class FavoriteTeam {
     )
     private Team team;
 
-    @OneToMany(mappedBy = "favorite_test", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Team> favoriteTeamsList = new ArrayList<>();
+//    @OneToMany(mappedBy = "favorite_test", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+//    private List<Team> favoriteTeamsList = new ArrayList<>();
 
     /**
      * Instantiates a new Favorite team.
@@ -105,18 +106,18 @@ public class FavoriteTeam {
      *
      * @return the favorite teams list
      */
-    public List<Team> getFavoriteTeamsList() {
-        return favoriteTeamsList;
-    }
+//    public List<Team> getFavoriteTeamsList() {
+//        return favoriteTeamsList;
+//    }
 
     /**
      * Sets favorite teams list.
      *
      * @param favoriteTeamsList the favorite teams list
      */
-    public void setFavoriteTeamsList(List<Team> favoriteTeamsList) {
-        this.favoriteTeamsList = favoriteTeamsList;
-    }
+//    public void setFavoriteTeamsList(List<Team> favoriteTeamsList) {
+//        this.favoriteTeamsList = favoriteTeamsList;
+//    }
 
     @Override
     public String toString() {
@@ -124,7 +125,7 @@ public class FavoriteTeam {
                 "id=" + id +
                 ", userEmail='" + userEmail + '\'' +
                 ", team=" + team +
-                ", favoriteTeamsList=" + favoriteTeamsList +
+//                ", favoriteTeamsList=" + favoriteTeamsList +
                 '}';
     }
 
@@ -133,11 +134,11 @@ public class FavoriteTeam {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         FavoriteTeam that = (FavoriteTeam) o;
-        return id == that.id && Objects.equals(userEmail, that.userEmail) && Objects.equals(team, that.team) && Objects.equals(favoriteTeamsList, that.favoriteTeamsList);
+        return id == that.id && Objects.equals(userEmail, that.userEmail) && Objects.equals(team, that.team);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, userEmail, team, favoriteTeamsList);
+        return Objects.hash(id, userEmail, team);
     }
 }

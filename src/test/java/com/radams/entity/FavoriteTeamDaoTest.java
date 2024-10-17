@@ -1,6 +1,6 @@
-package com.radams.persistence;
+package com.radams.entity;
 
-import com.radams.entity.FavoriteTeam;
+import com.radams.persistence.GenericDao;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
