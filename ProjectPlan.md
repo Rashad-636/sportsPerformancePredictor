@@ -27,38 +27,38 @@
 ### Week 5 
 ## As a user, I want to easily navigate back to the list of games from the detailed prediction page
 
-- [ ] Create and set up servlet navigation between each page
-- [ ] Double check requirements checkpoint #2 
-- [ ] Update weekly reflection
+- [X] Create and set up servlet navigation between each page
+- [X] Double check requirements checkpoint #2 
+- [X] Update weekly reflection
 
 ### Week 6
 ## As a user, I want to create an account to set/save my preferences
 
-- [ ] Design and create database (Check instructions for relationship requirements)
-- [ ] Implement Hibernate on first DAO with full CRUD
-- [ ] Create and set up navigation between each page
-- [ ] DAO needs to be unit tested
-- [ ] DAO has Log4J implemented
-- [ ] Double check requirements checkpoint #2
-- [ ] Start building out methods
-- [ ] Look into the implemntation of the API's and how to derive information (JSON parsing?)
-- [ ] Make any updates to project plan
-- [ ] Update weekly reflection
+- [X] Design database (Check instructions for relationship requirements)
+- [X] Implement Hibernate on first DAO with full CRUD
+- [X] Create and set up navigation between each page
+- [X] DAO needs to be unit tested
+- [X] Sport DAO has Log4J implemented
+- [X] Start building out entities
+- [X] Look into the implemntation of the API's and how to derive information (JSON parsing?)
+- [X] Update weekly reflection
 
 ### Week 7 (Class topic is security authentication)
 ## As a registered user, I want to log in to access and edit my account preferences
 #### Checkpoint 2 is Due: Database designed and created, at least one DAO with full CRUD (create, read, update, delete) implemented with Hibernate, DAO is fully unit tested, Log4J is implemented (no System.out.printlns)
 
-- [ ] Double-check all checkpoint 2 items (above) are complete and visible in github.
-- [ ] Set up Authentication in indie project (more tasks coming for this)
-- [ ] Create project DB on AWS.
-- [ ] Update project config files for AWS as needed
-- [ ] Deploy project to AWS
-- [ ] Add deployed link to indie project list in student repo
-- [ ] Update weekly reflection
+- [X] Double-check all checkpoint 2 items (above) are complete and visible in github.
+- [X] Set up Authentication in indie project
+- [X] Database created
+- [X] Create project DB on AWS.
+- [X] Update project config files for AWS as needed
+- [X] CRUD for Sport unit tested and passed
+- [X] Update weekly reflection
 
 ### Week 8 (Class Topic is Web Services intro)
-## All account management user stories 
+## All account management user stories
+- [X] Complete checkpoint #2
+- [ ]
 - [ ] Create Dao CRUD for favorite team list on account page
 - [ ] Show favorite teams list on account page
 - [ ] Option to Edit and remove list
