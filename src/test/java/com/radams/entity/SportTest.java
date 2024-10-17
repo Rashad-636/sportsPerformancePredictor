@@ -36,7 +36,15 @@ class SportTest {
     }
 
     @Test
-    void setId() {
+    void updateSuccess() {
+        Sport sport = (Sport) genericDao.getById(1);
+        sport.setSportName("Name Change");
+        genericDao.update(sport);
+
+        // verify if both objects match (calls .equals method generated in User class to compare)
+        Sport sport2 = (Sport) genericDao.getById(1);
+        assertEquals(sport, sport2);
+        logger.info("Sport name after change: " + sport.getSportName());
     }
 
     @Test
