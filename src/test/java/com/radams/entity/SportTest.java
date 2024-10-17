@@ -1,6 +1,8 @@
 package com.radams.entity;
 
 import com.radams.persistence.GenericDao;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SportTest {
 
     GenericDao genericDao;
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
     @BeforeEach
     void setUp() {
@@ -28,6 +31,8 @@ class SportTest {
         Sport sport2 = (Sport) genericDao.getById(1);
         assertEquals(sport, sport2);
         assertEquals("Football" , sport.getSportName()); // confirming football is being called
+
+        logger.info("The sport name that is being returned is: " + sport.getSportName());
     }
 
     @Test
