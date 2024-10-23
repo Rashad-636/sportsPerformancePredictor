@@ -1,23 +1,24 @@
+package com.radams.persistence;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rapidapi.Tank01Team.Response;
-import org.junit.Test;
-import javax.ws.rs.client.*;
-import javax.ws.rs.core.MediaType;
-// log4J both
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
 
-public class TestServiceClient {
+public class RapidapiDao {
 
-    private final Logger logger = LogManager.getLogger(TestServiceClient.class);
+    private final Logger logger = LogManager.getLogger(RapidapiDao.class);
 
-    @Test
-    public void testTank01JSON() throws Exception {
+    Response getTeams() {
+
         Client client = ClientBuilder.newClient();
 
-        // needs to be read from a properties file?
         WebTarget target = client.target("https://tank01-fantasy-stats.p.rapidapi.com/getNBATeams")
                 // needs to be read from a properties file?
                 .queryParam("schedules", false)
@@ -32,9 +33,16 @@ public class TestServiceClient {
                 .get(String.class);
 
         ObjectMapper mapper = new ObjectMapper();
-        Response data = mapper.readValue(response, Response.class);
+        Response team = null;
+        try {
+            team = mapper.readValue(response, Response.class);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            logger.error(e);
+        }
 
-        assertEquals("Magic" , data.getBody().get(0).getTeamName());
-        logger.debug(data.getBody().get(0).getTeamName());
+        logger.debug("Team returned: " + team);
+
+        return team;
     }
 }
