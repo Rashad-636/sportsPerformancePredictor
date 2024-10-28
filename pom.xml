@@ -31,7 +31,7 @@
   </properties>
 
   <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core - 2 Packages  -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
@@ -44,7 +44,7 @@
       <artifactId>hibernate-c3p0</artifactId>
       <version>${hibernate-version}</version>
     </dependency>
-    <!-- JUnit unit testing package. -->
+    <!-- JUnit unit testing package. 4 packages -->
     <dependency>
       <groupId>org.junit.platform</groupId>
       <artifactId>junit-platform-runner</artifactId>
@@ -69,15 +69,13 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
-    <!-- Java EE packages. -->
+    <!-- Java EE package -->
     <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-web-api</artifactId>
       <version>${javax.version}</version>
     </dependency>
-    <!--
-     https://mvnrepository.com/artifact/mysql/mysql-connector-java
-    -->
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java - Mysql -->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
@@ -117,7 +115,7 @@
       <artifactId>commons-io</artifactId>
       <version>${commons-version}</version>
     </dependency>
-    <!-- Jersey REST API packages. -->
+    <!-- Jersey REST API packages. 3 Packages -->
     <dependency>
       <groupId>org.glassfish.jersey.core</groupId>
       <artifactId>jersey-client</artifactId>
@@ -126,6 +124,11 @@
     <dependency>
       <groupId>org.glassfish.jersey.inject</groupId>
       <artifactId>jersey-hk2</artifactId>
+      <version>${jersey-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.containers</groupId>
+      <artifactId>jersey-container-servlet</artifactId>
       <version>${jersey-version}</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
