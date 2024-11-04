@@ -9,8 +9,8 @@ import java.util.*;
  * The type Favorite team.
  */
 @Entity
-@Table(name = "favorite_team")
-public class FavoriteTeam {
+@Table(name = "user")
+public class User {
 
     // Every Entity must have a unique identifier which is annotated @Id
     // Notice there is no @Column here as the column and instance variable name are the same
@@ -32,7 +32,7 @@ public class FavoriteTeam {
     /**
      * Instantiates a new Favorite team.
      */
-    public FavoriteTeam() {
+    public User() {
     }
 
     /**
@@ -40,7 +40,7 @@ public class FavoriteTeam {
      *
      * @param userEmail the user email
      */
-    public FavoriteTeam(String userEmail) {
+    public User(String userEmail) {
         this.userEmail = userEmail;
     }
 
@@ -112,7 +112,7 @@ public class FavoriteTeam {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        FavoriteTeam that = (FavoriteTeam) o;
+        User that = (User) o;
         return id == that.id &&
                 Objects.equals(userEmail, that.userEmail) &&
                 Objects.equals(team != null ? team.getId() : null, that.team != null ? that.team.getId() : null);

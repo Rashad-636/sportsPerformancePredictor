@@ -5,7 +5,7 @@
 <!--suppress ALL -->
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost/sport_performance_predictor</property>
+        <property name="connection.url">jdbc:mysql://localhost/sports_performance_predictor_test</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 
         <property name="connection.username">student</property>

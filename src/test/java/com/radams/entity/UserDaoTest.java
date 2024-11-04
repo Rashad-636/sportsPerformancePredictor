@@ -7,13 +7,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FavoriteTeamDaoTest {
+class UserDaoTest {
 
     GenericDao genericDao;
 
     @BeforeEach
     void setUp() {
-        genericDao = new GenericDao<>(FavoriteTeam.class);
+        genericDao = new GenericDao<>(User.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleanDB.sql");
@@ -21,12 +21,12 @@ class FavoriteTeamDaoTest {
 
     @Test
     void getByIdSuccess() {
-        FavoriteTeam favoriteTeam = (FavoriteTeam) genericDao.getById(1);
-        assertNotNull(favoriteTeam); // see if a favorite team us being returned
+        User user = (User) genericDao.getById(1);
+        assertNotNull(user); // see if a favorite team us being returned
 
         // verify if both objects match (calls .equals method generated in User class to compare)
-        FavoriteTeam favoriteTeam2 = (FavoriteTeam) genericDao.getById(1);
-        assertEquals(favoriteTeam, favoriteTeam2);
+        User user2 = (User) genericDao.getById(1);
+        assertEquals(user, user2);
     }
 
     @Test

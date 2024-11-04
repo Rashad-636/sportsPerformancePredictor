@@ -33,7 +33,7 @@ public class Team {
     private Sport sport;
 
     @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<FavoriteTeam> favoriteTeams = new ArrayList<>();
+    private List<User> favoriteTeams = new ArrayList<>();
 
     @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Player> players = new ArrayList<>();
@@ -140,7 +140,7 @@ public class Team {
      *
      * @return the favorite teams
      */
-    public List<FavoriteTeam> getFavoriteTeams() {
+    public List<User> getFavoriteTeams() {
         return favoriteTeams;
     }
 
@@ -149,7 +149,7 @@ public class Team {
      *
      * @param favoriteTeams the favorite teams
      */
-    public void setFavoriteTeams(List<FavoriteTeam> favoriteTeams) {
+    public void setFavoriteTeams(List<User> favoriteTeams) {
         this.favoriteTeams = favoriteTeams;
     }
 
