@@ -16,7 +16,7 @@ class UserDaoTest {
         genericDao = new GenericDao<>(User.class);
 
         Database database = Database.getInstance();
-        database.runSQL("cleanDB.sql");
+        database.runSQL("testDB.sql");
     }
 
     @Test

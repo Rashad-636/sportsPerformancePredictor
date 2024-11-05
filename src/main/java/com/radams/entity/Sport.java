@@ -4,9 +4,7 @@ package com.radams.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * The Sport type.
@@ -30,7 +28,7 @@ public class Sport {
     private String apiEndpoint;
 
     @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Team> teams = new ArrayList<>();
+    private Set<Team> teams = new HashSet<>();
 
     @OneToMany(mappedBy = "sport", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Player> players = new ArrayList<>();
@@ -72,6 +70,11 @@ public class Sport {
     public void addTeam (Team team) {
         teams.add(team);
         team.setSport(this); // sets current sport object by using this keyword
+    }
+
+    public void removeTeam(Team team) {
+        teams.remove(team);
+        team.setSport(null);
     }
 
     /**

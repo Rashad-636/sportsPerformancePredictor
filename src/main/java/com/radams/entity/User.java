@@ -15,7 +15,7 @@ public class User {
     // Every Entity must have a unique identifier which is annotated @Id
     // Notice there is no @Column here as the column and instance variable name are the same
     @Id
-    @Column(name = "favorite_id")
+    @Column(name = "user_id")
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native",strategy = "native")
     private int id;
@@ -98,12 +98,21 @@ public class User {
         this.team = team;
     }
 
+//    @Override
+//    public String toString() {
+//        return "FavoriteTeam{" +
+//                "id=" + id +
+//                ", userEmail='" + userEmail + '\'' +
+//                ", team=" + team +
+//                '}';
+//    }
+
     @Override
     public String toString() {
-        return "FavoriteTeam{" +
-                "id=" + id +
+        return "User{" +
+                "favorite_id=" + id +
                 ", userEmail='" + userEmail + '\'' +
-                ", team=" + team +
+                ", team=" + (team != null ? "Team{id=" + team.getId() + "}" : "null") +
                 '}';
     }
 

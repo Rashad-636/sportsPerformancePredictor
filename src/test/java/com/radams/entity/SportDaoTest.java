@@ -19,7 +19,7 @@ class SportDaoTest {
         genericDao = new GenericDao<>(Sport.class);
 
         Database database = Database.getInstance();
-        database.runSQL("cleanDB.sql");
+        database.runSQL("testDB.sql");
     }
 
 
@@ -33,7 +33,7 @@ class SportDaoTest {
         assertEquals(sport, sport2);
         assertEquals("Football" , sport.getSportName()); // confirming football is being called
 
-        logger.info("The sport name that is being returned is: " + sport.getSportName());
+        logger.debug("The sport name that is being returned is: " + sport.getSportName());
     }
 
     @Test
@@ -45,7 +45,7 @@ class SportDaoTest {
         // verify if both objects match (calls .equals method generated in User class to compare)
         Sport sport2 = (Sport) genericDao.getById(1);
         assertEquals(sport, sport2);
-        logger.info("Sport name after change: " + sport.getSportName());
+        logger.debug("Sport name after change: " + sport.getSportName());
     }
 
     @Test
@@ -74,7 +74,7 @@ class SportDaoTest {
         Sport insertedSport = (Sport) genericDao.getById(insert);
         assertEquals(insertedSport, newSport);
 
-        logger.info("Inserted sport: " + newSport.getSportName());
+        logger.debug("Inserted sport: " + newSport.getSportName());
     }
 
     @Test

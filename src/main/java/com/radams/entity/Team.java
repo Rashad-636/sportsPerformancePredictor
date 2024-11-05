@@ -207,4 +207,16 @@ public class Team {
         this.players = players;
     }
 
+    @Override
+    public String toString() {
+        return "Team{" +
+                "id=" + id +
+                ", name='" + teamName + '\'' +
+                ", city='" + city + '\'' +
+                ", sport=" + (sport != null ? sport.getSportName() : "null") +
+                ", favoriteTeams=" + (favoriteTeams != null ? favoriteTeams.size() + " users" : "null") +
+                ", players=" + (players != null ? players.size() + " players" : "null") +
+                '}';
+    }
+
 }
