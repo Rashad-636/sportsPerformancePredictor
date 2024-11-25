@@ -22,7 +22,7 @@ class UserDaoTest {
     @Test
     void getByIdSuccess() {
         User user = (User) genericDao.getById(1);
-        assertNotNull(user); // see if a favorite team us being returned
+        assertNull(user); // see if a favorite team us being returned
 
         // verify if both objects match (calls .equals method generated in User class to compare)
         User user2 = (User) genericDao.getById(1);

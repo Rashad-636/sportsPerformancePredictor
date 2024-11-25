@@ -84,12 +84,4 @@ class SportDaoTest {
     @Test
     void setTeams() {
     }
-
-    @Test
-    void getSportName() {
-    }
-
-    @Test
-    void setSportName() {
-    }
 }

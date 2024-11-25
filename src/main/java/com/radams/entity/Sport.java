@@ -87,6 +87,14 @@ public class Sport {
         this.sportName = sportName;
     }
 
+    public Set<Team> getTeams() {
+        return teams;
+    }
+
+    public void setTeams(Set<Team> teams) {
+        this.teams = teams;
+    }
+
     @Override
     public String toString() {
         return "Sport{" +
