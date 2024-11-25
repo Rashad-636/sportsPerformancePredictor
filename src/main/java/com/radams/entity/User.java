@@ -9,25 +9,21 @@ import java.util.*;
  * The type Favorite team.
  */
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
     // Every Entity must have a unique identifier which is annotated @Id
     // Notice there is no @Column here as the column and instance variable name are the same
     @Id
-    @Column(name = "user_id")
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native",strategy = "native")
     private int id;
 
-    @Column(name = "user_email")
+    @Column(name = "email")
     private String userEmail;
 
-    @ManyToOne
-    @JoinColumn(name = "team_id",
-            foreignKey = @ForeignKey(name = "favorite_test_team_id_fk")
-    )
-    private Team team;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Team> favoriteTeams = new HashSet<>();
 
     /**
      * Instantiates a new Favorite team.
@@ -80,42 +76,30 @@ public class User {
         this.userEmail = userEmail;
     }
 
-    /**
-     * Gets team.
-     *
-     * @return the team
-     */
-    public Team getTeam() {
-        return team;
+    public Set<Team> getFavoriteTeams() {
+        return favoriteTeams;
     }
 
-    /**
-     * Sets team.
-     *
-     * @param team the team
-     */
-    public void setTeam(Team team) {
-        this.team = team;
+    public void setFavoriteTeams(Set<Team> favoriteTeams) {
+        this.favoriteTeams = favoriteTeams;
     }
 
-//    @Override
-//    public String toString() {
-//        return "FavoriteTeam{" +
-//                "id=" + id +
-//                ", userEmail='" + userEmail + '\'' +
-//                ", team=" + team +
-//                '}';
-//    }
+    //    @Override
+    //    public String toString() {
+    //        return "FavoriteTeam{" +
+    //                "id=" + id +
+    //                ", userEmail='" + userEmail + '\'' +
+    //                ", team=" + team +
+    //                '}';
+    //    }
 
     @Override
     public String toString() {
         return "User{" +
                 "favorite_id=" + id +
                 ", userEmail='" + userEmail + '\'' +
-                ", team=" + (team != null ? "Team{id=" + team.getId() + "}" : "null") +
                 '}';
     }
-
     /// !!!!!!!!
     @Override
     public boolean equals(Object o) {
@@ -123,13 +107,7 @@ public class User {
         if (o == null || getClass() != o.getClass()) return false;
         User that = (User) o;
         return id == that.id &&
-                Objects.equals(userEmail, that.userEmail) &&
-                Objects.equals(team != null ? team.getId() : null, that.team != null ? that.team.getId() : null);
+                Objects.equals(userEmail, that.userEmail);
     }
 
-    /// !!!!!!!!!!
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, userEmail, team != null ? team.getId() : null);
-    }
 }

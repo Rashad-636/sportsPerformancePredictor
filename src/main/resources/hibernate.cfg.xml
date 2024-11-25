@@ -5,7 +5,7 @@
 <!--suppress ALL -->
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost/sport_performance_predictor</property>
+        <property name="connection.url">jdbc:mysql://localhost/sportsAnalyticsPro</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 
         <property name="connection.username">student</property>
@@ -23,10 +23,7 @@
         <property name="hibernate.c3p0.debugUnreturnedConnectionStackTraces">false</property>
 
         <mapping class="com.radams.entity.User"/>
-        <mapping class="com.radams.entity.Game"/>
-        <mapping class="com.radams.entity.Player"/>
         <mapping class="com.radams.entity.Sport"/>
-        <mapping class="com.radams.entity.Statistics"/>
         <mapping class="com.radams.entity.Team"/>
 
     </session-factory>

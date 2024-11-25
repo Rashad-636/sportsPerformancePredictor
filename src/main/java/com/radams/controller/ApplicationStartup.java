@@ -20,7 +20,9 @@ public class ApplicationStartup extends HttpServlet implements PropertiesLoader 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     public void init() {
+
         Properties properties;
+
         try {
             properties = loadProperties("/cognito.properties");
         } catch (Exception e) {

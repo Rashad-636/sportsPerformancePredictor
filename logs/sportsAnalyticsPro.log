@@ -1,0 +1,18 @@
+[INFO ] 2024-11-25 16:15:56.339 [main] Database - properties loaded{password=student, driver=com.mysql.cj.jdbc.Driver, url=jdbc:mysql://localhost/sportsAnalyticsPro_test, username=student}
+[DEBUG] 2024-11-25 16:15:58.641 [main] SportDaoTest - The sport name that is being returned is: NBA
+[INFO ] 2024-11-25 16:18:21.858 [main] Database - properties loaded{password=student, driver=com.mysql.cj.jdbc.Driver, url=jdbc:mysql://localhost/sportsAnalyticsPro_test, username=student}
+[DEBUG] 2024-11-25 16:18:24.191 [main] SportDaoTest - Inserted sport: New Sport
+[DEBUG] 2024-11-25 16:18:24.420 [main] SportDaoTest - Sport name after change: Name Change
+[DEBUG] 2024-11-25 16:18:24.556 [main] SportDaoTest - The sport name that is being returned is: NBA
+[INFO ] 2024-11-25 16:20:23.875 [main] Database - properties loaded{password=student, driver=com.mysql.cj.jdbc.Driver, url=jdbc:mysql://localhost/sportsAnalyticsPro_test, username=student}
+[DEBUG] 2024-11-25 16:20:26.201 [main] SportDaoTest - Inserted sport: New Sport
+[DEBUG] 2024-11-25 16:20:26.436 [main] SportDaoTest - Sport name after change: Name Change
+[DEBUG] 2024-11-25 16:20:26.578 [main] SportDaoTest - The sport name that is being returned is: NBA
+[INFO ] 2024-11-25 16:21:54.594 [main] Database - properties loaded{password=student, driver=com.mysql.cj.jdbc.Driver, url=jdbc:mysql://localhost/sportsAnalyticsPro_test, username=student}
+[DEBUG] 2024-11-25 16:21:56.732 [main] SportDaoTest - Inserted sport: New Sport
+[DEBUG] 2024-11-25 16:21:56.987 [main] SportDaoTest - Sport name after change: Name Change
+[DEBUG] 2024-11-25 16:21:57.149 [main] SportDaoTest - The sport name that is being returned is: NBA
+[INFO ] 2024-11-25 16:22:12.261 [main] Database - properties loaded{password=student, driver=com.mysql.cj.jdbc.Driver, url=jdbc:mysql://localhost/sportsAnalyticsPro_test, username=student}
+[DEBUG] 2024-11-25 16:22:14.391 [main] SportDaoTest - Inserted sport: New Sport
+[DEBUG] 2024-11-25 16:22:14.632 [main] SportDaoTest - Sport name after change: Name Change
+[DEBUG] 2024-11-25 16:22:14.782 [main] SportDaoTest - The sport name that is being returned is: NBA

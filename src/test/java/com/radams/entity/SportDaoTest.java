@@ -31,7 +31,7 @@ class SportDaoTest {
         // verify if both objects match (calls .equals method generated in User class to compare)
         Sport sport2 = (Sport) genericDao.getById(1);
         assertEquals(sport, sport2);
-        assertEquals("Football" , sport.getSportName()); // confirming football is being called
+        assertEquals("NBA" , sport.getSportName()); // confirming NBA is being called
 
         logger.debug("The sport name that is being returned is: " + sport.getSportName());
     }
@@ -58,10 +58,10 @@ class SportDaoTest {
     @Test
     void insertWithTeamSuccess() {
         // create a sport
-        Sport newSport = new Sport("New Sport" , "newSportApi");
+        Sport newSport = new Sport("New Sport");
 
         // create a new team
-        Team team = new Team( "New Team", "Kansas", newSport);
+        Team team = new Team( "New Team", newSport);
 
         // add team to sport
         newSport.addTeam(team);
@@ -78,27 +78,11 @@ class SportDaoTest {
     }
 
     @Test
-    void getPlayers() {
-    }
-
-    @Test
-    void setPlayers() {
-    }
-
-    @Test
     void getTeams() {
     }
 
     @Test
     void setTeams() {
-    }
-
-    @Test
-    void getApiEndpoint() {
-    }
-
-    @Test
-    void setApiEndpoint() {
     }
 
     @Test

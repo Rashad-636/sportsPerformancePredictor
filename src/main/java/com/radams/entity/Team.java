@@ -9,13 +9,12 @@ import java.util.*;
  * The type Team.
  */
 @Entity
-@Table(name = "team")
+@Table(name = "favorite_teams")
 public class Team {
 
     // Every Entity must have a unique identifier which is annotated @Id
     // Notice there is no @Column here as the column and instance variable name are the same
     @Id
-    @Column(name = "team_id")
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
     @GenericGenerator(name = "native",strategy = "native")
     private int id;
@@ -23,26 +22,17 @@ public class Team {
     @Column(name = "team_name")
     private String teamName;
 
-    @Column(name = "city")
-    private String city;
-
     @ManyToOne
     @JoinColumn(name = "sport_id",
-            foreignKey = @ForeignKey(name = "team_test_sport_id_fk")
+            foreignKey = @ForeignKey(name = "favorite_teams_sports_id_fk")
     )
     private Sport sport;
 
-    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<User> favoriteTeams = new ArrayList<>();
-
-    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Player> players = new ArrayList<>();
-
-    @OneToMany(mappedBy = "homeTeam", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Game> homeGames;
-
-    @OneToMany(mappedBy = "awayTeam", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Game> awayGames;
+    @ManyToOne
+    @JoinColumn(name = "user_id",
+            foreignKey = @ForeignKey(name = "favorite_teams_fk")
+    )
+    private User user;
 
     /**
      * Instantiates a new Team.
@@ -54,12 +44,10 @@ public class Team {
      * Instantiates a new Team.
      *
      * @param teamName the team name
-     * @param city     the city
      * @param sport    the sport
      */
-    public Team(String teamName, String city, Sport sport) {
+    public Team(String teamName, Sport sport) {
         this.teamName = teamName;
-        this.city = city;
         this.sport = sport;
     }
 
@@ -100,24 +88,6 @@ public class Team {
     }
 
     /**
-     * Gets city.
-     *
-     * @return the city
-     */
-    public String getCity() {
-        return city;
-    }
-
-    /**
-     * Sets city.
-     *
-     * @param city the city
-     */
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    /**
      * Gets sport.
      *
      * @return the sport
@@ -136,86 +106,30 @@ public class Team {
     }
 
     /**
-     * Gets favorite teams.
+     * Gets user.
      *
-     * @return the favorite teams
+     * @return the user
      */
-    public List<User> getFavoriteTeams() {
-        return favoriteTeams;
+    public User getUser() {
+        return user;
     }
 
     /**
-     * Sets favorite teams.
+     * Sets user.
      *
-     * @param favoriteTeams the favorite teams
+     * @param user the user
      */
-    public void setFavoriteTeams(List<User> favoriteTeams) {
-        this.favoriteTeams = favoriteTeams;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    /**
-     * Gets home games.
-     *
-     * @return the home games
-     */
-    public List<Game> getHomeGames() {
-        return homeGames;
-    }
-
-    /**
-     * Sets home games.
-     *
-     * @param homeGames the home games
-     */
-    public void setHomeGames(List<Game> homeGames) {
-        this.homeGames = homeGames;
-    }
-
-    /**
-     * Gets away games.
-     *
-     * @return the away games
-     */
-    public List<Game> getAwayGames() {
-        return awayGames;
-    }
-
-    /**
-     * Sets away games.
-     *
-     * @param awayGames the away games
-     */
-    public void setAwayGames(List<Game> awayGames) {
-        this.awayGames = awayGames;
-    }
-
-    /**
-     * Gets players.
-     *
-     * @return the players
-     */
-    public List<Player> getPlayers() {
-        return players;
-    }
-
-    /**
-     * Sets players.
-     *
-     * @param players the players
-     */
-    public void setPlayers(List<Player> players) {
-        this.players = players;
-    }
 
     @Override
     public String toString() {
         return "Team{" +
                 "id=" + id +
                 ", name='" + teamName + '\'' +
-                ", city='" + city + '\'' +
                 ", sport=" + (sport != null ? sport.getSportName() : "null") +
-                ", favoriteTeams=" + (favoriteTeams != null ? favoriteTeams.size() + " users" : "null") +
-                ", players=" + (players != null ? players.size() + " players" : "null") +
                 '}';
     }
 
