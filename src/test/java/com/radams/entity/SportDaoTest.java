@@ -6,9 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
-import java.util.Set;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -52,14 +51,14 @@ class SportDaoTest {
     }
 
     @Test
-    void deleteSuccess() {
+    void deleteSportSuccess() {
         Sport sport = (Sport) genericDao.getById(1);
         genericDao.delete(sport);
         assertNull(genericDao.getById(1));
     }
 
     @Test
-    void insertWithTeamSuccess() {
+    void insertNewSportWithNewTeamSuccess() {
         // create a sport
         Sport newSport = new Sport("New Sport");
 
@@ -105,6 +104,8 @@ class SportDaoTest {
         assertNotNull(sports);
         assertEquals(2, sports.size()); // should be two sports that start with the letter n
 
-        logger.debug("Sports found with property like: " + sports);
+        for (Sport sport : sports) {
+            logger.debug("Sport: " + sport.getSportName());
+        }
     }
 }

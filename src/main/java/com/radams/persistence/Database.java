@@ -33,8 +33,7 @@ public class Database implements PropertiesLoader {
 	**/
     private Database() {
         properties = loadProperties("/database.properties");
-        logger.info("properties loaded" + properties);
-
+        //logger.info("properties loaded" + properties);
     }
 
     /** get the only Database object available

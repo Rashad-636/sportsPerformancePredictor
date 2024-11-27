@@ -29,6 +29,7 @@ CREATE TABLE `favorite_teams` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_user_team` (`user_id`,`team_id`),
   KEY `team_id` (`team_id`),
+  CONSTRAINT `favorite_teams_fk_2` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE,
   CONSTRAINT `favorite_teams_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
   CONSTRAINT `favorite_teams_ibfk_2` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -131,4 +132,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-27 13:52:25
+-- Dump completed on 2024-11-27 15:51:37
