@@ -7,6 +7,9 @@ import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class SportDaoTest {
@@ -78,10 +81,24 @@ class SportDaoTest {
     }
 
     @Test
-    void getTeams() {
+    void getAllTeams() {
+        Sport sport = (Sport) genericDao.getById(1);
+        assertNotNull(sport);
+
+        // Get all teams for NBA
+        List<Team> teams = genericDao.getByPropertyEqual("NBA", sport);
+
+        // Verify
+        assertNotNull(teams);
+        assertFalse(teams.isEmpty());
+        assertEquals(3, teams.size());  // Should find Hawks, Bulls, and Heat
+
+        // Log results
+        logger.debug("Found teams: " + teams);
     }
 
     @Test
-    void setTeams() {
+    void addTeamsToSportSuccess() {
+
     }
 }

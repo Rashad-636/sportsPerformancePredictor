@@ -24,14 +24,13 @@ DROP TABLE IF EXISTS `favorite_teams`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `favorite_teams` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `user_id` int DEFAULT NULL,
-  `team_name` varchar(100) NOT NULL,
-  `sport_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `team_id` int NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `idx_sport_teams` (`sport_id`),
-  KEY `idx_user_teams` (`user_id`),
-  CONSTRAINT `favorite_teams_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
-  CONSTRAINT `favorite_teams_sports_id_fk` FOREIGN KEY (`sport_id`) REFERENCES `sports` (`id`)
+  UNIQUE KEY `unique_user_team` (`user_id`,`team_id`),
+  KEY `team_id` (`team_id`),
+  CONSTRAINT `favorite_teams_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `favorite_teams_ibfk_2` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -55,8 +54,8 @@ CREATE TABLE `sports` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `unique_sport_name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +64,6 @@ CREATE TABLE `sports` (
 
 LOCK TABLES `sports` WRITE;
 /*!40000 ALTER TABLE `sports` DISABLE KEYS */;
-INSERT INTO `sports` VALUES (1,'NBA');
 /*!40000 ALTER TABLE `sports` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,6 +79,7 @@ CREATE TABLE `teams` (
   `team_name` varchar(100) NOT NULL,
   `sport_id` int NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_team_sport` (`team_name`,`sport_id`),
   KEY `teams_sports_id_fk` (`sport_id`),
   CONSTRAINT `teams_sports_id_fk` FOREIGN KEY (`sport_id`) REFERENCES `sports` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -105,8 +104,8 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(100) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -128,4 +127,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-25 16:04:20
+-- Dump completed on 2024-11-27 11:53:34

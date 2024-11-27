@@ -23,7 +23,7 @@ public class User {
     private String userEmail;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Team> favoriteTeams = new HashSet<>();
+    private Set<FavoriteTeam> favoriteTeams = new HashSet<>();
 
     /**
      * Instantiates a new Favorite team.
@@ -76,38 +76,33 @@ public class User {
         this.userEmail = userEmail;
     }
 
-    public Set<Team> getFavoriteTeams() {
+    public Set<FavoriteTeam> getFavoriteTeams() {
         return favoriteTeams;
     }
 
-    public void setFavoriteTeams(Set<Team> favoriteTeams) {
+    public void setFavoriteTeams(Set<FavoriteTeam> favoriteTeams) {
         this.favoriteTeams = favoriteTeams;
     }
-
-    //    @Override
-    //    public String toString() {
-    //        return "FavoriteTeam{" +
-    //                "id=" + id +
-    //                ", userEmail='" + userEmail + '\'' +
-    //                ", team=" + team +
-    //                '}';
-    //    }
 
     @Override
     public String toString() {
         return "User{" +
-                "favorite_id=" + id +
+                "id=" + id +
                 ", userEmail='" + userEmail + '\'' +
+                ", favoriteTeams=" + favoriteTeams +
                 '}';
     }
-    /// !!!!!!!!
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User that = (User) o;
-        return id == that.id &&
-                Objects.equals(userEmail, that.userEmail);
+        User user = (User) o;
+        return id == user.id;  // Just compare IDs
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);  // Just use ID
+    }
 }

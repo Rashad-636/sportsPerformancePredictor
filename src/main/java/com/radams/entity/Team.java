@@ -9,7 +9,7 @@ import java.util.*;
  * The type Team.
  */
 @Entity
-@Table(name = "favorite_teams")
+@Table(name = "teams")
 public class Team {
 
     // Every Entity must have a unique identifier which is annotated @Id
@@ -27,12 +27,6 @@ public class Team {
             foreignKey = @ForeignKey(name = "favorite_teams_sports_id_fk")
     )
     private Sport sport;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id",
-            foreignKey = @ForeignKey(name = "favorite_teams_fk")
-    )
-    private User user;
 
     /**
      * Instantiates a new Team.
@@ -103,24 +97,6 @@ public class Team {
      */
     public void setSport(Sport sport) {
         this.sport = sport;
-    }
-
-    /**
-     * Gets user.
-     *
-     * @return the user
-     */
-    public User getUser() {
-        return user;
-    }
-
-    /**
-     * Sets user.
-     *
-     * @param user the user
-     */
-    public void setUser(User user) {
-        this.user = user;
     }
 
 

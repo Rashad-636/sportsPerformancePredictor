@@ -25,6 +25,7 @@
         <mapping class="com.radams.entity.User"/>
         <mapping class="com.radams.entity.Sport"/>
         <mapping class="com.radams.entity.Team"/>
+        <mapping class="com.radams.entity.FavoriteTeam"/>
 
     </session-factory>
 

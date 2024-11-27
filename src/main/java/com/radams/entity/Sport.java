@@ -35,7 +35,7 @@ public class Sport {
     /**
      * Instantiates a new Sport.
      *
-     * @param sportName   the sport name
+     * @param sportName the sport name
      */
     public Sport(String sportName) {
         this.sportName = sportName;
@@ -59,11 +59,21 @@ public class Sport {
         this.id = id;
     }
 
+    /**
+     * Add team.
+     *
+     * @param team the team
+     */
     public void addTeam (Team team) {
         teams.add(team);
         team.setSport(this); // sets current sport object by using this keyword
     }
 
+    /**
+     * Remove team.
+     *
+     * @param team the team
+     */
     public void removeTeam(Team team) {
         teams.remove(team);
         team.setSport(null);
@@ -87,10 +97,20 @@ public class Sport {
         this.sportName = sportName;
     }
 
+    /**
+     * Gets teams.
+     *
+     * @return the teams
+     */
     public Set<Team> getTeams() {
         return teams;
     }
 
+    /**
+     * Sets teams.
+     *
+     * @param teams the teams
+     */
     public void setTeams(Set<Team> teams) {
         this.teams = teams;
     }
