@@ -84,7 +84,7 @@ public class FavoriteTeam {
      *
      * @return the team
      */
-    public Team getTeam() {    // Changed from getSport
+    public Team getTeam() {
         return team;
     }
 
@@ -93,7 +93,7 @@ public class FavoriteTeam {
      *
      * @param team the team
      */
-    public void setTeam(Team team) {  // Changed from setSport
+    public void setTeam(Team team) {
         this.team = team;
     }
 

@@ -85,7 +85,6 @@ class TeamDaoTest {
 
         // get all teams in the nba
         List<Team> teams = genericDao.getByPropertyEqual("sport", sport);
-        assertNotNull(teams);
 
         // verification
         assertNotNull(teams);
