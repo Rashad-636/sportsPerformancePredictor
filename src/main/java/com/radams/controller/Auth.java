@@ -7,6 +7,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.radams.auth.*;
+import com.radams.entity.User;
 import com.radams.persistence.*;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -88,7 +89,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
                 TokenResponse tokenResponse = getToken(authRequest);
-                userName = validate(tokenResponse);
+                userName = validate(tokenResponse, req);
                 req.setAttribute("userName", userName);
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
@@ -135,7 +136,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      * @return
      * @throws IOException
      */
-    private String validate(TokenResponse tokenResponse) throws IOException {
+    private String validate(TokenResponse tokenResponse, HttpServletRequest req) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         CognitoTokenHeader tokenHeader = mapper.readValue(CognitoJWTParser.getHeader(tokenResponse.getIdToken()).toString(), CognitoTokenHeader.class);
 
@@ -148,7 +149,6 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         BigInteger modulus = new BigInteger(1, org.apache.commons.codec.binary.Base64.decodeBase64(jwks.getKeys().get(0).getN()));
         BigInteger exponent = new BigInteger(1, org.apache.commons.codec.binary.Base64.decodeBase64(jwks.getKeys().get(0).getE()));
 
-        // TODO the following is "happy path", what if the exceptions are caught?
         // Create a public key
         PublicKey publicKey = null;
         try {
@@ -177,8 +177,28 @@ public class Auth extends HttpServlet implements PropertiesLoader {
 
         logger.debug("here are all the available claims: " + jwt.getClaims());
 
-        // TODO decide what you want to do with the info!
-        // for now, I'm just returning username for display back to the browser
+        // check if user is in the database, if not add them
+        GenericDao userDao = new GenericDao(User.class);
+        List<User> users = userDao.getByPropertyEqual("userEmail", email);
+
+        User user;
+        if (users.isEmpty()) {
+            // Create new user if they don't exist
+            user = new User();
+            user.setUserEmail(email);
+
+            int userId = userDao.insert(user);
+            user.setId(userId);
+            logger.debug("Created new user in mysql with email: " + email);
+        } else {
+            user = users.get(0); // get the first and only user in this list
+            logger.debug("User already exists in mysql with email: " + email);
+        }
+
+        // Store user ID in session for quicker access later
+        HttpSession session = req.getSession();
+        session.setAttribute("userId", user.getId());
+        logger.debug("Stored user ID in session: " + user.getId());
 
         return email;
     }

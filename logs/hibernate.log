@@ -12748,3 +12748,1037 @@
 [DEBUG] 2024-11-27 16:52:21.847 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 [DEBUG] 2024-11-27 16:52:21.848 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 [DEBUG] 2024-11-27 16:52:21.848 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2024-11-27 16:53:14.079 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.boot.beanvalidation.BeanValidationIntegrator].
+[DEBUG] 2024-11-27 16:53:14.083 [main] IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[INFO ] 2024-11-27 16:53:14.100 [main] Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+[DEBUG] 2024-11-27 16:53:14.101 [main] Environment - HHH000206: 'hibernate.properties' not found
+[DEBUG] 2024-11-27 16:53:14.136 [main] LocalXmlResourceResolver - Checking public/system identifiers `-//Hibernate/Hibernate Configuration DTD//EN`/`http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd` as DTD references
+[DEBUG] 2024-11-27 16:53:14.141 [main] JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+[DEBUG] 2024-11-27 16:53:14.300 [main] factory - Ignoring CDI for resolving IdentifierGenerator instances as extended or delayed CDI support was enabled
+[DEBUG] 2024-11-27 16:53:14.309 [main] factory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[DEBUG] 2024-11-27 16:53:14.310 [main] factory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[DEBUG] 2024-11-27 16:53:14.310 [main] factory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2024-11-27 16:53:14.310 [main] factory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[DEBUG] 2024-11-27 16:53:14.311 [main] factory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[DEBUG] 2024-11-27 16:53:14.311 [main] factory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[DEBUG] 2024-11-27 16:53:14.311 [main] factory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[DEBUG] 2024-11-27 16:53:14.312 [main] factory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2024-11-27 16:53:14.313 [main] factory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[DEBUG] 2024-11-27 16:53:14.313 [main] factory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[DEBUG] 2024-11-27 16:53:14.313 [main] factory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[DEBUG] 2024-11-27 16:53:14.314 [main] factory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[DEBUG] 2024-11-27 16:53:14.319 [main] RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[INFO ] 2024-11-27 16:53:14.320 [main] RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[DEBUG] 2024-11-27 16:53:14.391 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BasicTypeReference@665522c2
+[DEBUG] 2024-11-27 16:53:14.391 [main] BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BasicTypeReference@665522c2
+[DEBUG] 2024-11-27 16:53:14.391 [main] BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@665522c2
+[DEBUG] 2024-11-27 16:53:14.391 [main] BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@41fe8e5f
+[DEBUG] 2024-11-27 16:53:14.391 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@41fe8e5f
+[DEBUG] 2024-11-27 16:53:14.391 [main] BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.BasicTypeReference@3062f9f4
+[DEBUG] 2024-11-27 16:53:14.391 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@3062f9f4
+[DEBUG] 2024-11-27 16:53:14.391 [main] BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@2016f509
+[DEBUG] 2024-11-27 16:53:14.392 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@2016f509
+[DEBUG] 2024-11-27 16:53:14.392 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.BasicTypeReference@6f1a80fb
+[DEBUG] 2024-11-27 16:53:14.392 [main] BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.BasicTypeReference@6f1a80fb
+[DEBUG] 2024-11-27 16:53:14.392 [main] BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@6f1a80fb
+[DEBUG] 2024-11-27 16:53:14.392 [main] BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BasicTypeReference@5a237731
+[DEBUG] 2024-11-27 16:53:14.392 [main] BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@5a237731
+[DEBUG] 2024-11-27 16:53:14.392 [main] BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BasicTypeReference@5a237731
+[DEBUG] 2024-11-27 16:53:14.392 [main] BasicTypeRegistry - Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@7d2998d8
+[DEBUG] 2024-11-27 16:53:14.392 [main] BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@7d2998d8
+[DEBUG] 2024-11-27 16:53:14.392 [main] BasicTypeRegistry - Adding type registration image -> org.hibernate.type.BasicTypeReference@6a0094c9
+[DEBUG] 2024-11-27 16:53:14.392 [main] BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BasicTypeReference@51a6cc2a
+[DEBUG] 2024-11-27 16:53:14.393 [main] BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@51a6cc2a
+[DEBUG] 2024-11-27 16:53:14.393 [main] BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@10fda3d0
+[DEBUG] 2024-11-27 16:53:14.393 [main] BasicTypeRegistry - Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@2123064f
+[DEBUG] 2024-11-27 16:53:14.393 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.BasicTypeReference@4f6b687e
+[DEBUG] 2024-11-27 16:53:14.393 [main] BasicTypeRegistry - Adding type registration short -> org.hibernate.type.BasicTypeReference@4f6b687e
+[DEBUG] 2024-11-27 16:53:14.393 [main] BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@4f6b687e
+[DEBUG] 2024-11-27 16:53:14.393 [main] BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.BasicTypeReference@28cb3a25
+[DEBUG] 2024-11-27 16:53:14.393 [main] BasicTypeRegistry - Adding type registration int -> org.hibernate.type.BasicTypeReference@28cb3a25
+[DEBUG] 2024-11-27 16:53:14.393 [main] BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@28cb3a25
+[DEBUG] 2024-11-27 16:53:14.393 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.BasicTypeReference@5555ffcf
+[DEBUG] 2024-11-27 16:53:14.393 [main] BasicTypeRegistry - Adding type registration long -> org.hibernate.type.BasicTypeReference@5555ffcf
+[DEBUG] 2024-11-27 16:53:14.394 [main] BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@5555ffcf
+[DEBUG] 2024-11-27 16:53:14.394 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.BasicTypeReference@6cfd9a54
+[DEBUG] 2024-11-27 16:53:14.394 [main] BasicTypeRegistry - Adding type registration float -> org.hibernate.type.BasicTypeReference@6cfd9a54
+[DEBUG] 2024-11-27 16:53:14.394 [main] BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@6cfd9a54
+[DEBUG] 2024-11-27 16:53:14.394 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.BasicTypeReference@78c1372d
+[DEBUG] 2024-11-27 16:53:14.394 [main] BasicTypeRegistry - Adding type registration double -> org.hibernate.type.BasicTypeReference@78c1372d
+[DEBUG] 2024-11-27 16:53:14.394 [main] BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@78c1372d
+[DEBUG] 2024-11-27 16:53:14.394 [main] BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@9aa2002
+[DEBUG] 2024-11-27 16:53:14.394 [main] BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@9aa2002
+[DEBUG] 2024-11-27 16:53:14.394 [main] BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@73fb1d7f
+[DEBUG] 2024-11-27 16:53:14.395 [main] BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@73fb1d7f
+[DEBUG] 2024-11-27 16:53:14.395 [main] BasicTypeRegistry - Adding type registration character -> org.hibernate.type.BasicTypeReference@73d4066e
+[DEBUG] 2024-11-27 16:53:14.395 [main] BasicTypeRegistry - Adding type registration char -> org.hibernate.type.BasicTypeReference@73d4066e
+[DEBUG] 2024-11-27 16:53:14.395 [main] BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@73d4066e
+[DEBUG] 2024-11-27 16:53:14.395 [main] BasicTypeRegistry - Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@25d2f66
+[DEBUG] 2024-11-27 16:53:14.395 [main] BasicTypeRegistry - Adding type registration string -> org.hibernate.type.BasicTypeReference@5a2fa51f
+[DEBUG] 2024-11-27 16:53:14.395 [main] BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@5a2fa51f
+[DEBUG] 2024-11-27 16:53:14.395 [main] BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.BasicTypeReference@71945bc0
+[DEBUG] 2024-11-27 16:53:14.395 [main] BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.BasicTypeReference@22a0d4ea
+[DEBUG] 2024-11-27 16:53:14.395 [main] BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.BasicTypeReference@22a0d4ea
+[DEBUG] 2024-11-27 16:53:14.395 [main] BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.BasicTypeReference@22a0d4ea
+[DEBUG] 2024-11-27 16:53:14.396 [main] BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@49ede9c7
+[DEBUG] 2024-11-27 16:53:14.396 [main] BasicTypeRegistry - Adding type registration text -> org.hibernate.type.BasicTypeReference@6ecdbab8
+[DEBUG] 2024-11-27 16:53:14.396 [main] BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.BasicTypeReference@3dd4a6fa
+[DEBUG] 2024-11-27 16:53:14.396 [main] BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.BasicTypeReference@19f7222e
+[DEBUG] 2024-11-27 16:53:14.396 [main] BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@19f7222e
+[DEBUG] 2024-11-27 16:53:14.396 [main] BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.BasicTypeReference@3f725306
+[DEBUG] 2024-11-27 16:53:14.396 [main] BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@3f725306
+[DEBUG] 2024-11-27 16:53:14.396 [main] BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@3c69362a
+[DEBUG] 2024-11-27 16:53:14.396 [main] BasicTypeRegistry - Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@2412a42b
+[DEBUG] 2024-11-27 16:53:14.396 [main] BasicTypeRegistry - Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@45404d5
+[DEBUG] 2024-11-27 16:53:14.396 [main] BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@29138d3a
+[DEBUG] 2024-11-27 16:53:14.397 [main] BasicTypeRegistry - Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@5cbe2654
+[DEBUG] 2024-11-27 16:53:14.397 [main] BasicTypeRegistry - Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@6dbcf214
+[DEBUG] 2024-11-27 16:53:14.397 [main] BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.BasicTypeReference@496a31da
+[DEBUG] 2024-11-27 16:53:14.397 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@496a31da
+[DEBUG] 2024-11-27 16:53:14.397 [main] BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@7c251f90
+[DEBUG] 2024-11-27 16:53:14.397 [main] BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@7c251f90
+[DEBUG] 2024-11-27 16:53:14.397 [main] BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@51841ac6
+[DEBUG] 2024-11-27 16:53:14.397 [main] BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@51841ac6
+[DEBUG] 2024-11-27 16:53:14.398 [main] BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@5ba26eb0
+[DEBUG] 2024-11-27 16:53:14.398 [main] BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@5ba26eb0
+[DEBUG] 2024-11-27 16:53:14.398 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@435e60ff
+[DEBUG] 2024-11-27 16:53:14.398 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@435e60ff
+[DEBUG] 2024-11-27 16:53:14.398 [main] BasicTypeRegistry - Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@17d32e9b
+[DEBUG] 2024-11-27 16:53:14.398 [main] BasicTypeRegistry - Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@66f0548d
+[DEBUG] 2024-11-27 16:53:14.398 [main] BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@2e6f610d
+[DEBUG] 2024-11-27 16:53:14.398 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@2e6f610d
+[DEBUG] 2024-11-27 16:53:14.398 [main] BasicTypeRegistry - Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@1e86a5a7
+[DEBUG] 2024-11-27 16:53:14.398 [main] BasicTypeRegistry - Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@10afe71a
+[DEBUG] 2024-11-27 16:53:14.398 [main] BasicTypeRegistry - Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@741f8dbe
+[DEBUG] 2024-11-27 16:53:14.399 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@212dfd39
+[DEBUG] 2024-11-27 16:53:14.399 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@212dfd39
+[DEBUG] 2024-11-27 16:53:14.399 [main] BasicTypeRegistry - Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@a2ddf26
+[DEBUG] 2024-11-27 16:53:14.399 [main] BasicTypeRegistry - Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@65d57e4e
+[DEBUG] 2024-11-27 16:53:14.399 [main] BasicTypeRegistry - Adding type registration date -> org.hibernate.type.BasicTypeReference@6daf7d37
+[DEBUG] 2024-11-27 16:53:14.399 [main] BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@6daf7d37
+[DEBUG] 2024-11-27 16:53:14.399 [main] BasicTypeRegistry - Adding type registration time -> org.hibernate.type.BasicTypeReference@23a5818e
+[DEBUG] 2024-11-27 16:53:14.399 [main] BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@23a5818e
+[DEBUG] 2024-11-27 16:53:14.399 [main] BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@4715ae33
+[DEBUG] 2024-11-27 16:53:14.399 [main] BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@4715ae33
+[DEBUG] 2024-11-27 16:53:14.399 [main] BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@4715ae33
+[DEBUG] 2024-11-27 16:53:14.400 [main] BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.BasicTypeReference@9fc9f91
+[DEBUG] 2024-11-27 16:53:14.400 [main] BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@9fc9f91
+[DEBUG] 2024-11-27 16:53:14.400 [main] BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@9fc9f91
+[DEBUG] 2024-11-27 16:53:14.400 [main] BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@1fac1d5c
+[DEBUG] 2024-11-27 16:53:14.400 [main] BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@108a46d6
+[DEBUG] 2024-11-27 16:53:14.400 [main] BasicTypeRegistry - Adding type registration instant -> org.hibernate.type.BasicTypeReference@7a8406c2
+[DEBUG] 2024-11-27 16:53:14.400 [main] BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@7a8406c2
+[DEBUG] 2024-11-27 16:53:14.400 [main] BasicTypeRegistry - Adding type registration uuid -> org.hibernate.type.BasicTypeReference@17690e14
+[DEBUG] 2024-11-27 16:53:14.400 [main] BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@17690e14
+[DEBUG] 2024-11-27 16:53:14.400 [main] BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@17690e14
+[DEBUG] 2024-11-27 16:53:14.400 [main] BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@6850b758
+[DEBUG] 2024-11-27 16:53:14.400 [main] BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@2a2ef072
+[DEBUG] 2024-11-27 16:53:14.401 [main] BasicTypeRegistry - Adding type registration class -> org.hibernate.type.BasicTypeReference@704641e3
+[DEBUG] 2024-11-27 16:53:14.401 [main] BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@704641e3
+[DEBUG] 2024-11-27 16:53:14.401 [main] BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.BasicTypeReference@2f00f851
+[DEBUG] 2024-11-27 16:53:14.401 [main] BasicTypeRegistry - Adding type registration Currency -> org.hibernate.type.BasicTypeReference@2f00f851
+[DEBUG] 2024-11-27 16:53:14.401 [main] BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@2f00f851
+[DEBUG] 2024-11-27 16:53:14.401 [main] BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.BasicTypeReference@4207609e
+[DEBUG] 2024-11-27 16:53:14.401 [main] BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@4207609e
+[DEBUG] 2024-11-27 16:53:14.401 [main] BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.BasicTypeReference@1f77b5cc
+[DEBUG] 2024-11-27 16:53:14.401 [main] BasicTypeRegistry - Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@1f77b5cc
+[DEBUG] 2024-11-27 16:53:14.401 [main] BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.BasicTypeReference@5d7ca698
+[DEBUG] 2024-11-27 16:53:14.401 [main] BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@5d7ca698
+[DEBUG] 2024-11-27 16:53:14.401 [main] BasicTypeRegistry - Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@75961f16
+[DEBUG] 2024-11-27 16:53:14.402 [main] BasicTypeRegistry - Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@75961f16
+[DEBUG] 2024-11-27 16:53:14.402 [main] BasicTypeRegistry - Adding type registration url -> org.hibernate.type.BasicTypeReference@c6c82aa
+[DEBUG] 2024-11-27 16:53:14.402 [main] BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@c6c82aa
+[DEBUG] 2024-11-27 16:53:14.402 [main] BasicTypeRegistry - Adding type registration vector -> org.hibernate.type.BasicTypeReference@2e179f3e
+[DEBUG] 2024-11-27 16:53:14.402 [main] BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.BasicTypeReference@16e7b402
+[DEBUG] 2024-11-27 16:53:14.406 [main] BasicTypeRegistry - Adding type registration object -> org.hibernate.type.JavaObjectType@10643593
+[DEBUG] 2024-11-27 16:53:14.406 [main] BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@10643593
+[DEBUG] 2024-11-27 16:53:14.407 [main] BasicTypeRegistry - Adding type registration null -> org.hibernate.type.NullType@1c7f96b1
+[DEBUG] 2024-11-27 16:53:14.407 [main] BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@7979b8b7
+[DEBUG] 2024-11-27 16:53:14.407 [main] BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@7a04fea7
+[DEBUG] 2024-11-27 16:53:14.407 [main] BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@1bc49bc5
+[DEBUG] 2024-11-27 16:53:14.407 [main] BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@7b6e5c12
+[DEBUG] 2024-11-27 16:53:14.407 [main] BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@4f66ffc8
+[DEBUG] 2024-11-27 16:53:14.407 [main] BasicTypeRegistry - Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@124ac145
+[DEBUG] 2024-11-27 16:53:14.407 [main] BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@2def7a7a
+[DEBUG] 2024-11-27 16:53:14.407 [main] BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@24e83d19
+[INFO ] 2024-11-27 16:53:14.427 [main] c3p0 - HHH010002: C3P0 using driver: com.mysql.cj.jdbc.Driver at URL: jdbc:mysql://localhost/sportsAnalyticsPro_test
+[INFO ] 2024-11-27 16:53:14.427 [main] c3p0 - HHH10001001: Connection properties: {password=****, user=student}
+[INFO ] 2024-11-27 16:53:14.427 [main] c3p0 - HHH10001003: Autocommit mode: false
+[INFO ] 2024-11-27 16:53:14.489 [main] c3p0 - HHH10001007: JDBC isolation level: <unknown>
+[DEBUG] 2024-11-27 16:53:14.557 [main] JdbcEnvironmentInitiator - Database ->
+       name : MySQL
+    version : 9.0.1
+      major : 9
+      minor : 0
+[DEBUG] 2024-11-27 16:53:14.557 [main] JdbcEnvironmentInitiator - Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.16 (Revision: 34cbc6bc61f72836e26327537a432d6db7c77de6)
+      major : 8
+      minor : 0
+[DEBUG] 2024-11-27 16:53:14.557 [main] JdbcEnvironmentInitiator - JDBC version : 4.2
+[WARN ] 2024-11-27 16:53:14.590 [main] deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[DEBUG] 2024-11-27 16:53:14.590 [main] dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQLDialect, version: 9.0.1
+[DEBUG] 2024-11-27 16:53:14.594 [main] IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in more than one case
+[DEBUG] 2024-11-27 16:53:14.594 [main] IdentifierHelperBuilder - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+[DEBUG] 2024-11-27 16:53:14.604 [main] DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@29b40b3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7d247660)
+[DEBUG] 2024-11-27 16:53:14.605 [main] DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@656f62dc) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@49d30c6f)
+[DEBUG] 2024-11-27 16:53:14.605 [main] DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1115433e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4fdca00a)
+[DEBUG] 2024-11-27 16:53:14.605 [main] DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@513b52af) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5a8c93)
+[DEBUG] 2024-11-27 16:53:14.605 [main] DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3bed3315) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@119b0892)
+[DEBUG] 2024-11-27 16:53:14.605 [main] DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1a3e8e24) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4ed4a7e4)
+[DEBUG] 2024-11-27 16:53:14.605 [main] DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1c7350b0) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@55651434)
+[DEBUG] 2024-11-27 16:53:14.605 [main] DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3bc4ef12) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@50448409)
+[DEBUG] 2024-11-27 16:53:14.605 [main] DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5634a861) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2b0dc227)
+[DEBUG] 2024-11-27 16:53:14.606 [main] JdbcTypeRegistry - addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+[DEBUG] 2024-11-27 16:53:14.606 [main] JdbcTypeRegistry - addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+[DEBUG] 2024-11-27 16:53:14.607 [main] JdbcTypeRegistry - addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+[DEBUG] 2024-11-27 16:53:14.608 [main] JdbcTypeRegistry - addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+[DEBUG] 2024-11-27 16:53:14.608 [main] JdbcTypeRegistry - addDescriptor(2005, ClobTypeDescriptor(STREAM_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+[DEBUG] 2024-11-27 16:53:14.610 [main] BasicTypeRegistry - Adding type registration null -> org.hibernate.type.NullType@6b63e6ad
+[DEBUG] 2024-11-27 16:53:14.610 [main] BasicTypeRegistry - Type registration key [null] overrode previous entry : `org.hibernate.type.NullType@1c7f96b1`
+[DEBUG] 2024-11-27 16:53:14.614 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,2)
+[DEBUG] 2024-11-27 16:53:14.614 [main] BasicTypeRegistry - Adding type registration Duration -> basicType@1(java.time.Duration,2)
+[DEBUG] 2024-11-27 16:53:14.614 [main] BasicTypeRegistry - Adding type registration java.time.Duration -> basicType@1(java.time.Duration,2)
+[DEBUG] 2024-11-27 16:53:14.616 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.OffsetDateTimeType -> basicType@2(java.time.OffsetDateTime,3003)
+[DEBUG] 2024-11-27 16:53:14.616 [main] BasicTypeRegistry - Adding type registration OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
+[DEBUG] 2024-11-27 16:53:14.616 [main] BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> basicType@2(java.time.OffsetDateTime,3003)
+[DEBUG] 2024-11-27 16:53:14.616 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.ZonedDateTimeType -> basicType@3(java.time.ZonedDateTime,3003)
+[DEBUG] 2024-11-27 16:53:14.617 [main] BasicTypeRegistry - Adding type registration ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
+[DEBUG] 2024-11-27 16:53:14.617 [main] BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> basicType@3(java.time.ZonedDateTime,3003)
+[DEBUG] 2024-11-27 16:53:14.617 [main] BasicTypeRegistry - Adding type registration org.hibernate.type.OffsetTimeType -> basicType@4(java.time.OffsetTime,3007)
+[DEBUG] 2024-11-27 16:53:14.617 [main] BasicTypeRegistry - Adding type registration OffsetTime -> basicType@4(java.time.OffsetTime,3007)
+[DEBUG] 2024-11-27 16:53:14.617 [main] BasicTypeRegistry - Adding type registration java.time.OffsetTime -> basicType@4(java.time.OffsetTime,3007)
+[DEBUG] 2024-11-27 16:53:14.618 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@77bc2e16] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@48e8c32a]
+[DEBUG] 2024-11-27 16:53:14.644 [main] Namespace - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[DEBUG] 2024-11-27 16:53:14.660 [main] EntityBinder - Binding entity from annotated class: com.radams.entity.User
+[DEBUG] 2024-11-27 16:53:14.666 [main] EntityBinder - Import with entity name User
+[DEBUG] 2024-11-27 16:53:14.670 [main] EntityBinder - Bind entity com.radams.entity.User on table users
+[DEBUG] 2024-11-27 16:53:14.676 [main] AnnotatedColumn - Binding column: AnnotatedDiscriminatorColumn(column='DTYPE')
+[DEBUG] 2024-11-27 16:53:14.691 [main] AnnotatedColumn - Binding column: AnnotatedColumn()
+[DEBUG] 2024-11-27 16:53:14.691 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.radams.entity.User] is safe
+[DEBUG] 2024-11-27 16:53:14.691 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.radams.entity.User
+[DEBUG] 2024-11-27 16:53:14.693 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2024-11-27 16:53:14.696 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.radams.entity.User:id]
+[DEBUG] 2024-11-27 16:53:14.698 [main] BasicValueBinder - building BasicValue for id
+[DEBUG] 2024-11-27 16:53:14.701 [main] BasicValue - Skipping column re-registration: users.id
+[DEBUG] 2024-11-27 16:53:14.702 [main] PropertyBinder - Building property id
+[DEBUG] 2024-11-27 16:53:14.704 [main] BinderHelper - #makeIdGenerator(BasicValue([Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
+[DEBUG] 2024-11-27 16:53:14.709 [main] AnnotatedColumn - Binding column: AnnotatedJoinColumn()
+[DEBUG] 2024-11-27 16:53:14.709 [main] AnnotatedColumn - Binding column: AnnotatedColumn()
+[DEBUG] 2024-11-27 16:53:14.716 [main] AnnotatedColumn - Binding column: IndexColumn(column='favoriteTeams_ORDER')
+[DEBUG] 2024-11-27 16:53:14.718 [main] AnnotatedColumn - Binding column: AnnotatedColumn()
+[DEBUG] 2024-11-27 16:53:14.718 [main] AnnotatedColumn - Binding column: AnnotatedColumn(column='favoriteTeams_KEY')
+[DEBUG] 2024-11-27 16:53:14.719 [main] AnnotatedColumn - Binding column: AnnotatedJoinColumn(column='favoriteTeams_KEY')
+[DEBUG] 2024-11-27 16:53:14.719 [main] AnnotatedColumn - Binding column: AnnotatedJoinColumn()
+[DEBUG] 2024-11-27 16:53:14.720 [main] AnnotatedColumn - Binding column: AnnotatedJoinColumn()
+[DEBUG] 2024-11-27 16:53:14.722 [main] CollectionBinder - Collection role: com.radams.entity.User.favoriteTeams
+[DEBUG] 2024-11-27 16:53:14.723 [main] PropertyBinder - Building property favoriteTeams
+[DEBUG] 2024-11-27 16:53:14.723 [main] AnnotatedColumn - Binding column: AnnotatedColumn(column='email')
+[DEBUG] 2024-11-27 16:53:14.724 [main] PropertyBinder - MetadataSourceProcessor property userEmail with lazy=false
+[DEBUG] 2024-11-27 16:53:14.724 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.radams.entity.User:userEmail]
+[DEBUG] 2024-11-27 16:53:14.724 [main] BasicValueBinder - building BasicValue for userEmail
+[DEBUG] 2024-11-27 16:53:14.724 [main] BasicValue - Skipping column re-registration: users.email
+[DEBUG] 2024-11-27 16:53:14.724 [main] PropertyBinder - Building property userEmail
+[DEBUG] 2024-11-27 16:53:14.724 [main] ClassLoaderServiceImpl - HHH000194: Package not found or wo package-info.java: com.radams.entity
+[DEBUG] 2024-11-27 16:53:14.728 [main] EntityBinder - Binding entity from annotated class: com.radams.entity.Sport
+[DEBUG] 2024-11-27 16:53:14.728 [main] EntityBinder - Import with entity name Sport
+[DEBUG] 2024-11-27 16:53:14.728 [main] EntityBinder - Bind entity com.radams.entity.Sport on table sports
+[DEBUG] 2024-11-27 16:53:14.728 [main] AnnotatedColumn - Binding column: AnnotatedDiscriminatorColumn(column='DTYPE')
+[DEBUG] 2024-11-27 16:53:14.729 [main] AnnotatedColumn - Binding column: AnnotatedColumn()
+[DEBUG] 2024-11-27 16:53:14.729 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.radams.entity.Sport] is safe
+[DEBUG] 2024-11-27 16:53:14.729 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.radams.entity.Sport
+[DEBUG] 2024-11-27 16:53:14.729 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2024-11-27 16:53:14.729 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.radams.entity.Sport:id]
+[DEBUG] 2024-11-27 16:53:14.730 [main] BasicValueBinder - building BasicValue for id
+[DEBUG] 2024-11-27 16:53:14.730 [main] BasicValue - Skipping column re-registration: sports.id
+[DEBUG] 2024-11-27 16:53:14.730 [main] PropertyBinder - Building property id
+[DEBUG] 2024-11-27 16:53:14.730 [main] BinderHelper - #makeIdGenerator(BasicValue([Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
+[DEBUG] 2024-11-27 16:53:14.730 [main] AnnotatedColumn - Binding column: AnnotatedColumn(column='name')
+[DEBUG] 2024-11-27 16:53:14.730 [main] PropertyBinder - MetadataSourceProcessor property sportName with lazy=false
+[DEBUG] 2024-11-27 16:53:14.730 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.radams.entity.Sport:sportName]
+[DEBUG] 2024-11-27 16:53:14.730 [main] BasicValueBinder - building BasicValue for sportName
+[DEBUG] 2024-11-27 16:53:14.730 [main] BasicValue - Skipping column re-registration: sports.name
+[DEBUG] 2024-11-27 16:53:14.730 [main] PropertyBinder - Building property sportName
+[DEBUG] 2024-11-27 16:53:14.731 [main] AnnotatedColumn - Binding column: AnnotatedJoinColumn()
+[DEBUG] 2024-11-27 16:53:14.731 [main] AnnotatedColumn - Binding column: AnnotatedColumn()
+[DEBUG] 2024-11-27 16:53:14.731 [main] AnnotatedColumn - Binding column: IndexColumn(column='teams_ORDER')
+[DEBUG] 2024-11-27 16:53:14.731 [main] AnnotatedColumn - Binding column: AnnotatedColumn()
+[DEBUG] 2024-11-27 16:53:14.731 [main] AnnotatedColumn - Binding column: AnnotatedColumn(column='teams_KEY')
+[DEBUG] 2024-11-27 16:53:14.731 [main] AnnotatedColumn - Binding column: AnnotatedJoinColumn(column='teams_KEY')
+[DEBUG] 2024-11-27 16:53:14.732 [main] AnnotatedColumn - Binding column: AnnotatedJoinColumn()
+[DEBUG] 2024-11-27 16:53:14.732 [main] AnnotatedColumn - Binding column: AnnotatedJoinColumn()
+[DEBUG] 2024-11-27 16:53:14.732 [main] CollectionBinder - Collection role: com.radams.entity.Sport.teams
+[DEBUG] 2024-11-27 16:53:14.732 [main] PropertyBinder - Building property teams
+[DEBUG] 2024-11-27 16:53:14.732 [main] ClassLoaderServiceImpl - HHH000194: Package not found or wo package-info.java: com.radams.entity
+[DEBUG] 2024-11-27 16:53:14.733 [main] EntityBinder - Binding entity from annotated class: com.radams.entity.Team
+[DEBUG] 2024-11-27 16:53:14.733 [main] EntityBinder - Import with entity name Team
+[DEBUG] 2024-11-27 16:53:14.733 [main] EntityBinder - Bind entity com.radams.entity.Team on table teams
+[DEBUG] 2024-11-27 16:53:14.733 [main] AnnotatedColumn - Binding column: AnnotatedDiscriminatorColumn(column='DTYPE')
+[DEBUG] 2024-11-27 16:53:14.736 [main] AnnotatedColumn - Binding column: AnnotatedColumn()
+[DEBUG] 2024-11-27 16:53:14.736 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.radams.entity.Team] is safe
+[DEBUG] 2024-11-27 16:53:14.737 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.radams.entity.Team
+[DEBUG] 2024-11-27 16:53:14.737 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2024-11-27 16:53:14.737 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.radams.entity.Team:id]
+[DEBUG] 2024-11-27 16:53:14.737 [main] BasicValueBinder - building BasicValue for id
+[DEBUG] 2024-11-27 16:53:14.737 [main] BasicValue - Skipping column re-registration: teams.id
+[DEBUG] 2024-11-27 16:53:14.737 [main] PropertyBinder - Building property id
+[DEBUG] 2024-11-27 16:53:14.737 [main] BinderHelper - #makeIdGenerator(BasicValue([Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
+[DEBUG] 2024-11-27 16:53:14.737 [main] AnnotatedColumn - Binding column: AnnotatedJoinColumn(column='sport_id')
+[DEBUG] 2024-11-27 16:53:14.738 [main] AnnotatedColumn - Binding column: AnnotatedColumn()
+[DEBUG] 2024-11-27 16:53:14.740 [main] PropertyBinder - Building property sport
+[DEBUG] 2024-11-27 16:53:14.740 [main] AnnotatedColumn - Binding column: AnnotatedColumn(column='team_name')
+[DEBUG] 2024-11-27 16:53:14.740 [main] PropertyBinder - MetadataSourceProcessor property teamName with lazy=false
+[DEBUG] 2024-11-27 16:53:14.740 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.radams.entity.Team:teamName]
+[DEBUG] 2024-11-27 16:53:14.740 [main] BasicValueBinder - building BasicValue for teamName
+[DEBUG] 2024-11-27 16:53:14.740 [main] BasicValue - Skipping column re-registration: teams.team_name
+[DEBUG] 2024-11-27 16:53:14.740 [main] PropertyBinder - Building property teamName
+[DEBUG] 2024-11-27 16:53:14.740 [main] ClassLoaderServiceImpl - HHH000194: Package not found or wo package-info.java: com.radams.entity
+[DEBUG] 2024-11-27 16:53:14.741 [main] EntityBinder - Binding entity from annotated class: com.radams.entity.FavoriteTeam
+[DEBUG] 2024-11-27 16:53:14.741 [main] EntityBinder - Import with entity name FavoriteTeam
+[DEBUG] 2024-11-27 16:53:14.741 [main] EntityBinder - Bind entity com.radams.entity.FavoriteTeam on table favorite_teams
+[DEBUG] 2024-11-27 16:53:14.741 [main] AnnotatedColumn - Binding column: AnnotatedDiscriminatorColumn(column='DTYPE')
+[DEBUG] 2024-11-27 16:53:14.742 [main] AnnotatedColumn - Binding column: AnnotatedColumn()
+[DEBUG] 2024-11-27 16:53:14.742 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.radams.entity.FavoriteTeam] is safe
+[DEBUG] 2024-11-27 16:53:14.742 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.radams.entity.FavoriteTeam
+[DEBUG] 2024-11-27 16:53:14.742 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
+[DEBUG] 2024-11-27 16:53:14.742 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [com.radams.entity.FavoriteTeam:id]
+[DEBUG] 2024-11-27 16:53:14.742 [main] BasicValueBinder - building BasicValue for id
+[DEBUG] 2024-11-27 16:53:14.742 [main] BasicValue - Skipping column re-registration: favorite_teams.id
+[DEBUG] 2024-11-27 16:53:14.742 [main] PropertyBinder - Building property id
+[DEBUG] 2024-11-27 16:53:14.743 [main] BinderHelper - #makeIdGenerator(BasicValue([Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
+[DEBUG] 2024-11-27 16:53:14.743 [main] AnnotatedColumn - Binding column: AnnotatedJoinColumn(column='team_id')
+[DEBUG] 2024-11-27 16:53:14.743 [main] AnnotatedColumn - Binding column: AnnotatedColumn()
+[DEBUG] 2024-11-27 16:53:14.743 [main] PropertyBinder - Building property team
+[DEBUG] 2024-11-27 16:53:14.743 [main] AnnotatedColumn - Binding column: AnnotatedJoinColumn(column='user_id')
+[DEBUG] 2024-11-27 16:53:14.743 [main] AnnotatedColumn - Binding column: AnnotatedColumn()
+[DEBUG] 2024-11-27 16:53:14.744 [main] PropertyBinder - Building property user
+[DEBUG] 2024-11-27 16:53:14.744 [main] ClassLoaderServiceImpl - HHH000194: Package not found or wo package-info.java: com.radams.entity
+[DEBUG] 2024-11-27 16:53:14.745 [main] BasicValueBinder - Starting `BasicValueBinder#fillSimpleValue` for id
+[DEBUG] 2024-11-27 16:53:14.745 [main] BasicValueBinder - Starting `BasicValueBinder#fillSimpleValue` for userEmail
+[DEBUG] 2024-11-27 16:53:14.746 [main] BasicValueBinder - Starting `BasicValueBinder#fillSimpleValue` for id
+[DEBUG] 2024-11-27 16:53:14.746 [main] BasicValueBinder - Starting `BasicValueBinder#fillSimpleValue` for sportName
+[DEBUG] 2024-11-27 16:53:14.746 [main] BasicValueBinder - Starting `BasicValueBinder#fillSimpleValue` for id
+[DEBUG] 2024-11-27 16:53:14.746 [main] BasicValueBinder - Starting `BasicValueBinder#fillSimpleValue` for teamName
+[DEBUG] 2024-11-27 16:53:14.746 [main] BasicValueBinder - Starting `BasicValueBinder#fillSimpleValue` for id
+[DEBUG] 2024-11-27 16:53:14.749 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [users]
+[DEBUG] 2024-11-27 16:53:14.749 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [sports]
+[DEBUG] 2024-11-27 16:53:14.750 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [teams]
+[DEBUG] 2024-11-27 16:53:14.750 [main] PrimaryKey - Forcing column [id] to be non-null as it is part of the primary key for table [favorite_teams]
+[DEBUG] 2024-11-27 16:53:14.750 [main] CollectionSecondPass - Second pass for collection: com.radams.entity.User.favoriteTeams
+[DEBUG] 2024-11-27 16:53:14.751 [main] CollectionBinder - Binding a OneToMany: com.radams.entity.User.favoriteTeams through a foreign key
+[DEBUG] 2024-11-27 16:53:14.752 [main] CollectionBinder - Mapping collection: com.radams.entity.User.favoriteTeams -> favorite_teams
+[DEBUG] 2024-11-27 16:53:14.753 [main] TableBinder - Retrieving property com.radams.entity.FavoriteTeam.user
+[DEBUG] 2024-11-27 16:53:14.753 [main] CollectionSecondPass - Mapped collection key: user_id, one-to-many: com.radams.entity.FavoriteTeam
+[DEBUG] 2024-11-27 16:53:14.753 [main] CollectionSecondPass - Second pass for collection: com.radams.entity.Sport.teams
+[DEBUG] 2024-11-27 16:53:14.753 [main] CollectionBinder - Binding a OneToMany: com.radams.entity.Sport.teams through a foreign key
+[DEBUG] 2024-11-27 16:53:14.753 [main] CollectionBinder - Mapping collection: com.radams.entity.Sport.teams -> teams
+[DEBUG] 2024-11-27 16:53:14.754 [main] TableBinder - Retrieving property com.radams.entity.Team.sport
+[DEBUG] 2024-11-27 16:53:14.754 [main] CollectionSecondPass - Mapped collection key: sport_id, one-to-many: com.radams.entity.Team
+[DEBUG] 2024-11-27 16:53:14.754 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.radams.entity.Team
+[DEBUG] 2024-11-27 16:53:14.755 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.radams.entity.User
+[DEBUG] 2024-11-27 16:53:14.755 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.radams.entity.Sport
+[DEBUG] 2024-11-27 16:53:14.762 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.radams.entity.Team
+[DEBUG] 2024-11-27 16:53:14.762 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.radams.entity.User
+[DEBUG] 2024-11-27 16:53:14.762 [main] InFlightMetadataCollectorImpl - Resolving reference to class: com.radams.entity.Sport
+[DEBUG] 2024-11-27 16:53:14.970 [main] SessionFactoryImpl - Building session factory
+[DEBUG] 2024-11-27 16:53:14.999 [main] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2024-11-27 16:53:14.999 [main] SessionFactoryImpl - Instantiating SessionFactory with settings: {gopherProxySet=false, awt.toolkit=sun.lwawt.macosx.LWCToolkit, hibernate.format_sql=false, dialect=org.hibernate.dialect.MySQLDialect, java.specification.version=11, sun.cpu.isalist=, hibernate.c3p0.idle_test_period=3000, sun.jnu.encoding=UTF-8, hibernate.dialect=org.hibernate.dialect.MySQLDialect, hibernate.c3p0.debugUnreturnedConnectionStackTraces=false, hibernate.c3p0.min_size=5, java.class.path=/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar:/Applications/IntelliJ IDEA.app/Contents/plugins/junit/lib/junit5-rt.jar:/Applications/IntelliJ IDEA.app/Contents/plugins/junit/lib/junit-rt.jar:/Users/rashadadams/Documents/GitHub/enterpriseJava/projects/sportsPerformancePredictor/target/test-classes:/Users/rashadadams/Documents/GitHub/enterpriseJava/projects/sportsPerformancePredictor/target/classes:/Users/rashadadams/.m2/repository/org/hibernate/orm/hibernate-core/6.4.3.Final/hibernate-core-6.4.3.Final.jar:/Users/rashadadams/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/rashadadams/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/rashadadams/.m2/repository/org/jboss/logging/jboss-logging/3.5.0.Final/jboss-logging-3.5.0.Final.jar:/Users/rashadadams/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/rashadadams/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/rashadadams/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/rashadadams/.m2/repository/net/bytebuddy/byte-buddy/1.14.7/byte-buddy-1.14.7.jar:/Users/rashadadams/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/rashadadams/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/rashadadams/.m2/repository/org/hibernate/orm/hibernate-c3p0/6.4.3.Final/hibernate-c3p0-6.4.3.Final.jar:/Users/rashadadams/.m2/repository/com/mchange/c3p0/0.9.5.5/c3p0-0.9.5.5.jar:/Users/rashadadams/.m2/repository/com/mchange/mchange-commons-java/0.2.19/mchange-commons-java-0.2.19.jar:/Users/rashadadams/.m2/repository/org/junit/platform/junit-platform-runner/1.0.0/junit-platform-runner-1.0.0.jar:/Users/rashadadams/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/Users/rashadadams/.m2/repository/org/junit/platform/junit-platform-launcher/1.0.0/junit-platform-launcher-1.0.0.jar:/Users/rashadadams/.m2/repository/org/junit/platform/junit-platform-suite-api/1.0.0/junit-platform-suite-api-1.0.0.jar:/Users/rashadadams/.m2/repository/org/junit/platform/junit-platform-commons/1.0.0/junit-platform-commons-1.0.0.jar:/Users/rashadadams/.m2/repository/org/junit/vintage/junit-vintage-engine/4.12.0/junit-vintage-engine-4.12.0.jar:/Users/rashadadams/.m2/repository/org/junit/platform/junit-platform-engine/1.0.0/junit-platform-engine-1.0.0.jar:/Users/rashadadams/.m2/repository/org/opentest4j/opentest4j/1.0.0/opentest4j-1.0.0.jar:/Users/rashadadams/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.0.0/junit-jupiter-engine-5.0.0.jar:/Users/rashadadams/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.0.0/junit-jupiter-api-5.0.0.jar:/Users/rashadadams/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/rashadadams/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/rashadadams/.m2/repository/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar:/Users/rashadadams/.m2/repository/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar:/Users/rashadadams/.m2/repository/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar:/Users/rashadadams/.m2/repository/jstl/jstl/1.2/jstl-1.2.jar:/Users/rashadadams/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar:/Users/rashadadams/.m2/repository/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1.jar:/Users/rashadadams/.m2/repository/com/auth0/java-jwt/3.4.1/java-jwt-3.4.1.jar:/Users/rashadadams/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/rashadadams/.m2/repository/org/json/json/20170516/json-20170516.jar:/Users/rashadadams/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/rashadadams/.m2/repository/org/glassfish/jersey/core/jersey-client/2.29.1/jersey-client-2.29.1.jar:/Users/rashadadams/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/2.1.6/jakarta.ws.rs-api-2.1.6.jar:/Users/rashadadams/.m2/repository/org/glassfish/jersey/core/jersey-common/2.29.1/jersey-common-2.29.1.jar:/Users/rashadadams/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/Users/rashadadams/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.3/osgi-resource-locator-1.0.3.jar:/Users/rashadadams/.m2/repository/org/glassfish/hk2/external/jakarta.inject/2.6.1/jakarta.inject-2.6.1.jar:/Users/rashadadams/.m2/repository/org/glassfish/jersey/inject/jersey-hk2/2.29.1/jersey-hk2-2.29.1.jar:/Users/rashadadams/.m2/repository/org/glassfish/hk2/hk2-locator/2.6.1/hk2-locator-2.6.1.jar:/Users/rashadadams/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.6.1/aopalliance-repackaged-2.6.1.jar:/Users/rashadadams/.m2/repository/org/glassfish/hk2/hk2-api/2.6.1/hk2-api-2.6.1.jar:/Users/rashadadams/.m2/repository/org/glassfish/hk2/hk2-utils/2.6.1/hk2-utils-2.6.1.jar:/Users/rashadadams/.m2/repository/org/javassist/javassist/3.22.0-CR2/javassist-3.22.0-CR2.jar:/Users/rashadadams/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet/2.29.1/jersey-container-servlet-2.29.1.jar:/Users/rashadadams/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.29.1/jersey-container-servlet-core-2.29.1.jar:/Users/rashadadams/.m2/repository/org/glassfish/jersey/core/jersey-server/2.29.1/jersey-server-2.29.1.jar:/Users/rashadadams/.m2/repository/org/glassfish/jersey/media/jersey-media-jaxb/2.29.1/jersey-media-jaxb-2.29.1.jar:/Users/rashadadams/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar:/Users/rashadadams/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.0/jackson-core-2.10.0.jar:/Users/rashadadams/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.0/jackson-annotations-2.10.0.jar:/Users/rashadadams/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.0/jackson-databind-2.10.0.jar:/Users/rashadadams/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/Users/rashadadams/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/Users/rashadadams/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.3/jaxb-impl-2.3.3.jar:/Users/rashadadams/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/Users/rashadadams/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.0/jakarta.xml.bind-api-4.0.0.jar:/Users/rashadadams/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.0/jakarta.activation-api-2.1.0.jar:/Users/rashadadams/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.2/jaxb-runtime-4.0.2.jar:/Users/rashadadams/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.2/jaxb-core-4.0.2.jar:/Users/rashadadams/.m2/repository/org/eclipse/angus/angus-activation/2.0.0/angus-activation-2.0.0.jar:/Users/rashadadams/.m2/repository/org/glassfish/jaxb/txw2/4.0.2/txw2-4.0.2.jar:/Users/rashadadams/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.1/istack-commons-runtime-4.1.1.jar, java.vm.vendor=Eclipse Adoptium, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, java.vendor.url=https://adoptium.net/, user.timezone=America/New_York, os.name=Mac OS X, java.vm.specification.version=11, sun.java.launcher=SUN_STANDARD, user.country=US, sun.boot.library.path=/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/lib, sun.java.command=com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 com.radams.entity.SportDaoTest,getByPropertyLike, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, jdk.debug=release, sun.cpu.endian=little, user.home=/Users/rashadadams, hibernate.c3p0.max_statements=50, user.language=en, java.specification.vendor=Oracle Corporation, java.version.date=2023-07-18, java.home=/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home, file.separator=/, java.vm.compressedOopsMode=Zero based, line.separator=
+, hibernate.c3p0.timeout=300, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, connection.password=student, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, hibernate.c3p0.max_size=20, java.runtime.version=11.0.20+8, user.name=rashadadams, path.separator=:, hibernate.connection.username=****, os.version=15.1.1, java.runtime.name=OpenJDK Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost/sportsAnalyticsPro_test, file.encoding=UTF-8, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=false, java.vendor.version=Temurin-11.0.20+8, hibernate.connection.driver_class=com.mysql.cj.jdbc.Driver, java.vendor.url.bug=https://github.com/adoptium/adoptium-support/issues, java.io.tmpdir=/var/folders/0j/24v3d27s3676y9nl_twl5ycc0000gn/T/, java.version=11.0.20, user.dir=/Users/rashadadams/Documents/GitHub/enterpriseJava/projects/sportsPerformancePredictor, os.arch=x86_64, connection.username=student, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, hibernate.connection.password=****, sun.os.patch.level=unknown, connection.driver_class=com.mysql.cj.jdbc.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@25a5c8e, java.library.path=/Users/rashadadams/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor=Eclipse Adoptium, java.vm.info=mixed mode, java.vm.version=11.0.20+8, java.specification.maintenance.version=2, sun.io.unicode.encoding=UnicodeBig, connection.url=jdbc:mysql://localhost/sportsAnalyticsPro_test, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.class.version=55.0}
+[DEBUG] 2024-11-27 16:53:15.002 [main] SessionFactoryImpl - Session factory constructed with filter configurations : {}
+[DEBUG] 2024-11-27 16:53:15.007 [main] SchemaManagementToolCoordinator - No schema actions specified for contributor `orm`; doing nothing
+[DEBUG] 2024-11-27 16:53:15.035 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(max)] under max; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.035 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(min)] under min; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.035 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sum)] under sum; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.036 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(avg)] under avg; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.037 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.CountFunction@25699aa7] under count; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.037 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.EveryAnyEmulation@693f2213] under every; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.037 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.EveryAnyEmulation@514377fc] under any; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.037 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(floor)] under floor; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.038 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(ceiling)] under ceiling; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.038 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(mod)] under mod; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.038 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(abs)] under abs; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.038 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sign)] under sign; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.038 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sqrt)] under sqrt; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.038 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(ln)] under ln; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.038 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(exp)] under exp; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.038 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(power)] under power; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.039 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(round)] under round; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.039 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sin)] under sin; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.039 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(cos)] under cos; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.039 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(tan)] under tan; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.039 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(asin)] under asin; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.039 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(acos)] under acos; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.039 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(atan)] under atan; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.039 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(atan2)] under atan2; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.040 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@59b492ec] under sinh; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.040 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@55c1ced9] under cosh; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.040 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@49cc9b2a] under tanh; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.040 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@11826398] under pi; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.041 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@6c5ca0b6] under log; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.041 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(coalesce)] under coalesce; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.041 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(nullif)] under nullif; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.041 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(left)] under left; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.041 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(right)] under right; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.042 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(replace)] under replace; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.042 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(concat)] under concat; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.042 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(lower)] under lower; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.042 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(upper)] under upper; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.043 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(substring)] under substring; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.043 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(locate)] under locate; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.043 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(character_length)] under character_length; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.043 [main] SqmFunctionRegistry - Registering alternate key : length -> character_length
+[DEBUG] 2024-11-27 16:53:15.044 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.LocatePositionEmulation@33d230ce] under position; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.046 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.InsertSubstringOverlayEmulation@7caf1e5] under overlay; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.046 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.TrimFunction@681de87f] under trim; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.047 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.CastFunction@4e974b9e] under cast; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.047 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@370c7cc5] under collate; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.047 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.ExtractFunction@a056b26] under extract; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.047 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(least)] under least; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.047 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(greatest)] under greatest; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.048 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.CoalesceIfnullEmulation@4bce62b] under ifnull; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.048 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(lpad)] under lpad; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.048 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(rpad)] under rpad; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.048 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.LpadRpadPadEmulation@5c82031b] under pad; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.048 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.CastStrEmulation@661e1399] under str; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.049 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.FormatFunction@53d30d23] under format; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.050 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.TimestampaddFunction@59e7564b] under timestampadd; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.050 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.TimestampdiffFunction@1471b98d] under timestampdiff; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registering alternate key : dateadd -> timestampadd
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registering alternate key : datediff -> timestampdiff
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@23564dd2] under current_date; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@54895681] under current_time; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@2dd0a0d0] under current_timestamp; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registering alternate key : current date -> current_date
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registering alternate key : current time -> current_time
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registering alternate key : current timestamp -> current_timestamp
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@6bf570c] under local_date; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@1796b2d4] under local_time; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@935d3f9] under local_datetime; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@214b342f] under offset_datetime; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registering alternate key : local date -> local_date
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registering alternate key : local time -> local_time
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registering alternate key : local datetime -> local_datetime
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registering alternate key : offset datetime -> offset_datetime
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.CurrentFunction@5db0003d] under instant; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.051 [main] SqmFunctionRegistry - Registering alternate key : current_instant -> instant
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.SqlFunction@7de147e9] under sql; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(soundex)] under soundex; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(radians)] under radians; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(degrees)] under degrees; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(cot)] under cot; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(log)] under log; prior registration was org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@6c5ca0b6
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(log2)] under log2; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(log10)] under log10; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(ltrim)] under ltrim; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(rtrim)] under rtrim; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(octet_length)] under octet_length; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(reverse)] under reverse; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(space)] under space; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.052 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(repeat)] under repeat; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.MultipatternSqmFunctionDescriptor@8eb6f9a] under lpad; prior registration was NamedSqmFunctionTemplate(lpad)
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.MultipatternSqmFunctionDescriptor@29170a47] under rpad; prior registration was NamedSqmFunctionTemplate(rpad)
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(md5)] under md5; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(day)] under day; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(month)] under month; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(year)] under year; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(hour)] under hour; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(minute)] under minute; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(second)] under second; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(microsecond)] under microsecond; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(dayofweek)] under dayofweek; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(dayofmonth)] under dayofmonth; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.053 [main] SqmFunctionRegistry - Registering alternate key : day -> dayofmonth
+[DEBUG] 2024-11-27 16:53:15.054 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(dayofyear)] under dayofyear; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.054 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(week)] under week; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.054 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(quarter)] under quarter; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.054 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(monthname)] under monthname; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.054 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(dayname)] under dayname; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.054 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(last_day)] under last_day; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.054 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(date)] under date; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.054 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(timestamp)] under timestamp; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.054 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(time)] under time; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.054 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(utc_date)] under utc_date; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.054 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(utc_time)] under utc_time; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.054 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(utc_timestamp)] under utc_timestamp; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(rand)] under rand; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(crc32)] under crc32; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sha1)] under sha1; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sha2)] under sha2; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(sha)] under sha; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(bit_length)] under bit_length; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(octet_length)] under octet_length; prior registration was NamedSqmFunctionTemplate(octet_length)
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(ascii)] under ascii; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(instr)] under instr; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(substr)] under substr; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@2a8f8555] under position; prior registration was org.hibernate.dialect.function.LocatePositionEmulation@33d230ce
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(curtime)] under curtime; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(curdate)] under curdate; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.055 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(now)] under now; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.TruncFunction@759a678a] under trunc; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registering alternate key : truncate -> trunc
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(insert)] under insert; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@6cdbe5ec] under bitand; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@14b8a751] under bitor; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@7345f97d] under bitxor; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@554566a8] under bitnot; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(bit_and)] under bit_and; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(bit_or)] under bit_or; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(stddev)] under stddev; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(stddev_pop)] under stddev_pop; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(stddev_samp)] under stddev_samp; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.058 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(variance)] under variance; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(var_pop)] under var_pop; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(var_samp)] under var_samp; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(datediff)] under datediff; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(adddate)] under adddate; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(subdate)] under subdate; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(addtime)] under addtime; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(subtime)] under subtime; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.FormatFunction@66020d69] under format; prior registration was org.hibernate.dialect.function.FormatFunction@53d30d23
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(makedate)] under makedate; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(maketime)] under maketime; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(localtime)] under localtime; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(localtimestamp)] under localtimestamp; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(localtime)] under local_time; prior registration was org.hibernate.dialect.function.CurrentFunction@1796b2d4
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(localtimestamp)] under local_datetime; prior registration was org.hibernate.dialect.function.CurrentFunction@935d3f9
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(localtime)] under localtime; prior registration was NamedSqmFunctionTemplate(localtime)
+[DEBUG] 2024-11-27 16:53:15.059 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@3751acd7] under pi; prior registration was org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@11826398
+[DEBUG] 2024-11-27 16:53:15.060 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@6b832551] under chr; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.060 [main] SqmFunctionRegistry - Registering alternate key : char -> chr
+[DEBUG] 2024-11-27 16:53:15.060 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.query.sqm.function.PatternBasedSqmFunctionDescriptor@150d6eaf] under sysdate; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.060 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(row_number)] under row_number; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.060 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(lag)] under lag; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.060 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(lead)] under lead; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.060 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(first_value)] under first_value; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.060 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(last_value)] under last_value; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.060 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [NamedSqmFunctionTemplate(nth_value)] under nth_value; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.061 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.HypotheticalSetWindowEmulation@611c3eae] under rank; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.061 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.HypotheticalSetWindowEmulation@13e00016] under dense_rank; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.061 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.HypotheticalSetWindowEmulation@7b3cbe6e] under percent_rank; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.061 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.HypotheticalSetWindowEmulation@177ede17] under cume_dist; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.062 [main] SqmFunctionRegistry - Registered SqmFunctionTemplate [org.hibernate.dialect.function.ListaggGroupConcatEmulation@7b5ac347] under listagg; prior registration was null
+[DEBUG] 2024-11-27 16:53:15.065 [main] HQL_FUNCTIONS - abs(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.065 [main] HQL_FUNCTIONS - Double acos(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.065 [main] HQL_FUNCTIONS - adddate(DATE datetime, INTEGER days)
+[DEBUG] 2024-11-27 16:53:15.065 [main] HQL_FUNCTIONS - addtime(TIME datetime, TIME time)
+[DEBUG] 2024-11-27 16:53:15.065 [main] HQL_FUNCTIONS - Boolean any(BOOLEAN arg)
+[DEBUG] 2024-11-27 16:53:15.065 [main] HQL_FUNCTIONS - Integer ascii(STRING arg)
+[DEBUG] 2024-11-27 16:53:15.065 [main] HQL_FUNCTIONS - Double asin(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Double atan(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Double atan2(NUMERIC arg0, NUMERIC arg1)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - avg(arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - bit_and(arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Integer bit_length(STRING_OR_CLOB arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - bit_or(arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - bitand(arg0, arg1)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - bitnot(arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - bitor(arg0, arg1)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - bitxor(arg0, arg1)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - cast(arg as Type)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - ceiling(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Character char(INTEGER arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Integer character_length(STRING_OR_CLOB arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Character chr(INTEGER arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - coalesce(arg0[, arg1[, ...]])
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - String collate(STRING string as COLLATION collation)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - String concat(STRING string0[, STRING string1[, ...]])
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Double cos(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Double cosh(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Double cot(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Long count([distinct ]{arg|*})
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Integer crc32(arg)
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Double cume_dist([arg0[, ...]])
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Date curdate()
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Date current date
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Time current time
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Timestamp current timestamp
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Date current_date
+[DEBUG] 2024-11-27 16:53:15.066 [main] HQL_FUNCTIONS - Instant current_instant
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Time current_time
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Timestamp current_timestamp
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Time curtime()
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Date date(arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - dateadd(TEMPORAL_UNIT field, INTEGER magnitude, TEMPORAL datetime)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Integer datediff(DATE end, DATE start)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Integer day(DATE arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - String dayname(DATE arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Integer dayofmonth(DATE arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Integer dayofweek(DATE arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Integer dayofyear(DATE arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Double degrees(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Long dense_rank([arg0[, ...]])
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Boolean every(BOOLEAN arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Double exp(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - extract(TEMPORAL_UNIT field from TEMPORAL arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - first_valueANY value
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - floor(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - String format(TEMPORAL datetime as STRING pattern)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - greatest(COMPARABLE arg0, COMPARABLE arg1[, arg2[, ...]])
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Integer hour(TIME arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - ifnull(arg0, arg1)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - String insert(STRING string, INTEGER start, INTEGER length, STRING replacement)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Instant instant
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Integer instr(STRING string, STRING pattern[, INTEGER start[, INTEGER occurrence]])
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - lagANY value[, INTEGER offset[, ANY default]]
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Date last_day(DATE arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - last_valueANY value
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - leadANY value[, INTEGER offset[, ANY default]]
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - least(COMPARABLE arg0, COMPARABLE arg1[, arg2[, ...]])
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - String left(STRING string, INTEGER length)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - Integer length(STRING_OR_CLOB arg)
+[DEBUG] 2024-11-27 16:53:15.067 [main] HQL_FUNCTIONS - String listagg(STRING arg0, STRING arg1)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Double ln(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - LocalDate local date
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - LocalDateTime local datetime
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - LocalTime local time
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - LocalDate local_date
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - LocalDateTime local_datetime
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - LocalTime local_time
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Timestamp localtime
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Timestamp localtimestamp
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Integer locate(STRING pattern, STRING string[, INTEGER start])
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Double log(NUMERIC arg0[, NUMERIC arg1])
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Double log10(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Double log2(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - String lower(STRING string)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - String lpad(string, length[, padding])
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - String ltrim(STRING string[, STRING characters])
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Date makedate(INTEGER year, INTEGER dayofyear)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Time maketime(INTEGER hour, INTEGER min, INTEGER sec)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - max(COMPARABLE arg)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - String md5(arg)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Integer microsecond(TIME arg)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - min(COMPARABLE arg)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Integer minute(TIME arg)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Integer mod(INTEGER arg0, INTEGER arg1)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Integer month(DATE arg)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - String monthname(DATE arg)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Timestamp now()
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - nth_valueANY value, INTEGER nth
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - nullif(arg0, arg1)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Integer octet_length(STRING_OR_CLOB arg)
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - OffsetDateTime offset datetime
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - OffsetDateTime offset_datetime
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - String overlay(STRING string placing STRING replacement from INTEGER start[ for INTEGER length])
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - String pad(STRING string with INTEGER length {leading|trailing}[ STRING character])
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Double percent_rank([arg0[, ...]])
+[DEBUG] 2024-11-27 16:53:15.068 [main] HQL_FUNCTIONS - Double pi
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Integer position(STRING pattern in STRING string)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Double power(NUMERIC arg0, NUMERIC arg1)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Integer quarter(DATE arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Double radians(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Double rand([INTEGER seed])
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Long rank([arg0[, ...]])
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String repeat(STRING string, INTEGER times)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String replace(STRING string, STRING pattern, STRING replacement)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String reverse(STRING arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String right(STRING string, INTEGER length)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - round(NUMERIC number[, INTEGER places])
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Long row_number()
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String rpad(string, length[, padding])
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String rtrim(STRING string[, STRING characters])
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Integer second(TIME arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String sha(arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String sha1(arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String sha2(arg0, arg1)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Integer sign(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Double sin(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Double sinh(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String soundex(arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String space(INTEGER arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Object sql
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Double sqrt(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Double stddev(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Double stddev_pop(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Double stddev_samp(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String str(arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - subdate(DATE datetime, INTEGER days)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String substr(STRING string, INTEGER start[, INTEGER length])
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String substring(STRING string{ from|,} INTEGER start[{ for|,} INTEGER length])
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - subtime(TIME datetime, TIME time)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - sum(arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Timestamp sysdate()
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Double tan(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Double tanh(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - String time(arg)
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - Timestamp timestamp(arg0[, arg1])
+[DEBUG] 2024-11-27 16:53:15.069 [main] HQL_FUNCTIONS - timestampadd(TEMPORAL_UNIT field, INTEGER magnitude, TEMPORAL datetime)
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - basicType@14(java.lang.Long,-5)|basicType@17(java.lang.Double,8) timestampdiff(TEMPORAL_UNIT field, TEMPORAL start, TEMPORAL end)
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - String trim([[{leading|trailing|both} ][STRING arg0 ]from] STRING arg1)
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - trunc( ... )
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - truncate( ... )
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - String upper(STRING string)
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - Date utc_date
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - Time utc_time
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - Timestamp utc_timestamp
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - Double var_pop(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - Double var_samp(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - Double variance(NUMERIC arg)
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - Integer week(DATE arg)
+[DEBUG] 2024-11-27 16:53:15.070 [main] HQL_FUNCTIONS - Integer year(DATE arg)
+[DEBUG] 2024-11-27 16:53:15.073 [main] cache - Starting QueryInterpretationCache(2048)
+[DEBUG] 2024-11-27 16:53:15.170 [main] SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+[DEBUG] 2024-11-27 16:53:15.171 [main] EntityCopyObserverFactoryInitiator - Configured EntityCopyObserver strategy: disallow
+[DEBUG] 2024-11-27 16:53:15.259 [main] interceptor - To-one property `com.radams.entity.Team#sport` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2024-11-27 16:53:15.262 [main] interceptor - To-one property `com.radams.entity.Team#sport` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2024-11-27 16:53:15.264 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.radams.entity.Team] is safe
+[DEBUG] 2024-11-27 16:53:15.264 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.radams.entity.Team
+[DEBUG] 2024-11-27 16:53:15.390 [main] BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [com.radams.entity.Team]: private accessor [sport]
+[DEBUG] 2024-11-27 16:53:15.393 [main] interceptor - To-one property `com.radams.entity.Team#sport` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2024-11-27 16:53:15.414 [main] interceptor - To-one property `com.radams.entity.FavoriteTeam#team` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2024-11-27 16:53:15.414 [main] interceptor - To-one property `com.radams.entity.FavoriteTeam#team` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2024-11-27 16:53:15.414 [main] interceptor - To-one property `com.radams.entity.FavoriteTeam#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2024-11-27 16:53:15.414 [main] interceptor - To-one property `com.radams.entity.FavoriteTeam#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2024-11-27 16:53:15.414 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.radams.entity.FavoriteTeam] is safe
+[DEBUG] 2024-11-27 16:53:15.414 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.radams.entity.FavoriteTeam
+[DEBUG] 2024-11-27 16:53:15.428 [main] BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [com.radams.entity.FavoriteTeam]: private accessor [team]
+[DEBUG] 2024-11-27 16:53:15.428 [main] interceptor - To-one property `com.radams.entity.FavoriteTeam#team` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2024-11-27 16:53:15.428 [main] interceptor - To-one property `com.radams.entity.FavoriteTeam#user` was mapped with LAZY + NO_PROXY but the class was not enhanced
+[DEBUG] 2024-11-27 16:53:15.429 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.radams.entity.Sport] is safe
+[DEBUG] 2024-11-27 16:53:15.429 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.radams.entity.Sport
+[DEBUG] 2024-11-27 16:53:15.441 [main] BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [com.radams.entity.Sport]: private accessor [sportName]
+[DEBUG] 2024-11-27 16:53:15.441 [main] ClassLoaderAccessImpl - Not known whether passed class name [com.radams.entity.User] is safe
+[DEBUG] 2024-11-27 16:53:15.441 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.radams.entity.User
+[DEBUG] 2024-11-27 16:53:15.450 [main] BytecodeProviderImpl - HHH000513: Unable to create the ReflectionOptimizer for [com.radams.entity.User]: private accessor [favoriteTeams]
+[DEBUG] 2024-11-27 16:53:15.460 [main] mutation - Skipping collection (re)creation - com.radams.entity.User.favoriteTeams
+[DEBUG] 2024-11-27 16:53:15.461 [main] mutation - Skipping collection row deletions - com.radams.entity.User.favoriteTeams
+[DEBUG] 2024-11-27 16:53:15.461 [main] mutation - Skipping collection removals - com.radams.entity.User.favoriteTeams
+[DEBUG] 2024-11-27 16:53:15.462 [main] mutation - Skipping collection (re)creation - com.radams.entity.Sport.teams
+[DEBUG] 2024-11-27 16:53:15.462 [main] mutation - Skipping collection row deletions - com.radams.entity.Sport.teams
+[DEBUG] 2024-11-27 16:53:15.462 [main] mutation - Skipping collection removals - com.radams.entity.Sport.teams
+[DEBUG] 2024-11-27 16:53:15.483 [main] creation - Starting post-init callbacks
+[DEBUG] 2024-11-27 16:53:15.483 [main] creation - Starting PostInitCallbackEntry : To-one key - NavigableRole[com.radams.entity.Team.sport]
+[DEBUG] 2024-11-27 16:53:15.485 [main] creation - Starting PostInitCallbackEntry : Entity(com.radams.entity.Team) `staticFetchableList` generator
+[DEBUG] 2024-11-27 16:53:15.485 [main] creation - Starting PostInitCallbackEntry : To-one key - NavigableRole[com.radams.entity.FavoriteTeam.team]
+[DEBUG] 2024-11-27 16:53:15.486 [main] creation - Starting PostInitCallbackEntry : To-one key - NavigableRole[com.radams.entity.FavoriteTeam.user]
+[DEBUG] 2024-11-27 16:53:15.486 [main] creation - Starting PostInitCallbackEntry : Entity(com.radams.entity.FavoriteTeam) `staticFetchableList` generator
+[DEBUG] 2024-11-27 16:53:15.486 [main] creation - Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[com.radams.entity.Sport.teams#{element}]) - element descriptor
+[DEBUG] 2024-11-27 16:53:15.486 [main] creation - Starting PostInitCallbackEntry : PluralAttributeMapping(com.radams.entity.Sport.teams)#finishInitialization
+[DEBUG] 2024-11-27 16:53:15.486 [main] creation - Starting PostInitCallbackEntry : PluralAttributeMapping(com.radams.entity.Sport.teams) - key descriptor
+[DEBUG] 2024-11-27 16:53:15.486 [main] creation - Starting PostInitCallbackEntry : Entity(com.radams.entity.Sport) `staticFetchableList` generator
+[DEBUG] 2024-11-27 16:53:15.486 [main] creation - Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[com.radams.entity.User.favoriteTeams#{element}]) - element descriptor
+[DEBUG] 2024-11-27 16:53:15.486 [main] creation - Starting PostInitCallbackEntry : PluralAttributeMapping(com.radams.entity.User.favoriteTeams)#finishInitialization
+[DEBUG] 2024-11-27 16:53:15.486 [main] creation - Starting PostInitCallbackEntry : PluralAttributeMapping(com.radams.entity.User.favoriteTeams) - key descriptor
+[DEBUG] 2024-11-27 16:53:15.486 [main] creation - Starting PostInitCallbackEntry : Entity(com.radams.entity.User) `staticFetchableList` generator
+[DEBUG] 2024-11-27 16:53:15.486 [main] creation - Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[com.radams.entity.Sport.teams#{element}]) - element descriptor
+[DEBUG] 2024-11-27 16:53:15.486 [main] creation - Starting PostInitCallbackEntry : PluralAttributeMapping( NavigableRole[com.radams.entity.User.favoriteTeams#{element}]) - element descriptor
+[DEBUG] 2024-11-27 16:53:15.536 [main] create - Created new SQL alias : t1_0
+[DEBUG] 2024-11-27 16:53:15.537 [main] create - Registration of TableGroup [StandardTableGroup(com.radams.entity.Team)] with identifierForTableGroup [com.radams.entity.Team] for NavigablePath [com.radams.entity.Team] 
+[DEBUG] 2024-11-27 16:53:15.544 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@4fafd27e] with identifierForTableGroup [com.radams.entity.Team.sport] for NavigablePath [com.radams.entity.Team.sport] 
+[DEBUG] 2024-11-27 16:53:15.545 [main] create - Created new SQL alias : s1_0
+[DEBUG] 2024-11-27 16:53:15.553 [main] AST - DomainResult Graph:
+ \-EntityResultImpl [com.radams.entity.Team]
+ |  +-EntityFetchJoinedImpl [com.radams.entity.Team.sport]
+ |  \-BasicFetch [com.radams.entity.Team.teamName]
+
+[DEBUG] 2024-11-27 16:53:15.561 [main] tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (t1 : com.radams.entity.Team) {
+          primaryTableReference : teams as t1_0
+          TableGroupJoins {
+            left  join LazyTableGroup (s1 : com.radams.entity.Team.sport) {
+              primaryTableReference : sports as s1_0
+            }
+          }
+        }
+      }
+    }
+
+[DEBUG] 2024-11-27 16:53:15.568 [main] AbstractEntityPersister - Static SQL for entity: com.radams.entity.Team
+[DEBUG] 2024-11-27 16:53:15.568 [main] AbstractEntityPersister -  Version select: select id from teams where id=?
+[DEBUG] 2024-11-27 16:53:15.568 [main] AbstractEntityPersister -  Insert (0): insert into teams (sport_id,team_name) values (?,?)
+[DEBUG] 2024-11-27 16:53:15.568 [main] AbstractEntityPersister -  Update (0): update teams set sport_id=?,team_name=? where id=?
+[DEBUG] 2024-11-27 16:53:15.568 [main] AbstractEntityPersister -  Delete (0): delete from teams where id=?
+[DEBUG] 2024-11-27 16:53:15.568 [main] create - Created new SQL alias : ft1_0
+[DEBUG] 2024-11-27 16:53:15.568 [main] create - Registration of TableGroup [StandardTableGroup(com.radams.entity.FavoriteTeam)] with identifierForTableGroup [com.radams.entity.FavoriteTeam] for NavigablePath [com.radams.entity.FavoriteTeam] 
+[DEBUG] 2024-11-27 16:53:15.568 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@335b3d6] with identifierForTableGroup [com.radams.entity.FavoriteTeam.team] for NavigablePath [com.radams.entity.FavoriteTeam.team] 
+[DEBUG] 2024-11-27 16:53:15.568 [main] create - Created new SQL alias : t1_0
+[DEBUG] 2024-11-27 16:53:15.569 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@3a5ce4b8] with identifierForTableGroup [com.radams.entity.FavoriteTeam.team.sport] for NavigablePath [com.radams.entity.FavoriteTeam.team.sport] 
+[DEBUG] 2024-11-27 16:53:15.569 [main] create - Created new SQL alias : s1_0
+[DEBUG] 2024-11-27 16:53:15.569 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@65262308] with identifierForTableGroup [com.radams.entity.FavoriteTeam.user] for NavigablePath [com.radams.entity.FavoriteTeam.user] 
+[DEBUG] 2024-11-27 16:53:15.569 [main] create - Created new SQL alias : u1_0
+[DEBUG] 2024-11-27 16:53:15.569 [main] AST - DomainResult Graph:
+ \-EntityResultImpl [com.radams.entity.FavoriteTeam]
+ |  +-EntityFetchJoinedImpl [com.radams.entity.FavoriteTeam.team]
+ |  \-EntityFetchJoinedImpl [com.radams.entity.FavoriteTeam.user]
+
+[DEBUG] 2024-11-27 16:53:15.569 [main] tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (ft1 : com.radams.entity.FavoriteTeam) {
+          primaryTableReference : favorite_teams as ft1_0
+          TableGroupJoins {
+            left  join LazyTableGroup (t1 : com.radams.entity.FavoriteTeam.team) {
+              primaryTableReference : teams as t1_0
+              TableGroupJoins {
+                left  join LazyTableGroup (s1 : com.radams.entity.FavoriteTeam.team.sport) {
+                  primaryTableReference : sports as s1_0
+                }
+              }
+            }
+            left  join LazyTableGroup (u1 : com.radams.entity.FavoriteTeam.user) {
+              primaryTableReference : users as u1_0
+            }
+          }
+        }
+      }
+    }
+
+[DEBUG] 2024-11-27 16:53:15.569 [main] AbstractEntityPersister - Static SQL for entity: com.radams.entity.FavoriteTeam
+[DEBUG] 2024-11-27 16:53:15.569 [main] AbstractEntityPersister -  Version select: select id from favorite_teams where id=?
+[DEBUG] 2024-11-27 16:53:15.569 [main] AbstractEntityPersister -  Insert (0): insert into favorite_teams (team_id,user_id) values (?,?)
+[DEBUG] 2024-11-27 16:53:15.570 [main] AbstractEntityPersister -  Update (0): update favorite_teams set team_id=?,user_id=? where id=?
+[DEBUG] 2024-11-27 16:53:15.570 [main] AbstractEntityPersister -  Delete (0): delete from favorite_teams where id=?
+[DEBUG] 2024-11-27 16:53:15.570 [main] create - Created new SQL alias : s1_0
+[DEBUG] 2024-11-27 16:53:15.570 [main] create - Registration of TableGroup [StandardTableGroup(com.radams.entity.Sport)] with identifierForTableGroup [com.radams.entity.Sport] for NavigablePath [com.radams.entity.Sport] 
+[DEBUG] 2024-11-27 16:53:15.571 [main] create - Created new SQL alias : t1_0
+[DEBUG] 2024-11-27 16:53:15.572 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.OneToManyTableGroup@5d22604e] with identifierForTableGroup [com.radams.entity.Sport.teams] for NavigablePath [com.radams.entity.Sport.teams] 
+[DEBUG] 2024-11-27 16:53:15.572 [main] create - Registration of TableGroup [StandardTableGroup(com.radams.entity.Sport.teams.{element})] with identifierForTableGroup [com.radams.entity.Sport.teams.{element}] for NavigablePath [com.radams.entity.Sport.teams.{element}] 
+[DEBUG] 2024-11-27 16:53:15.578 [main] AST - DomainResult Graph:
+ \-EntityResultImpl [com.radams.entity.Sport]
+ |  +-BasicFetch [com.radams.entity.Sport.sportName]
+ |  \-EagerCollectionFetch [com.radams.entity.Sport.teams]
+ |  |  \-EntityFetchJoinedImpl [com.radams.entity.Sport.teams.{element}]
+
+[DEBUG] 2024-11-27 16:53:15.578 [main] tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (s1 : com.radams.entity.Sport) {
+          primaryTableReference : sports as s1_0
+          TableGroupJoins {
+            left  join OneToManyTableGroup (t1 : com.radams.entity.Sport.teams) {
+              primaryTableReference : teams as t1_0
+            }
+          }
+        }
+      }
+    }
+
+[DEBUG] 2024-11-27 16:53:15.578 [main] AbstractEntityPersister - Static SQL for entity: com.radams.entity.Sport
+[DEBUG] 2024-11-27 16:53:15.578 [main] AbstractEntityPersister -  Version select: select id from sports where id=?
+[DEBUG] 2024-11-27 16:53:15.578 [main] AbstractEntityPersister -  Insert (0): insert into sports (name) values (?)
+[DEBUG] 2024-11-27 16:53:15.578 [main] AbstractEntityPersister -  Update (0): update sports set name=? where id=?
+[DEBUG] 2024-11-27 16:53:15.579 [main] AbstractEntityPersister -  Delete (0): delete from sports where id=?
+[DEBUG] 2024-11-27 16:53:15.579 [main] create - Created new SQL alias : u1_0
+[DEBUG] 2024-11-27 16:53:15.579 [main] create - Registration of TableGroup [StandardTableGroup(com.radams.entity.User)] with identifierForTableGroup [com.radams.entity.User] for NavigablePath [com.radams.entity.User] 
+[DEBUG] 2024-11-27 16:53:15.579 [main] create - Created new SQL alias : ft1_0
+[DEBUG] 2024-11-27 16:53:15.579 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.OneToManyTableGroup@6d2db15b] with identifierForTableGroup [com.radams.entity.User.favoriteTeams] for NavigablePath [com.radams.entity.User.favoriteTeams] 
+[DEBUG] 2024-11-27 16:53:15.579 [main] create - Registration of TableGroup [StandardTableGroup(com.radams.entity.User.favoriteTeams.{element})] with identifierForTableGroup [com.radams.entity.User.favoriteTeams.{element}] for NavigablePath [com.radams.entity.User.favoriteTeams.{element}] 
+[DEBUG] 2024-11-27 16:53:15.579 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@749ad37c] with identifierForTableGroup [com.radams.entity.User.favoriteTeams.{element}.team] for NavigablePath [com.radams.entity.User.favoriteTeams.{element}.team] 
+[DEBUG] 2024-11-27 16:53:15.579 [main] create - Created new SQL alias : t1_0
+[DEBUG] 2024-11-27 16:53:15.579 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@591e5fd4] with identifierForTableGroup [com.radams.entity.User.favoriteTeams.{element}.team.sport] for NavigablePath [com.radams.entity.User.favoriteTeams.{element}.team.sport] 
+[DEBUG] 2024-11-27 16:53:15.580 [main] AST - DomainResult Graph:
+ \-EntityResultImpl [com.radams.entity.User]
+ |  +-EagerCollectionFetch [com.radams.entity.User.favoriteTeams]
+ |  |  \-EntityFetchJoinedImpl [com.radams.entity.User.favoriteTeams.{element}]
+ |  \-BasicFetch [com.radams.entity.User.userEmail]
+
+[DEBUG] 2024-11-27 16:53:15.580 [main] tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (u1 : com.radams.entity.User) {
+          primaryTableReference : users as u1_0
+          TableGroupJoins {
+            left  join OneToManyTableGroup (ft1 : com.radams.entity.User.favoriteTeams) {
+              primaryTableReference : favorite_teams as ft1_0
+              TableGroupJoins {
+                left  join LazyTableGroup (t1 : com.radams.entity.User.favoriteTeams.{element}.team) {
+                  primaryTableReference : teams as t1_0
+                  TableGroupJoins {
+                    left  join LazyTableGroup (s1 : com.radams.entity.User.favoriteTeams.{element}.team.sport) {
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+[DEBUG] 2024-11-27 16:53:15.580 [main] AbstractEntityPersister - Static SQL for entity: com.radams.entity.User
+[DEBUG] 2024-11-27 16:53:15.580 [main] AbstractEntityPersister -  Version select: select id from users where id=?
+[DEBUG] 2024-11-27 16:53:15.580 [main] AbstractEntityPersister -  Insert (0): insert into users (email) values (?)
+[DEBUG] 2024-11-27 16:53:15.581 [main] AbstractEntityPersister -  Update (0): update users set email=? where id=?
+[DEBUG] 2024-11-27 16:53:15.581 [main] AbstractEntityPersister -  Delete (0): delete from users where id=?
+[DEBUG] 2024-11-27 16:53:15.581 [main] create - Created new SQL alias : ft1_0
+[DEBUG] 2024-11-27 16:53:15.581 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.OneToManyTableGroup@398f0516] with identifierForTableGroup [com.radams.entity.User.favoriteTeams] for NavigablePath [com.radams.entity.User.favoriteTeams] 
+[DEBUG] 2024-11-27 16:53:15.581 [main] create - Registration of TableGroup [StandardTableGroup(com.radams.entity.User.favoriteTeams.{element})] with identifierForTableGroup [com.radams.entity.User.favoriteTeams.{element}] for NavigablePath [com.radams.entity.User.favoriteTeams.{element}] 
+[DEBUG] 2024-11-27 16:53:15.582 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@6dbb3d7d] with identifierForTableGroup [com.radams.entity.User.favoriteTeams.{element}.team] for NavigablePath [com.radams.entity.User.favoriteTeams.{element}.team] 
+[DEBUG] 2024-11-27 16:53:15.582 [main] create - Created new SQL alias : t1_0
+[DEBUG] 2024-11-27 16:53:15.582 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@7a3a49e5] with identifierForTableGroup [com.radams.entity.User.favoriteTeams.{element}.team.sport] for NavigablePath [com.radams.entity.User.favoriteTeams.{element}.team.sport] 
+[DEBUG] 2024-11-27 16:53:15.582 [main] create - Created new SQL alias : s1_0
+[DEBUG] 2024-11-27 16:53:15.582 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@6c1b82cd] with identifierForTableGroup [com.radams.entity.User.favoriteTeams.{element}.user] for NavigablePath [com.radams.entity.User.favoriteTeams.{element}.user] 
+[DEBUG] 2024-11-27 16:53:15.583 [main] AST - DomainResult Graph:
+ \-CollectionDomainResult [com.radams.entity.User.favoriteTeams]
+
+[DEBUG] 2024-11-27 16:53:15.584 [main] tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        OneToManyTableGroup (ft1 : com.radams.entity.User.favoriteTeams) {
+          primaryTableReference : favorite_teams as ft1_0
+          TableGroupJoins {
+            left  join LazyTableGroup (t1 : com.radams.entity.User.favoriteTeams.{element}.team) {
+              primaryTableReference : teams as t1_0
+              TableGroupJoins {
+                left  join LazyTableGroup (s1 : com.radams.entity.User.favoriteTeams.{element}.team.sport) {
+                  primaryTableReference : sports as s1_0
+                }
+              }
+            }
+            left  join LazyTableGroup (u1 : com.radams.entity.User.favoriteTeams.{element}.user) {
+            }
+          }
+        }
+      }
+    }
+
+[DEBUG] 2024-11-27 16:53:15.584 [main] mutation - Static SQL for collection: com.radams.entity.User.favoriteTeams
+[DEBUG] 2024-11-27 16:53:15.584 [main] create - Created new SQL alias : t1_0
+[DEBUG] 2024-11-27 16:53:15.584 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.OneToManyTableGroup@69de72ec] with identifierForTableGroup [com.radams.entity.Sport.teams] for NavigablePath [com.radams.entity.Sport.teams] 
+[DEBUG] 2024-11-27 16:53:15.584 [main] create - Registration of TableGroup [StandardTableGroup(com.radams.entity.Sport.teams.{element})] with identifierForTableGroup [com.radams.entity.Sport.teams.{element}] for NavigablePath [com.radams.entity.Sport.teams.{element}] 
+[DEBUG] 2024-11-27 16:53:15.584 [main] create - Registration of TableGroup [org.hibernate.sql.ast.tree.from.LazyTableGroup@21c99abf] with identifierForTableGroup [com.radams.entity.Sport.teams.{element}.sport] for NavigablePath [com.radams.entity.Sport.teams.{element}.sport] 
+[DEBUG] 2024-11-27 16:53:15.584 [main] AST - DomainResult Graph:
+ \-CollectionDomainResult [com.radams.entity.Sport.teams]
+
+[DEBUG] 2024-11-27 16:53:15.584 [main] tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        OneToManyTableGroup (t1 : com.radams.entity.Sport.teams) {
+          primaryTableReference : teams as t1_0
+          TableGroupJoins {
+            left  join LazyTableGroup (s1 : com.radams.entity.Sport.teams.{element}.sport) {
+            }
+          }
+        }
+      }
+    }
+
+[DEBUG] 2024-11-27 16:53:15.584 [main] mutation - Static SQL for collection: com.radams.entity.Sport.teams
+[DEBUG] 2024-11-27 16:53:15.607 [main] JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
+[DEBUG] 2024-11-27 16:53:15.608 [main] JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+[DEBUG] 2024-11-27 16:53:15.611 [main] StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2024-11-27 16:53:15.611 [main] JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 2024-11-27 16:53:15.612 [main] TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@77bc2e16] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@fd69983]
+[DEBUG] 2024-11-27 16:53:15.612 [main] NamedObjectRepository - Checking 0 named HQL queries
+[DEBUG] 2024-11-27 16:53:15.612 [main] NamedObjectRepository - Checking 0 named SQL queries
+[DEBUG] 2024-11-27 16:53:15.613 [main] SchemaManagementToolCoordinator - No schema actions specified for contributor `orm`; doing nothing
+[DEBUG] 2024-11-27 16:53:15.613 [main] SchemaManagementToolCoordinator - No actions found; doing nothing
+[DEBUG] 2024-11-27 16:53:15.615 [main] SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@42238078
+[DEBUG] 2024-11-27 16:53:15.615 [main] SessionFactoryRegistry - Registering SessionFactory: 6ff5f54d-e40d-447c-8af9-ca973b3938e9 (<unnamed>)
+[DEBUG] 2024-11-27 16:53:15.615 [main] SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+[DEBUG] 2024-11-27 16:53:15.615 [main] SessionFactoryImpl - Instantiated SessionFactory
+[DEBUG] 2024-11-27 16:53:15.659 [main] StatisticsInitiator - Statistics initialized [enabled=false]
+[DEBUG] 2024-11-27 16:53:15.747 [main] create - Created new SQL alias : s1_0
+[DEBUG] 2024-11-27 16:53:15.747 [main] create - Registration of TableGroup [StandardTableGroup(com.radams.entity.Sport(85314240036285))] with identifierForTableGroup [com.radams.entity.Sport] for NavigablePath [com.radams.entity.Sport] 
+[DEBUG] 2024-11-27 16:53:15.755 [main] BaseSqmToSqlAstConverter - Determining mapping-model type for SqmParameter : org.hibernate.query.sqm.tree.expression.SqmJpaCriteriaParameterWrapper@3275a47f
+[DEBUG] 2024-11-27 16:53:15.755 [main] BaseSqmToSqlAstConverter - Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.radams.entity.Sport(85314240036285).sportName) 
+[DEBUG] 2024-11-27 16:53:15.760 [main] AST - DomainResult Graph:
+ \-EntityResultImpl [com.radams.entity.Sport(85314240036285)]
+ |  +-BasicFetch [com.radams.entity.Sport(85314240036285).sportName]
+ |  \-SelectEagerCollectionFetch [com.radams.entity.Sport(85314240036285).teams]
+
+[DEBUG] 2024-11-27 16:53:15.760 [main] tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (s1 : com.radams.entity.Sport(85314240036285)) {
+          primaryTableReference : sports as s1_0
+        }
+      }
+    }
+
+[DEBUG] 2024-11-27 16:53:15.767 [main] exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+[DEBUG] 2024-11-27 16:53:15.776 [main] results - Initializer list:
+	  com.radams.entity.Sport(85314240036285) -> EntityResultInitializer(com.radams.entity.Sport(85314240036285))@1151617540 (SingleTableEntityPersister(com.radams.entity.Sport))
+	  com.radams.entity.Sport(85314240036285).teams -> SelectEagerCollectionInitializer(com.radams.entity.Sport(85314240036285).teams)@1516501617 (PluralAttribute(com.radams.entity.Sport.teams))
+
+[DEBUG] 2024-11-27 16:53:15.780 [main] SQL - select s1_0.id,s1_0.name from sports s1_0 where s1_0.name like ? escape ''
+[DEBUG] 2024-11-27 16:53:15.792 [main] results - Extracted JDBC value [0] - [1]
+[DEBUG] 2024-11-27 16:53:15.792 [main] entity - (EntityResultInitializer) Hydrated EntityKey (com.radams.entity.Sport(85314240036285)): 1
+[DEBUG] 2024-11-27 16:53:15.793 [main] collection - (SelectEagerCollectionInitializer) Current row collection key : com.radams.entity.Sport(85314240036285).teams#1
+[DEBUG] 2024-11-27 16:53:15.794 [main] entity - (EntityResultInitializer) Created new entity instance [com.radams.entity.Sport(85314240036285)#1] : 1525186016
+[DEBUG] 2024-11-27 16:53:15.798 [main] results - Extracted JDBC value [1] - [NBA]
+[DEBUG] 2024-11-27 16:53:15.801 [main] entity - (EntityResultInitializer) Done materializing entityInstance : com.radams.entity.Sport(85314240036285)#1
+[DEBUG] 2024-11-27 16:53:15.801 [main] loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@4ff0706c
+[DEBUG] 2024-11-27 16:53:15.801 [main] results - Extracted JDBC value [0] - [2]
+[DEBUG] 2024-11-27 16:53:15.801 [main] entity - (EntityResultInitializer) Hydrated EntityKey (com.radams.entity.Sport(85314240036285)): 2
+[DEBUG] 2024-11-27 16:53:15.801 [main] collection - (SelectEagerCollectionInitializer) Current row collection key : com.radams.entity.Sport(85314240036285).teams#2
+[DEBUG] 2024-11-27 16:53:15.801 [main] entity - (EntityResultInitializer) Created new entity instance [com.radams.entity.Sport(85314240036285)#2] : 757788974
+[DEBUG] 2024-11-27 16:53:15.801 [main] results - Extracted JDBC value [1] - [NFL]
+[DEBUG] 2024-11-27 16:53:15.801 [main] entity - (EntityResultInitializer) Done materializing entityInstance : com.radams.entity.Sport(85314240036285)#2
+[DEBUG] 2024-11-27 16:53:15.801 [main] loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@4ff0706c
+[DEBUG] 2024-11-27 16:53:15.803 [main] exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[DEBUG] 2024-11-27 16:53:15.810 [main] results - Initializer list:
+	  com.radams.entity.Sport.teams.{element}.sport -> EntitySelectFetchInitializer(com.radams.entity.Sport.teams.{element}.sport)@921500150 (ToOneAttributeMapping(NavigableRole[com.radams.entity.Team.sport])@273401463)
+	  com.radams.entity.Sport.teams.{element} -> EntityJoinedFetchInitializer(com.radams.entity.Sport.teams.{element})@684660636 (EntityCollectionPart(com.radams.entity.Sport.teams#{element})@199076007)
+	  com.radams.entity.Sport.teams -> SetInitializer(com.radams.entity.Sport.teams)@826884252 (PluralAttribute(com.radams.entity.Sport.teams))
+
+[DEBUG] 2024-11-27 16:53:15.811 [main] SQL - select t1_0.sport_id,t1_0.id,t1_0.team_name from teams t1_0 where t1_0.sport_id=?
+[DEBUG] 2024-11-27 16:53:15.812 [main] results - Extracted JDBC value [1] - [2]
+[DEBUG] 2024-11-27 16:53:15.812 [main] entity - (EntityJoinedFetchInitializer) Hydrated EntityKey (com.radams.entity.Sport.teams.{element}): 2
+[DEBUG] 2024-11-27 16:53:15.812 [main] results - Extracted JDBC value [0] - [2]
+[DEBUG] 2024-11-27 16:53:15.812 [main] collection - (SetInitializer) Current row collection key : com.radams.entity.Sport.teams#2
+[DEBUG] 2024-11-27 16:53:15.812 [main] results - Extracted JDBC value [0] - [2]
+[DEBUG] 2024-11-27 16:53:15.812 [main] entity - (EntityJoinedFetchInitializer) Created new entity instance [com.radams.entity.Sport.teams.{element}#2] : 1371539709
+[DEBUG] 2024-11-27 16:53:15.812 [main] results - Extracted JDBC value [0] - [2]
+[DEBUG] 2024-11-27 16:53:15.812 [main] entity - (EntitySelectFetchInitializer) Found existing loading entry [com.radams.entity.Sport.teams.{element}.sport#2] - using loading instance
+[DEBUG] 2024-11-27 16:53:15.813 [main] collection - (SetInitializer) Responsible for loading collection [com.radams.entity.Sport.teams#2] : org.hibernate.collection.spi.PersistentSet@1628801015
+[DEBUG] 2024-11-27 16:53:15.813 [main] results - Extracted JDBC value [2] - [Packers]
+[DEBUG] 2024-11-27 16:53:15.813 [main] entity - (EntityJoinedFetchInitializer) Done materializing entityInstance : com.radams.entity.Sport.teams.{element}#2
+[DEBUG] 2024-11-27 16:53:15.813 [main] collection - (SetInitializer) Reading element from row for collection [com.radams.entity.Sport.teams#2] -> org.hibernate.collection.spi.PersistentSet@1628801015
+[DEBUG] 2024-11-27 16:53:15.813 [main] loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.collection.internal.EagerCollectionAssembler@4af84a76
+[DEBUG] 2024-11-27 16:53:15.814 [main] results - Extracted JDBC value [1] - [4]
+[DEBUG] 2024-11-27 16:53:15.814 [main] entity - (EntityJoinedFetchInitializer) Hydrated EntityKey (com.radams.entity.Sport.teams.{element}): 4
+[DEBUG] 2024-11-27 16:53:15.814 [main] results - Extracted JDBC value [0] - [2]
+[DEBUG] 2024-11-27 16:53:15.814 [main] collection - (SetInitializer) Current row collection key : com.radams.entity.Sport.teams#2
+[DEBUG] 2024-11-27 16:53:15.814 [main] results - Extracted JDBC value [0] - [2]
+[DEBUG] 2024-11-27 16:53:15.814 [main] entity - (EntityJoinedFetchInitializer) Created new entity instance [com.radams.entity.Sport.teams.{element}#4] : 190838539
+[DEBUG] 2024-11-27 16:53:15.814 [main] results - Extracted JDBC value [0] - [2]
+[DEBUG] 2024-11-27 16:53:15.814 [main] entity - (EntitySelectFetchInitializer) Found existing loading entry [com.radams.entity.Sport.teams.{element}.sport#2] - using loading instance
+[DEBUG] 2024-11-27 16:53:15.814 [main] collection - (SetInitializer) Found existing loading collection entry [com.radams.entity.Sport.teams#2]; using loading collection instance - org.hibernate.collection.spi.PersistentSet@1628801015
+[DEBUG] 2024-11-27 16:53:15.814 [main] collection - (SetInitializer) Responsible for loading collection [com.radams.entity.Sport.teams#2] : org.hibernate.collection.spi.PersistentSet@1628801015
+[DEBUG] 2024-11-27 16:53:15.814 [main] results - Extracted JDBC value [2] - [Falcons]
+[DEBUG] 2024-11-27 16:53:15.814 [main] entity - (EntityJoinedFetchInitializer) Done materializing entityInstance : com.radams.entity.Sport.teams.{element}#4
+[DEBUG] 2024-11-27 16:53:15.814 [main] collection - (SetInitializer) Reading element from row for collection [com.radams.entity.Sport.teams#2] -> org.hibernate.collection.spi.PersistentSet@1628801015
+[DEBUG] 2024-11-27 16:53:15.814 [main] loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.collection.internal.EagerCollectionAssembler@4af84a76
+[DEBUG] 2024-11-27 16:53:15.815 [main] ResultsHelper - Collection fully initialized: [com.radams.entity.Sport.teams#2]
+[DEBUG] 2024-11-27 16:53:15.815 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2024-11-27 16:53:15.816 [main] exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+[DEBUG] 2024-11-27 16:53:15.816 [main] results - Initializer list:
+	  com.radams.entity.Sport.teams.{element}.sport -> EntitySelectFetchInitializer(com.radams.entity.Sport.teams.{element}.sport)@1462452338 (ToOneAttributeMapping(NavigableRole[com.radams.entity.Team.sport])@273401463)
+	  com.radams.entity.Sport.teams.{element} -> EntityJoinedFetchInitializer(com.radams.entity.Sport.teams.{element})@841660110 (EntityCollectionPart(com.radams.entity.Sport.teams#{element})@199076007)
+	  com.radams.entity.Sport.teams -> SetInitializer(com.radams.entity.Sport.teams)@1534365740 (PluralAttribute(com.radams.entity.Sport.teams))
+
+[DEBUG] 2024-11-27 16:53:15.816 [main] SQL - select t1_0.sport_id,t1_0.id,t1_0.team_name from teams t1_0 where t1_0.sport_id=?
+[DEBUG] 2024-11-27 16:53:15.817 [main] results - Extracted JDBC value [1] - [1]
+[DEBUG] 2024-11-27 16:53:15.817 [main] entity - (EntityJoinedFetchInitializer) Hydrated EntityKey (com.radams.entity.Sport.teams.{element}): 1
+[DEBUG] 2024-11-27 16:53:15.817 [main] results - Extracted JDBC value [0] - [1]
+[DEBUG] 2024-11-27 16:53:15.817 [main] collection - (SetInitializer) Current row collection key : com.radams.entity.Sport.teams#1
+[DEBUG] 2024-11-27 16:53:15.817 [main] results - Extracted JDBC value [0] - [1]
+[DEBUG] 2024-11-27 16:53:15.817 [main] entity - (EntityJoinedFetchInitializer) Created new entity instance [com.radams.entity.Sport.teams.{element}#1] : 2013063878
+[DEBUG] 2024-11-27 16:53:15.817 [main] results - Extracted JDBC value [0] - [1]
+[DEBUG] 2024-11-27 16:53:15.817 [main] entity - (EntitySelectFetchInitializer) Found existing loading entry [com.radams.entity.Sport.teams.{element}.sport#1] - using loading instance
+[DEBUG] 2024-11-27 16:53:15.817 [main] collection - (SetInitializer) Responsible for loading collection [com.radams.entity.Sport.teams#1] : org.hibernate.collection.spi.PersistentSet@807240950
+[DEBUG] 2024-11-27 16:53:15.817 [main] results - Extracted JDBC value [2] - [Hawks]
+[DEBUG] 2024-11-27 16:53:15.817 [main] entity - (EntityJoinedFetchInitializer) Done materializing entityInstance : com.radams.entity.Sport.teams.{element}#1
+[DEBUG] 2024-11-27 16:53:15.817 [main] collection - (SetInitializer) Reading element from row for collection [com.radams.entity.Sport.teams#1] -> org.hibernate.collection.spi.PersistentSet@807240950
+[DEBUG] 2024-11-27 16:53:15.817 [main] loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.collection.internal.EagerCollectionAssembler@563c3aca
+[DEBUG] 2024-11-27 16:53:15.817 [main] results - Extracted JDBC value [1] - [3]
+[DEBUG] 2024-11-27 16:53:15.817 [main] entity - (EntityJoinedFetchInitializer) Hydrated EntityKey (com.radams.entity.Sport.teams.{element}): 3
+[DEBUG] 2024-11-27 16:53:15.817 [main] results - Extracted JDBC value [0] - [1]
+[DEBUG] 2024-11-27 16:53:15.817 [main] collection - (SetInitializer) Current row collection key : com.radams.entity.Sport.teams#1
+[DEBUG] 2024-11-27 16:53:15.817 [main] results - Extracted JDBC value [0] - [1]
+[DEBUG] 2024-11-27 16:53:15.817 [main] entity - (EntityJoinedFetchInitializer) Created new entity instance [com.radams.entity.Sport.teams.{element}#3] : 1407280813
+[DEBUG] 2024-11-27 16:53:15.817 [main] results - Extracted JDBC value [0] - [1]
+[DEBUG] 2024-11-27 16:53:15.817 [main] entity - (EntitySelectFetchInitializer) Found existing loading entry [com.radams.entity.Sport.teams.{element}.sport#1] - using loading instance
+[DEBUG] 2024-11-27 16:53:15.818 [main] collection - (SetInitializer) Found existing loading collection entry [com.radams.entity.Sport.teams#1]; using loading collection instance - org.hibernate.collection.spi.PersistentSet@807240950
+[DEBUG] 2024-11-27 16:53:15.818 [main] collection - (SetInitializer) Responsible for loading collection [com.radams.entity.Sport.teams#1] : org.hibernate.collection.spi.PersistentSet@807240950
+[DEBUG] 2024-11-27 16:53:15.818 [main] results - Extracted JDBC value [2] - [Bulls]
+[DEBUG] 2024-11-27 16:53:15.818 [main] entity - (EntityJoinedFetchInitializer) Done materializing entityInstance : com.radams.entity.Sport.teams.{element}#3
+[DEBUG] 2024-11-27 16:53:15.818 [main] collection - (SetInitializer) Reading element from row for collection [com.radams.entity.Sport.teams#1] -> org.hibernate.collection.spi.PersistentSet@807240950
+[DEBUG] 2024-11-27 16:53:15.818 [main] loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.collection.internal.EagerCollectionAssembler@563c3aca
+[DEBUG] 2024-11-27 16:53:15.818 [main] ResultsHelper - Collection fully initialized: [com.radams.entity.Sport.teams#1]
+[DEBUG] 2024-11-27 16:53:15.818 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2024-11-27 16:53:15.818 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+[DEBUG] 2024-11-27 16:53:15.818 [main] LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction

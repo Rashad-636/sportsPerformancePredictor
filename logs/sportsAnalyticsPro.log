@@ -112,3 +112,6 @@
 [DEBUG] 2024-11-27 16:52:21.691 [main] GenericDao - Searching for user with sportName = N
 [DEBUG] 2024-11-27 16:52:21.850 [main] SportDaoTest - Sport: NBA
 [DEBUG] 2024-11-27 16:52:21.850 [main] SportDaoTest - Sport: NFL
+[DEBUG] 2024-11-27 16:53:15.662 [main] GenericDao - Searching for user with sportName = N
+[DEBUG] 2024-11-27 16:53:15.821 [main] SportDaoTest - Sport: NBA
+[DEBUG] 2024-11-27 16:53:15.821 [main] SportDaoTest - Sport: NFL
