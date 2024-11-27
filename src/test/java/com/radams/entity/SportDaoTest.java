@@ -40,7 +40,7 @@ class SportDaoTest {
     }
 
     @Test
-    void updateSuccess() {
+    void updateSportSuccess() {
         Sport sport = (Sport) genericDao.getById(1);
         sport.setSportName("Name Change");
         genericDao.update(sport);
@@ -81,24 +81,30 @@ class SportDaoTest {
     }
 
     @Test
-    void getAllTeams() {
-        Sport sport = (Sport) genericDao.getById(1);
-        assertNotNull(sport);
-
-        // Get all teams for NBA
-        List<Team> teams = genericDao.getByPropertyEqual("NBA", sport);
-
-        // Verify
-        assertNotNull(teams);
-        assertFalse(teams.isEmpty());
-        assertEquals(3, teams.size());  // Should find Hawks, Bulls, and Heat
+    void getAllSportsSuccess() {
+        List<Sport> sports = genericDao.getAll();
+        assertNotNull(sports);
+        assertEquals(2, sports.size()); // two sports
 
         // Log results
-        logger.debug("Found teams: " + teams);
+        logger.debug("Sports found: " + sports);
     }
 
     @Test
-    void addTeamsToSportSuccess() {
+    void getByPropertyEqual() {
+        List<Sport> sports = genericDao.getByPropertyEqual("sportName", "NBA");
+        assertNotNull(sports);
+        assertEquals(1, sports.size());
 
+        logger.debug("Sports found with property equal: " + sports);
+    }
+
+    @Test
+    void getByPropertyLike() {
+        List<Sport> sports = genericDao.getByPropertyLike("sportName", "N");
+        assertNotNull(sports);
+        assertEquals(2, sports.size()); // should be two sports that start with the letter n
+
+        logger.debug("Sports found with property like: " + sports);
     }
 }
