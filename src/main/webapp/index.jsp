@@ -15,6 +15,9 @@
         <h3>Welcome, ${userName}!!</h3>
     </c:otherwise>
 </c:choose>
+<%--<c:if test="${not empty sessionScope.userId}">--%>
+<%--    <a href="signout">Sign Out</a>--%>
+<%--</c:if>--%>
 
     <body>
         <div id="wrap">

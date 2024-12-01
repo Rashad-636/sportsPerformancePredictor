@@ -79,17 +79,22 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        logger.debug("Auth servlet's doGet method called");
 
         String authCode = req.getParameter("code");
+        logger.debug("Auth code received: " + authCode);
         String userName = null;
 
         if (authCode == null) {
             //TODO forward to an error page or back to the login
+            logger.debug("Auth code is null");
         } else {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
                 TokenResponse tokenResponse = getToken(authRequest);
+                logger.debug("About to call validate...");
                 userName = validate(tokenResponse, req);
+                logger.debug("After validate, userName: " + userName);
                 req.setAttribute("userName", userName);
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
@@ -99,6 +104,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 //TODO forward to an error page
             }
         }
+
+        logger.debug("Forwarding to index.jsp");
         RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
         dispatcher.forward(req, resp);
 
@@ -176,29 +183,29 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         logger.debug("here's the email: " + email);
 
         logger.debug("here are all the available claims: " + jwt.getClaims());
+        // ********check if user is in the database, if not add them***************************
+//        GenericDao userDao = new GenericDao(User.class);
+//        List<User> users = userDao.getByPropertyEqual("userEmail", email);
+//
+//        User user;
+//        if (users.isEmpty()) {
+//            // Create new user if they don't exist
+//            // also set and or get userID to be stored in the session
+//            user = new User();
+//            user.setUserEmail(email);
+//
+//            int userId = userDao.insert(user);
+//            user.setId(userId);
+//            logger.debug("Created new user in mysql with email: " + email);
+//        } else {
+//            user = users.get(0); // get the first and only user in this list
+//            logger.debug("User already exists in mysql with email: " + email);
+//        }
 
-        // check if user is in the database, if not add them
-        GenericDao userDao = new GenericDao(User.class);
-        List<User> users = userDao.getByPropertyEqual("userEmail", email);
-
-        User user;
-        if (users.isEmpty()) {
-            // Create new user if they don't exist
-            user = new User();
-            user.setUserEmail(email);
-
-            int userId = userDao.insert(user);
-            user.setId(userId);
-            logger.debug("Created new user in mysql with email: " + email);
-        } else {
-            user = users.get(0); // get the first and only user in this list
-            logger.debug("User already exists in mysql with email: " + email);
-        }
-
-        // Store user ID in session for quicker access later
-        HttpSession session = req.getSession();
-        session.setAttribute("userId", user.getId());
-        logger.debug("Stored user ID in session: " + user.getId());
+        // Store user ID in session for quicker access later !!!!!! IMPORTANT
+//        HttpSession session = req.getSession();
+//        session.setAttribute("userId", user.getId());
+//        logger.debug("Stored user ID in session: " + user.getId());
 
         return email;
     }
