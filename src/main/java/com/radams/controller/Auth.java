@@ -103,34 +103,46 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        logger.debug("Auth servlet's doGet method called");
-
         String authCode = req.getParameter("code");
         String userName = null;
 
         if (authCode == null) {
-            //TODO forward to an error page or back to the login
+            // TODO: forward to an error page or back to the login
             logger.debug("Auth code is null");
         } else {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
                 TokenResponse tokenResponse = getToken(authRequest);
                 userName = validate(tokenResponse, req);
-//                logger.debug("After validate, userName: " + userName);
                 req.setAttribute("userName", userName);
+
+                // Session validation
+                Integer userId = (Integer) req.getSession().getAttribute("userId");
+                if (userId != null) {
+                    GenericDao userDao = new GenericDao(User.class);
+                    User user = (User) userDao.getById(userId);
+                    if (user != null) {
+                        // update session attributes and forward to index.jsp
+                        req.getSession().setAttribute("userId", user.getId());
+                        req.getSession().setAttribute("userName", user.getUserEmail());
+                        RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+                        dispatcher.forward(req, resp);
+                    } else {
+                        // Session is invalid, redirect to login page
+                        resp.sendRedirect("login.jsp");
+                    }
+                } else {
+                    // No user ID in session, redirect to login page
+                    resp.sendRedirect("login.jsp");
+                }
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
-                //TODO forward to an error page
+                // TODO: forward to an error page
             } catch (InterruptedException e) {
                 logger.error("Error getting token from Cognito oauth url " + e.getMessage(), e);
-                //TODO forward to an error page
+                // TODO: forward to an error page
             }
         }
-
-        logger.debug("Forwarding to index.jsp");
-        RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
-        dispatcher.forward(req, resp);
-
     }
 
     /**
