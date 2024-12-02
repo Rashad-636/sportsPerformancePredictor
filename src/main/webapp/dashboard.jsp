@@ -35,9 +35,10 @@
       <c:if test="${empty favoriteTeams}">
         <p>No favorite teams added yet!</p>
       </c:if>
-      <c:forEach var="team" items="${favoriteTeams}">
+      <br>
+      <c:forEach var="favorite" items="${favoriteTeams}">
         <div class="team-card">
-          <h3>${team.teamName}</h3>
+          <h3>${favorite.team.teamName}</h3> <%-- access favorite teams, then teams ---%>
           <ul class="team-links">
             <li><a href="schedule?teamId=${team.id}">Schedule</a></li>
             <li><a href="stats?teamId=${team.id}">Stats & Predictions</a></li>
@@ -47,8 +48,11 @@
             <input type="hidden" name="teamId" value="${team.id}">
             <button type="submit" class="remove-btn">Remove from Favorites</button>
           </form>
+          <br>
         </div>
       </c:forEach>
+      <br>
+      <br>
       <div class="add-teams-section">
         <a href="allTeams" class="add-teams-btn">Add More Teams to Favorite List</a>
       </div>

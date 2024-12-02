@@ -4,12 +4,18 @@ import com.radams.entity.FavoriteTeam;
 import com.radams.entity.Team;
 import com.radams.entity.User;
 import com.radams.persistence.GenericDao;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.*;
 
 @WebServlet("/addFavorite")
 public class AddFavoriteTeam extends HttpServlet {
+
+    private final Logger logger = LogManager.getLogger(this.getClass());
+
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
 
