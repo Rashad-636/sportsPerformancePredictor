@@ -6,19 +6,6 @@
 <%-- header jsp --%>
 <c:import url="head.jsp" />
 
-<%-- temp log in to cognito --%>
-<%--<c:choose>--%>
-<%--    <c:when test="${empty userName}">--%>
-<%--        <a href = "logIn">Log in</a>--%>
-<%--    </c:when>--%>
-<%--    <c:otherwise>--%>
-<%--        <h3>Welcome, ${userName}!</h3>--%>
-<%--    </c:otherwise>--%>
-<%--</c:choose>--%>
-<%--<c:if test="${not empty sessionScope.userId}">--%>
-<%--    <a href="signout">Sign Out</a>--%>
-<%--</c:if>--%>
-
     <body>
         <div id="wrap">
         <%-- sidebar jsp --%>

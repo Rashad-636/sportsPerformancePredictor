@@ -45,7 +45,7 @@
             <li><a href="boxscore?teamId=${team.id}">Box Score</a></li>
           </ul>
           <form action="removeFavorite" method="POST">
-            <input type="hidden" name="teamId" value="${team.id}">
+            <input type="hidden" name="teamId" value="${favorite.team.id}"> <%-- access favorite teams, then teams ---%>
             <button type="submit" class="remove-btn">Remove from Favorites</button>
           </form>
           <br>
