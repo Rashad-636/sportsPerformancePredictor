@@ -28,6 +28,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
+/**
+ * The type Auth.
+ */
 @WebServlet(
         urlPatterns = {"/auth"}
 )
@@ -37,16 +40,37 @@ import java.util.stream.Collectors;
  */
 
 public class Auth extends HttpServlet implements PropertiesLoader {
-    // variable declarations
+    /**
+     * The Jwks.
+     */
+// variable declarations
     Keys jwks;
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    // assign variable to property key
+    /**
+     * The Client id.
+     */
+// assign variable to property key
     String CLIENT_ID;
+    /**
+     * The Client secret.
+     */
     String CLIENT_SECRET;
+    /**
+     * The Redirect url.
+     */
     String REDIRECT_URL;
+    /**
+     * The Oauth url.
+     */
     String OAUTH_URL;
+    /**
+     * The Region.
+     */
     String REGION;
+    /**
+     * The Pool id.
+     */
     String POOL_ID;
 
     public void init() throws ServletException {
@@ -79,10 +103,9 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.debug("Auth servlet's doGet method called");
+//        logger.debug("Auth servlet's doGet method called");
 
         String authCode = req.getParameter("code");
-        logger.debug("Auth code received: " + authCode);
         String userName = null;
 
         if (authCode == null) {
@@ -92,9 +115,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
                 TokenResponse tokenResponse = getToken(authRequest);
-                logger.debug("About to call validate...");
                 userName = validate(tokenResponse, req);
-                logger.debug("After validate, userName: " + userName);
+//                logger.debug("After validate, userName: " + userName);
                 req.setAttribute("userName", userName);
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
@@ -125,12 +147,12 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         response = client.send(authRequest, HttpResponse.BodyHandlers.ofString());
 
 
-        logger.debug("Response headers: " + response.headers().toString());
-        logger.debug("Response body: " + response.body().toString());
+//        logger.debug("Response headers: " + response.headers().toString());
+//        logger.debug("Response body: " + response.body().toString());
 
         ObjectMapper mapper = new ObjectMapper();
         TokenResponse tokenResponse = mapper.readValue(response.body().toString(), TokenResponse.class);
-        logger.debug("Id token: " + tokenResponse.getIdToken());
+//        logger.debug("Id token: " + tokenResponse.getIdToken());
 
         return tokenResponse;
 
@@ -180,34 +202,43 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         // Verify the token
         DecodedJWT jwt = verifier.verify(tokenResponse.getIdToken());
         String email = jwt.getClaim("email").asString();
-        logger.debug("here's the email: " + email);
-
-        logger.debug("here are all the available claims: " + jwt.getClaims());
-        // ********check if user is in the database, if not add them***************************
-//        GenericDao userDao = new GenericDao(User.class);
-//        List<User> users = userDao.getByPropertyEqual("userEmail", email);
+//        logger.debug("here's the email: " + email);
 //
-//        User user;
-//        if (users.isEmpty()) {
-//            // Create new user if they don't exist
-//            // also set and or get userID to be stored in the session
-//            user = new User();
-//            user.setUserEmail(email);
-//
-//            int userId = userDao.insert(user);
-//            user.setId(userId);
-//            logger.debug("Created new user in mysql with email: " + email);
-//        } else {
-//            user = users.get(0); // get the first and only user in this list
-//            logger.debug("User already exists in mysql with email: " + email);
-//        }
+//        logger.debug("here are all the available claims: " + jwt.getClaims());
 
-        // Store user ID in session for quicker access later !!!!!! IMPORTANT
-//        HttpSession session = req.getSession();
-//        session.setAttribute("userId", user.getId());
-//        logger.debug("Stored user ID in session: " + user.getId());
+        handleUserLogin(email, req);
 
         return email;
+    }
+
+    /**
+     * Processes user login by either retrieving existing user or creating new user.
+     * Sets user ID in session for future use
+     *
+     * @param email The email address from Cognito authentication
+     * @param req
+     */
+    private void handleUserLogin(String email, HttpServletRequest req) {
+        GenericDao userDao = new GenericDao(User.class);
+        List<User> users = userDao.getByPropertyEqual("userEmail", email);
+
+        User user;
+        if (users.isEmpty()) {
+            // Create new user if they don't exist and set/get userID to be stored in session
+            user = new User();
+            user.setUserEmail(email);
+
+            int userId = userDao.insert(user);
+            user.setId(userId);
+            logger.debug("Created new user in mysql with email: " + email);
+        } else {
+            user = users.get(0); // get the first and only user in this list
+            logger.debug("User already exists in mysql with email: " + email);
+        }
+
+        HttpSession session = req.getSession();
+        session.setAttribute("userId", user.getId());
+        logger.debug("Stored user ID in session: " + user.getId());
     }
 
     /** Create the auth url and use it to build the request.

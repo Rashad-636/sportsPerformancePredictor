@@ -5,7 +5,7 @@
 <!--suppress ALL -->
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://awseb-e-dawrkkpy2z-stack-awsebrdsdatabase-lokigkje8uw6.cb4c48w8k9mn.us-east-1.rds.amazonaws.com:3306/sportsAnalyticsPro</property>
+        <property name="connection.url">jdbc:mysql://awseb-e-dawrkkpy2z-stack-awsebrdsdatabase-lokigkje8uw6.cb4c48w8k9mn.us-east-1.rds.amazonaws.com:3306/SportsAnalyticsPro</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 
         <property name="connection.username">student</property>
@@ -25,6 +25,7 @@
         <mapping class="com.radams.entity.User"/>
         <mapping class="com.radams.entity.Sport"/>
         <mapping class="com.radams.entity.Team"/>
+        <mapping class="com.radams.entity.FavoriteTeam"/>
 
     </session-factory>
 
