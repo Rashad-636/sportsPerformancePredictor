@@ -118,9 +118,12 @@ public class Auth extends HttpServlet implements PropertiesLoader {
 
                 // Session validation
                 Integer userId = (Integer) req.getSession().getAttribute("userId");
+
                 if (userId != null) {
+
                     GenericDao userDao = new GenericDao(User.class);
                     User user = (User) userDao.getById(userId);
+
                     if (user != null) {
                         // update session attributes and forward to index.jsp
                         req.getSession().setAttribute("userId", user.getId());

@@ -32,6 +32,9 @@
   <div id="content">
     <div class="favorites-dashboard">
       <h2>My Teams</h2>
+      <c:if test="${empty favoriteTeams}">
+        <p>No favorite teams added yet!</p>
+      </c:if>
       <c:forEach var="team" items="${favoriteTeams}">
         <div class="team-card">
           <h3>${team.teamName}</h3>
@@ -40,8 +43,15 @@
             <li><a href="stats?teamId=${team.id}">Stats & Predictions</a></li>
             <li><a href="boxscore?teamId=${team.id}">Box Score</a></li>
           </ul>
+          <form action="removeFavorite" method="POST">
+            <input type="hidden" name="teamId" value="${team.id}">
+            <button type="submit" class="remove-btn">Remove from Favorites</button>
+          </form>
         </div>
       </c:forEach>
+      <div class="add-teams-section">
+        <a href="allTeams" class="add-teams-btn">Add More Teams to Favorite List</a>
+      </div>
     </div>
   </div>
 
