@@ -128,7 +128,7 @@ class SportDaoTest {
                 "Kings", "Spurs", "Raptors", "Jazz", "Wizards"
         );
 
-        // Afor each teamName in nbaTeams list
+        // for each teamName in nbaTeams list
         for (String teamName : nbaTeams) {
             Team team = new Team(teamName, nba); // create new team in/on nba object
             teamDao.insert(team);
