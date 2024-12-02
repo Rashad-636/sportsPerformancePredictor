@@ -6,6 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -107,5 +109,34 @@ class SportDaoTest {
         for (Sport sport : sports) {
             logger.debug("Sport: " + sport.getSportName());
         }
+    }
+
+    @Test
+    void loadNBATeams() {
+        GenericDao<Team> teamDao = new GenericDao<>(Team.class);
+
+        // get nba id
+        Sport nba = (Sport) genericDao.getById(1);
+
+        // Load the rest of the nba teams
+        List<String> nbaTeams = List.of(
+                "Celtics", "Nets", "Hornets",
+                "Cavaliers", "Mavericks", "Nuggets", "Pistons", "Warriors",
+                "Rockets", "Pacers", "Clippers", "Lakers", "Grizzlies",
+                "Heat", "Bucks", "Timberwolves", "Pelicans", "Knicks",
+                "Thunder", "Magic", "76ers", "Suns", "Trail Blazers",
+                "Kings", "Spurs", "Raptors", "Jazz", "Wizards"
+        );
+
+        // Afor each teamName in nbaTeams list
+        for (String teamName : nbaTeams) {
+            Team team = new Team(teamName, nba); // create new team in/on nba object
+            teamDao.insert(team);
+        }
+
+        // Verify teams were added (should be 30 total including Hawks and Bulls)
+        List<Team> teams = teamDao.getByPropertyEqual("sport", nba);
+        assertEquals(30, teams.size());
+        logger.debug("Added " + teams.size() + " NBA teams to database");
     }
 }
