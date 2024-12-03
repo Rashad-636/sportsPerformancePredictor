@@ -12,7 +12,7 @@
         <c:import url="sidebar.jsp" />
 
         <div id="content">
-            <h2>Top Stories <span class="post-span">powered by: RapidApi</span></h2>
+            <h2>Mission Statement <span class="post-span"></span></h2>
             <img src="images/placeholder/technics-q-c-680-280-4.jpg" class="post-img" alt="Bild" />
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 
@@ -22,7 +22,7 @@
 
             <h2>NFL <span class="post-span">powered by: RapidApi</span></h2>
             <img src="images/placeholder/technics-q-c-680-280-8.jpg" class="post-img" alt="Bild" />
-            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+            <p>Coming Soon</p>
         </div>
 
         <%-- footer jsp --%>

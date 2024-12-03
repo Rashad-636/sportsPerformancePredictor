@@ -25,21 +25,6 @@
         <div class="box">
             <ul>
                 <li><a href="#">coming soon ...</a></li>
-                <li><a href="#">coming soon ...</a></li>
-                <li><a href="#">coming soon ...</a></li>
-                <li><a href="#">coming soon ...</a></li>
-                <li><a href="#">coming soon ...</a></li>
-            </ul>
-        </div>
-
-        <h2>NFL</h2>
-        <div class="box">
-            <ul>
-                <li><a href="#">coming soon ...</a></li>
-                <li><a href="#">coming soon ...</a></li>
-                <li><a href="#">coming soon ...</a></li>
-                <li><a href="#">coming soon ...</a></li>
-                <li><a href="#">coming soon ...</a></li>
             </ul>
         </div>
     </div>

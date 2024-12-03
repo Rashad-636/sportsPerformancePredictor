@@ -112,6 +112,9 @@ goal is to start on the team schedules and consuming my restful api. While it wa
 dashboard, log in and log out links for cognito and logic for these links to show if a user is signed in. This isn't 
 quite working as it should but for now it will have to suffice. Roughly a week left but the goal is definitely in sight!
 
+** NOTE: My team link to dashboard still appears on index page although no one is logged in which leads to a blank page
+need to take a look at the logic and why that and sign out are still showing. I suspect it is the session **
+
 completed - 9 hours
 - Finished unit testing
 - Dashboard servlets for full CRUD created with direction and redirection.
