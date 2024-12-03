@@ -1,18 +1,16 @@
-# Sports Performance Predictor
+# Sports Analytics Pro
 
 ### Presentation Overview
-With the power of AI, score/stats history and recent news my goal is to give the most likely outcome of a sports game. 
-This will be done using various integrated API's for the most recent data found. Of course these prediction's will not 
-be 100% correct but a "more likely to happen" scenario. Data will be provided in the form of graphs and tables (more
-than likely box score style table).
-
-
+Sports analytics pro will consume Tank01 Fantasy Stats (an API provided by rapidapi) to show each team's schedule,
+record, and win probability. User's will have the option to sign up to make a personal account where they can quickly
+save a list of their favorite teams for faster viewing.
 
 ### Project Technologies/Techniques
 
 * Security/Authentication
-    * TBD
+    * AWS Cognito
 * Database
+    * AWS RDS 
     * MySQL 8.x
 * ORM Framework
     * Hibernate Version TBD
@@ -24,15 +22,8 @@ than likely box score style table).
     * Log4J2
 * Tech I'd like to explore as part of this work
     * Api Integration
-    * Artificial intelligence
 *Services/Api's potentially used
     * Tank01 Fantasy Stats (NBA API) by tank01
-    * NFL API Data by Smart Api
-    * Sports Information by Pinto Studios (***) 
-    * Major League Baseball by Pinto Studios
-    * OpenAI API
-    * Infinite GPT
-* Unit Testing
     * JUnit tests to cover all testable logic
 * IDE: IntelliJ IDEA
 

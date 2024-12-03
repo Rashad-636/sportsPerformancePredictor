@@ -69,5 +69,53 @@ Completed - 7 hours
 * Checkpoint #2 complete
 
 ## Week 8 (10/14)
+Being able to have a list of favorite teams for faster viewing is a big portion of my project so i wanted to unit test
+this first then move on to the rest. I ran into some relationship issues but thankfully i was able to debug with the
+help of the hibernate log4j logs. After successfully creating the full CRUD for my favorite teams dao, i went ahead and created the outline/skeleton for both the jsp and servlet for the user dashboard where the viewing, and editing of 
+their favorite teams will exist. Checkpoint #2 is also due this week!
 
+Completed - 3 hours
+* FavoriteTeam Dao Created and Unit tested
+* Outline for the user dashboard created
+* Checkpoint #2
+
+## Weeks 10 - 12 (10/28, 11/4, 11/11)
+Unfortunately I wasn't able to get much done on my project during weeks 9 and 10 due to the personal life and the team
+project, but I did notice that my database did not need to be as big and robust as it was. It made more sense to just 
+generate most of the data dynamically since I am going to be consuming a Restful API that will have changing data. If
+not my database would eventually be enormous and probably slow my application down so i decided for my database to only
+save the user and user's favorite teams. New database will hold four tables/entities and have multiple database 
+relationships (many-to-one and one-to-many). To make my life easier i went ahead and implemented restraints so that 
+certain data would and would not be deleted. Due to time restraints, i've decided to change up the scope of my project
+and remove the integration of AI. Instead, I will just show the probability/odds of whom the winner will be. I have
+a good bit of work and hours ahead of me if i want to make this happen before the deadline, but it is achievable!!! The
+plan was to have a few different sports but NBA is the focus for now. I have chosen Tank01 as my restful api for all my
+NBA information. Checkpoint #3 is around the corner and i should be set up for success now.
+
+
+completed - 10 hours
+- Recreated database with constraints
+- User dashboard servlet created with it's jsp landing page
+- Create new entities for new database
+- Begin Unit testing entities and client service
+- Update read.me with and project name
+- Created Aws database
+
+## Weeks 13 - 14 (11/18, 11/25)
+More catchup for these two weeks but I am getting close to my end goal! I was able to finish my unit testing for all 
+four entities, and am ready to start building out some servlets and jsps. So that I am able to complete checkpoint #3,
+getting the user dashboard to function was top priority. I ran into an issue where I could not access my user and team
+objects which was very frustrating. After hours of debugging and internet searching, I found that I need to use Integer 
+to return the user or team ID because since it wraps the primitive int into an object. And vice versa, i have to parse
+the Integer object to get my int. After building out the user dashboard and making sure it works as it should, my next
+goal is to start on the team schedules and consuming my restful api. While it was on my mind, i included a link to the 
+dashboard, log in and log out links for cognito and logic for these links to show if a user is signed in. This isn't 
+quite working as it should but for now it will have to suffice. Roughly a week left but the goal is definitely in sight!
+
+completed - 9 hours
+- Finished unit testing
+- Dashboard servlets for full CRUD created with direction and redirection.
+- Deployed updated app to AWS
+- Double check checkpoint #3 is ready to turn in
+- Configured logic for index and dashboard page links (partially working)
 

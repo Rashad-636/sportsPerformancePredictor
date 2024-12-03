@@ -37,7 +37,7 @@ class SportDaoTest {
         assertEquals(sport, sport2);
         assertEquals("NBA" , sport.getSportName()); // confirming NBA is being called
 
-        logger.debug("The sport name that is being returned is: " + sport.getSportName());
+//        logger.debug("The sport name that is being returned is: " + sport.getSportName());
     }
 
     @Test
@@ -49,7 +49,7 @@ class SportDaoTest {
         // verify if both objects match (calls .equals method generated in User class to compare)
         Sport sport2 = (Sport) genericDao.getById(1);
         assertEquals(sport, sport2);
-        logger.debug("Sport name after change: " + sport.getSportName());
+//        logger.debug("Sport name after change: " + sport.getSportName());
     }
 
     @Test
@@ -78,7 +78,7 @@ class SportDaoTest {
         Sport insertedSport = (Sport) genericDao.getById(insert);
         assertEquals(insertedSport, newSport);
 
-        logger.debug("Inserted sport: " + newSport.getSportName());
+//        logger.debug("Inserted sport: " + newSport.getSportName());
     }
 
     @Test
@@ -87,8 +87,7 @@ class SportDaoTest {
         assertNotNull(sports);
         assertEquals(2, sports.size()); // two sports
 
-        // Log results
-        logger.debug("Sports found: " + sports);
+//        logger.debug("Sports found: " + sports);
     }
 
     @Test
@@ -97,7 +96,7 @@ class SportDaoTest {
         assertNotNull(sports);
         assertEquals(1, sports.size());
 
-        logger.debug("Sports found with property equal: " + sports);
+//        logger.debug("Sports found with property equal: " + sports);
     }
 
     @Test
@@ -107,7 +106,7 @@ class SportDaoTest {
         assertEquals(2, sports.size()); // should be two sports that start with the letter n
 
         for (Sport sport : sports) {
-            logger.debug("Sport: " + sport.getSportName());
+//            logger.debug("Sport: " + sport.getSportName());
         }
     }
 
@@ -137,6 +136,6 @@ class SportDaoTest {
         // Verify teams were added (should be 30 total including Hawks and Bulls)
         List<Team> teams = teamDao.getByPropertyEqual("sport", nba);
         assertEquals(30, teams.size());
-        logger.debug("Added " + teams.size() + " NBA teams to database");
+//        logger.debug("Added " + teams.size() + " NBA teams to database");
     }
 }

@@ -40,7 +40,7 @@
 - [X] DAO needs to be unit tested
 - [X] Sport DAO has Log4J implemented
 - [X] Start building out entities
-- [X] Look into the implemntation of the API's and how to derive information (JSON parsing?)
+- [X] Look into the implementation of the API's and how to derive information (JSON parsing?)
 - [X] Update weekly reflection
 
 ### Week 7 (Class topic is security authentication)
@@ -58,31 +58,52 @@
 ### Week 8 (Class Topic is Web Services intro)
 ## All account management user stories
 - [X] Complete checkpoint #2
-- [ ]
-- [ ] Create Dao CRUD for favorite team list on account page
-- [ ] Show favorite teams list on account page
-- [ ] Option to Edit and remove list
-- [ ] Update weekly reflection
+- [X] Create Dao CRUD for favorite team list on account page
+- [X] Create jsp for dashboard and dashboard servlet skeletons
+- [X] Update weekly reflection
 
 
 ### Week 9 (Start of the team project) (Class Topic is RESTFul web services)
-#### Checkpoint 3 is Due: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
 ## 
-- [ ] Double-check all checkpoint 3 items (above) are complete and visible in github.
-- [ ] Update weekly reflection
+- [X] Double-check all checkpoint 3 items (above) are complete and visible in github.
+- [X] Find Api to use for project
+- [X] Update weekly reflection
 
 ### Weeks 10, 11, 12 (Work weeks)
 ##  As a sports fan, I want to view a list of all games scheduled within the next 24 hours
-## As a sports fan, I want to see predictions for each half of play. (1st inning ONLY for baseball)
-## As a user, I want to select a specific game to see detailed box score predictions
-## As a user, I want to view the predicted final score and win probability for each team
+## As a user, I want to view the predicted final score and/or win probability for each team
 
-- [ ] Create tables and or graphs to display jsp predictions
-- [ ] Organize how information will be displayed
-- [ ] Ensure one sport works them move onto the next (Shooting for at least 3?)
-- [ ] Update weekly reflection
+- [X] Database Revision ****
+- [X] Database will only track the user's favorite teams. Everything else will be generated dynamically
+- [X] Configure database restraints to make removal easier
+- [X] Change project scope(AI will not be included.Predictions only shows predicted final score and/or win probability)
+- [X] Create new database
+- [X] User, FavoriteTeam, Sport, and Team Dao created with hibernate. Full CRUD for each
+- [X] Begin Unit testing
+- [X] Update weekly reflection
 
-### Week 15
+## Weeks 13, 14
+#### Checkpoint 3 is Due: Deployed to AWS, at least one JSP that displays data from the database is implemented, authentication implemented, add AWS deployed app link to indie project list in student repo.
+## (NOTE: INTEGER has to be parsed to int since we are using objects to reference user_id, team_id, etc.)
+- [X] Finish unit testing database
+- [X] Deploy database and application to AWS for the first time
+- [X] Set up servlet direction and redirection for application
+- [X] Setup for checkpoint #3 started
+- [X] Begin building User dashboard servlet and jsp.
+- [X] Begin building servlets to display all teams, and the functionality to add, remove and display favorite teams.
+- [X] Configure logic to show index links. Cognito functions properly for authentication
+- [X] Weekly reflection
+
+
+### Week 15 
+## Create new jsps and servlets
+## Ensure account feature is fully functioning BEFORE consuming API
+- [X] Dashboard jsp completed to checkpoint #3 standards
+- [X] Checkpoint #3.
+- [ ] Create jsp for all nba teams (Not favorites list)
+- [ ] Consume API to show schedules
+- [ ] Consume ApI to show odds
+- [ ] Peer Review?
 - [ ] Implement Feedback from Week 14 review
 - [ ] Final Presentation
 - [ ] Create video, add video link to readme.md

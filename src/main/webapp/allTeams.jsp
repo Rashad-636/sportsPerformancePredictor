@@ -15,6 +15,7 @@
 <div id="wrap">
     <div id="header">
         <div id="headerlinks">
+            <%-- checking session scope for which links to show---%>
             <c:choose>
                 <c:when test="${sessionScope.userId == null}">
                     <a href="logIn">Sign In</a>
@@ -30,11 +31,14 @@
         <h1>Sports Analytics Pro</h1>
     </div>
     <div id="content">
+        <%-- show all teams that can be added to favorites list in card format ---%>
         <div class="available-teams">
             <h2>Available Teams</h2>
+            <%-- loop to show all teams ---%>
             <c:forEach var="team" items="${allTeams}">
                 <div class="team-card">
                     <h3>${team.teamName}</h3>
+                        <%-- option to add to list of favorites ---%>
                     <form action="addFavorite" method="POST">
                         <input type="hidden" name="teamId" value="${team.id}">
                         <button type="submit">Add to Favorites</button>

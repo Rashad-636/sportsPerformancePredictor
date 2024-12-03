@@ -30,20 +30,22 @@
     <h1>Sports Analytics Pro</h1>
   </div>
   <div id="content">
+
     <div class="favorites-dashboard">
       <h2>My Teams</h2>
+      <%-- check if user has any favorite teams ---%>
       <c:if test="${empty favoriteTeams}">
         <p>No favorite teams added yet!</p>
       </c:if>
       <br>
+      <%-- loop and show each of the user's favorite teams in card format ---%>
       <c:forEach var="favorite" items="${favoriteTeams}">
         <div class="team-card">
           <h3>${favorite.team.teamName}</h3> <%-- access favorite teams, then teams ---%>
           <ul class="team-links">
             <li><a href="schedule?teamId=${team.id}">Schedule</a></li>
-            <li><a href="stats?teamId=${team.id}">Stats & Predictions</a></li>
-            <li><a href="boxscore?teamId=${team.id}">Box Score</a></li>
           </ul>
+            <%-- option to remove favorite team ---%>
           <form action="removeFavorite" method="POST">
             <input type="hidden" name="teamId" value="${favorite.team.id}"> <%-- access favorite teams, then teams ---%>
             <button type="submit" class="remove-btn">Remove from Favorites</button>
@@ -53,10 +55,12 @@
       </c:forEach>
       <br>
       <br>
+      <%-- option to add favorite team ---%>
       <div class="add-teams-section">
         <a href="allTeams" class="add-teams-btn">Add More Teams to Favorite List</a>
       </div>
     </div>
+
   </div>
 
   <%-- footer jsp --%>

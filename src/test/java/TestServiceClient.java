@@ -35,6 +35,6 @@ public class TestServiceClient {
         Response data = mapper.readValue(response, Response.class);
 
         assertEquals("Magic" , data.getBody().get(0).getTeamName());
-        logger.debug(data.getBody().get(0).getTeamName());
+//        logger.debug(data.getBody().get(0).getTeamName());
     }
 }

@@ -35,7 +35,7 @@ class UserDaoTest {
         User user2 = (User) genericDao.getById(1);
         assertEquals(user, user2);
 
-        logger.debug("User being returned:" + user);
+//        logger.debug("User being returned:" + user);
     }
 
     @Test
@@ -52,7 +52,7 @@ class UserDaoTest {
         User user2 = (User) genericDao.getById(1);
         assertEquals(user, user2);
 
-        logger.debug("Updated user being returned:" + user);
+//        logger.debug("Updated user being returned:" + user);
     }
 
     @Test
@@ -69,7 +69,7 @@ class UserDaoTest {
         User insertedUser = (User) genericDao.getById(insert);
         assertEquals(newUser, insertedUser);
 
-        logger.debug("Inserted user being returned:" + insertedUser.getUserEmail());
+//        logger.debug("Inserted user being returned:" + insertedUser.getUserEmail());
     }
 
     @Test
@@ -84,7 +84,7 @@ class UserDaoTest {
         User user2 = (User) genericDao.getById(1);
         assertNull(user2);
 
-        logger.debug("Deleted user being returned:" + user);
+//        logger.debug("Deleted user being returned:" + user);
     }
 
     @Test
@@ -93,7 +93,7 @@ class UserDaoTest {
         assertNotNull(users);
         assertEquals(2, users.size()); // list size should be two
 
-        logger.debug("Users being returned:" + users);
+//        logger.debug("Users being returned:" + users);
     }
 
     @Test
@@ -102,7 +102,7 @@ class UserDaoTest {
         assertNotNull(users);
         assertEquals(1, users.size());
 
-        logger.debug("Users being returned by property equal:" + users);
+//        logger.debug("Users being returned by property equal:" + users);
     }
 
     @Test
@@ -111,7 +111,7 @@ class UserDaoTest {
         assertNotNull(users);
         assertEquals(2, users.size());
 
-        logger.debug("Users being returned by property like:" + users);
+//        logger.debug("Users being returned by property like:" + users);
     }
 
 }

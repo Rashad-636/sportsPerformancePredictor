@@ -39,8 +39,8 @@ class FavoriteTeamTest {
         FavoriteTeam team2 = (FavoriteTeam) favoriteDao.getById(1);
         assertEquals(retrievedFavorite.getId(), team2.getId()); // compare IDs
 
-        logger.info("This favorite team is: " + retrievedFavorite.getTeam().getTeamName() +
-                ". And belongs to user: " + retrievedFavorite.getUser().getUserEmail());
+//        logger.info("This favorite team is: " + retrievedFavorite.getTeam().getTeamName() +
+//                ". And belongs to user: " + retrievedFavorite.getUser().getUserEmail());
 
     }
 
@@ -61,7 +61,7 @@ class FavoriteTeamTest {
         FavoriteTeam updatedFavorite = (FavoriteTeam) favoriteDao.getById(1);
         assertEquals(retrievedFavorite.getId(), updatedFavorite.getId()); // compare ID only
 
-        logger.info("Updated favorite team from Hawks to: " + updatedFavorite.getTeam().getTeamName());
+//        logger.debug("Updated favorite team from Hawks to: " + updatedFavorite.getTeam().getTeamName());
     }
 
     @Test
@@ -92,7 +92,7 @@ class FavoriteTeamTest {
         FavoriteTeam insertedFavorite = (FavoriteTeam) favoriteDao.getById(insert);
         assertEquals(newFavorite.getId(), insertedFavorite.getId()); // compare ID only
 
-        logger.debug("Inserted favorite team: " + insertedFavorite.getTeam().getTeamName());
+//        logger.debug("Inserted favorite team: " + insertedFavorite.getTeam().getTeamName());
     }
 
     @Test
@@ -100,7 +100,7 @@ class FavoriteTeamTest {
         List<FavoriteTeam> favs = favoriteDao.getAll();
         assertNotNull(favs);
         assertEquals(6, favs.size());
-        logger.debug("Favs: " + favs.size());
+//        logger.debug("Favs: " + favs.size());
     }
 
     @Test
@@ -117,20 +117,10 @@ class FavoriteTeamTest {
 
         for (FavoriteTeam fav : favs) {
             assertEquals(user.getId(), fav.getUser().getId()); // verify the fav team belongs to the user
-            logger.debug("Found User: " + user.getUserEmail() + " and the " + fav.getTeam().getTeamName()
-            + " is a favorited team");
+//            logger.debug("Found User: " + user.getUserEmail() + " and the " + fav.getTeam().getTeamName()
+//            + " is a favorited team");
         }
 
-        logger.debug("Favorite team total: " + favs.size());
-    }
-
-    @Test
-    void getPropertyEqualSuccess(){
-
-    }
-
-    @Test
-    void getPropertyLikeSuccess(){
-
+//        logger.debug("Favorite team total: " + favs.size());
     }
 }

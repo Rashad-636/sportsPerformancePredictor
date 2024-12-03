@@ -35,7 +35,7 @@ class TeamDaoTest {
         Team team2 = (Team) genericDao.getById(1);
         assertEquals(team, team2);
 
-        logger.debug("The team that is being returned is: " + team.getTeamName());
+//        logger.debug("The team that is being returned is: " + team.getTeamName());
     }
 
     @Test
@@ -48,7 +48,7 @@ class TeamDaoTest {
         Team team2 = (Team) genericDao.getById(1);
         assertEquals(team, team2);
 
-        logger.debug("The team that is being returned is: " + team.getTeamName());
+//        logger.debug("The team that is being returned is: " + team.getTeamName());
     }
 
     @Test
@@ -74,7 +74,7 @@ class TeamDaoTest {
         Team insertedTeam = (Team) genericDao.getById(insert);
         assertEquals(team, insertedTeam);
 
-        logger.debug("The team that is being inserted is: " + team.getTeamName());
+//        logger.debug("The team that is being inserted is: " + team.getTeamName());
     }
 
     @Test
@@ -91,10 +91,10 @@ class TeamDaoTest {
 
         for (Team team : teams) {
             assertEquals(sport.getId(), team.getSport().getId());// verify team belongs to the sport by comparing ID
-            logger.debug("Found team: " + team.getTeamName() + " for sport: " + team.getSport().getSportName());
+//            logger.debug("Found team: " + team.getTeamName() + " for sport: " + team.getSport().getSportName());
         }
 
-        logger.debug("Total teams found: " + teams.size());
+//        logger.debug("Total teams found: " + teams.size());
     }
 
     @Test
@@ -103,7 +103,7 @@ class TeamDaoTest {
         assertNotNull(teams);
         assertEquals(4, teams.size());
 
-        logger.debug("Total teams found: " + teams.size());
+//        logger.debug("Total teams found: " + teams.size());
     }
 
     @Test
@@ -112,7 +112,7 @@ class TeamDaoTest {
         assertNotNull(teams);
         assertEquals(1, teams.size());
 
-        logger.debug("Found team: " + teams.get(0).getTeamName());
+//        logger.debug("Found team: " + teams.get(0).getTeamName());
     }
 
     @Test
@@ -122,7 +122,7 @@ class TeamDaoTest {
         assertEquals(4, teams.size()); // all sample teams have an s
 
         for (Team team : teams) {
-            logger.debug("Found team: " + team.getTeamName()); // for each team get me the team name
+//            logger.debug("Found team: " + team.getTeamName()); // for each team get me the team name
         }
     }
 }
