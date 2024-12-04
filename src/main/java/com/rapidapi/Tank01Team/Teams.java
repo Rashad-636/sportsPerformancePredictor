@@ -49,6 +49,17 @@ public class Teams {
 	@JsonProperty("nbaComLogo2")
 	private String nbaComLogo2;
 
+	@JsonProperty("teamSchedule")
+	private Object teamSchedule;
+
+	public Object getTeamSchedule() {
+		return teamSchedule;
+	}
+
+	public void setTeamSchedule(Object teamSchedule) {
+		this.teamSchedule = teamSchedule;
+	}
+
 	public void setTeamName(String teamName){
 		this.teamName = teamName;
 	}
@@ -170,24 +181,24 @@ public class Teams {
 	}
 
 	@Override
- 	public String toString(){
-		return 
-			"BodyItem{" + 
-			"teamName = '" + teamName + '\'' + 
-			",wins = '" + wins + '\'' + 
-			",currentStreak = '" + currentStreak + '\'' + 
-			",espnLogo1 = '" + espnLogo1 + '\'' + 
-			",conference = '" + conference + '\'' + 
-			",ppg = '" + ppg + '\'' + 
-			",nbaComLogo1 = '" + nbaComLogo1 + '\'' + 
-			",teamCity = '" + teamCity + '\'' + 
-			",oppg = '" + oppg + '\'' + 
-			",teamAbv = '" + teamAbv + '\'' + 
-			",division = '" + division + '\'' + 
-			",loss = '" + loss + '\'' + 
-			",conferenceAbv = '" + conferenceAbv + '\'' + 
-			",teamID = '" + teamID + '\'' + 
-			",nbaComLogo2 = '" + nbaComLogo2 + '\'' + 
-			"}";
-		}
+	public String toString() {
+		return "Teams{" +
+				"teamName='" + teamName + '\'' +
+				", wins='" + wins + '\'' +
+				", currentStreak=" + currentStreak +
+				", espnLogo1='" + espnLogo1 + '\'' +
+				", conference='" + conference + '\'' +
+				", ppg='" + ppg + '\'' +
+				", nbaComLogo1='" + nbaComLogo1 + '\'' +
+				", teamCity='" + teamCity + '\'' +
+				", oppg='" + oppg + '\'' +
+				", teamAbv='" + teamAbv + '\'' +
+				", division='" + division + '\'' +
+				", loss='" + loss + '\'' +
+				", conferenceAbv='" + conferenceAbv + '\'' +
+				", teamID='" + teamID + '\'' +
+				", nbaComLogo2='" + nbaComLogo2 + '\'' +
+				", teamSchedule='" + teamSchedule + '\'' +
+				'}';
+	}
 }

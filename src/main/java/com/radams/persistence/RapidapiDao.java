@@ -21,7 +21,7 @@ public class RapidapiDao {
 
         WebTarget target = client.target("https://tank01-fantasy-stats.p.rapidapi.com/getNBATeams")
                 // needs to be read from a properties file?
-                .queryParam("schedules", false)
+                .queryParam("schedules", true)
                 .queryParam("rosters", false)
                 .queryParam("topPerformers", false)
                 .queryParam("teamStats", false);
@@ -41,7 +41,7 @@ public class RapidapiDao {
             logger.error(e);
         }
 
-        logger.debug("Team returned: " + team);
+//        logger.debug("Teams returned: {}", team);
 
         return team;
     }

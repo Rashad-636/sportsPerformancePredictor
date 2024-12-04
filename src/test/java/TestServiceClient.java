@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestServiceClient {
 
-    private final Logger logger = LogManager.getLogger(TestServiceClient.class);
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
     @Test
     public void testTank01JSON() throws Exception {
@@ -20,7 +20,7 @@ public class TestServiceClient {
         // needs to be read from a properties file?
         WebTarget target = client.target("https://tank01-fantasy-stats.p.rapidapi.com/getNBATeams")
                 // needs to be read from a properties file?
-                .queryParam("schedules", false)
+                .queryParam("schedules", true)
                 .queryParam("rosters", false)
                 .queryParam("topPerformers", false)
                 .queryParam("teamStats", false);
@@ -34,7 +34,7 @@ public class TestServiceClient {
         ObjectMapper mapper = new ObjectMapper();
         Response data = mapper.readValue(response, Response.class);
 
-        assertEquals("Magic" , data.getBody().get(0).getTeamName());
-//        logger.debug(data.getBody().get(0).getTeamName());
+        assertEquals("Magic", data.getBody().get(0).getTeamName());
+        logger.info("Team Name: {}", data.getBody().get(0).getTeamName());
     }
 }
