@@ -9,3 +9,7 @@
 [INFO ] 2024-12-03 21:58:47.822 [RMI TCP Connection(2)-127.0.0.1] ApplicationStartup - Properties set in ServletContext
 [DEBUG] 2024-12-03 21:58:51.400 [RMI TCP Connection(2)-127.0.0.1] ApplicationStartup - Teams already exist in database
 [INFO ] 2024-12-03 21:58:51.400 [RMI TCP Connection(2)-127.0.0.1] ApplicationStartup - Servlet initialization completed successfully
+[INFO ] 2024-12-04 10:26:29.296 [main] TeamDaoTest - Found team in API: ATL
+[INFO ] 2024-12-04 10:29:58.978 [main] TeamDaoTest - Found team in API: ATL
+[INFO ] 2024-12-04 10:29:58.981 [main] TeamDaoTest - Found team in API: CHI
+[INFO ] 2024-12-04 10:29:58.982 [main] TeamDaoTest - Found team in API: ATL

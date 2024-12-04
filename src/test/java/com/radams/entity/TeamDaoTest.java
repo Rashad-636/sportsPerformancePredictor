@@ -1,12 +1,17 @@
 package com.radams.entity;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.radams.persistence.Database;
 import com.radams.persistence.GenericDao;
+import com.rapidapi.Tank01Team.Response;
+import com.rapidapi.Tank01Team.Teams;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.ws.rs.client.*;
+import javax.ws.rs.core.MediaType;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -123,6 +128,42 @@ class TeamDaoTest {
 
         for (Team team : teams) {
 //            logger.debug("Found team: " + team.getTeamName()); // for each team get me the team name
+        }
+    }
+
+    @Test
+    public void verifyTeamAbv() throws Exception {
+        Client client = ClientBuilder.newClient();
+        WebTarget target = client.target("https://tank01-fantasy-stats.p.rapidapi.com/getNBATeams");
+
+        // should be reading from properties file. okay for now
+        String response = target.request(MediaType.APPLICATION_JSON)
+                .header("x-rapidapi-host", "tank01-fantasy-stats.p.rapidapi.com")
+                .header("x-rapidapi-key", "2675fa7793msh7dc98ee2c3c8b44p148f76jsn9e60568e447f")
+                .get(String.class);
+//        logger.info("API response: {}", response);
+
+        // get all teams from database
+        GenericDao<Team> teamDao = new GenericDao<>(Team.class);
+        List<Team> databaseTeams = teamDao.getAll();
+//        logger.info("Database teams: {}", databaseTeams);
+
+        // Parse JSON response into list of teams
+        ObjectMapper mapper = new ObjectMapper();
+        Response apiTeams = mapper.readValue(response, Response.class);
+//        logger.info("API teams: {}", apiTeams.getBody());
+
+//        Verification - match database teams to apiTeams and get team abv
+        for (Team team : databaseTeams) {
+            boolean found = false;
+            for (Teams apiTeam : apiTeams.getBody()) {
+                if (team.getTeamAbv().equals(apiTeam.getTeamAbv())) {
+                    found = true;
+                    logger.info("Found team in API: {}", team.getTeamAbv());
+                    break;
+                }
+            }
+            assertTrue(found, "Team abbreviation not found in API response: " + team.getTeamAbv());
         }
     }
 }

@@ -41,7 +41,7 @@ CREATE TABLE `favorite_teams` (
 
 LOCK TABLES `favorite_teams` WRITE;
 /*!40000 ALTER TABLE `favorite_teams` DISABLE KEYS */;
-INSERT INTO `favorite_teams` VALUES (1,1,1),(5,1,2),(3,1,3),(6,2,1),(2,2,2),(4,2,4);
+INSERT INTO `favorite_teams` VALUES (1,1,1),(3,1,3),(6,2,1),(4,2,4);
 /*!40000 ALTER TABLE `favorite_teams` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +95,7 @@ CREATE TABLE `teams` (
 
 LOCK TABLES `teams` WRITE;
 /*!40000 ALTER TABLE `teams` DISABLE KEYS */;
-INSERT INTO `teams` VALUES (1,'Hawks',1,'ATL'),(2,'Packers',2,'GB'),(3,'Bulls',1,'CHI'),(4,'Falcons',2,'ATL');
+INSERT INTO `teams` VALUES (1,'Hawks',1,'ATL'),(3,'Bulls',1,'CHI'),(4,'Falcons',2,'ATL');
 /*!40000 ALTER TABLE `teams` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -133,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-04  9:55:56
+-- Dump completed on 2024-12-04 10:28:02
