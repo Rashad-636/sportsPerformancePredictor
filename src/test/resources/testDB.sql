@@ -81,6 +81,7 @@ CREATE TABLE `teams` (
   `id` int NOT NULL AUTO_INCREMENT,
   `team_name` varchar(100) NOT NULL,
   `sport_id` int NOT NULL,
+  `team_abv` varchar(5) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_team_sport` (`team_name`,`sport_id`),
   KEY `teams_sports_id_fk` (`sport_id`),
@@ -94,7 +95,7 @@ CREATE TABLE `teams` (
 
 LOCK TABLES `teams` WRITE;
 /*!40000 ALTER TABLE `teams` DISABLE KEYS */;
-INSERT INTO `teams` VALUES (3,'Bulls',1),(4,'Falcons',2),(1,'Hawks',1),(2,'Packers',2);
+INSERT INTO `teams` VALUES (1,'Hawks',1,'ATL'),(2,'Packers',2,'GB'),(3,'Bulls',1,'CHI'),(4,'Falcons',2,'ATL');
 /*!40000 ALTER TABLE `teams` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -132,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-27 15:51:37
+-- Dump completed on 2024-12-04  9:55:56

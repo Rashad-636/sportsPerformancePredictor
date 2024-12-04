@@ -22,6 +22,9 @@ public class Team {
     @Column(name = "team_name")
     private String teamName;
 
+    @Column(name = "team_abv")
+    private String teamAbv;
+
     @ManyToOne
     @JoinColumn(name = "sport_id",
             foreignKey = @ForeignKey(name = "favorite_teams_sports_id_fk")
@@ -99,12 +102,30 @@ public class Team {
         this.sport = sport;
     }
 
+    /**
+     * Gets team abv.
+     *
+     * @return the team abv
+     */
+    public String getTeamAbv() {
+        return teamAbv;
+    }
+
+    /**
+     * Sets team abv.
+     *
+     * @param teamAbv the team abv
+     */
+    public void setTeamAbv(String teamAbv) {
+        this.teamAbv = teamAbv;
+    }
 
     @Override
     public String toString() {
         return "Team{" +
                 "id=" + id +
                 ", name='" + teamName + '\'' +
+                ", abv='" + teamAbv + '\'' +
                 ", sport=" + (sport != null ? sport.getSportName() : "null") +
                 '}';
     }
