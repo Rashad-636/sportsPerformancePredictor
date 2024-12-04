@@ -13,6 +13,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -40,7 +41,7 @@ class rapidapiDaoTest {
         List<Team> databaseTeams = teamDao.getAll();
 //        logger.info("Database teams: {}", databaseTeams);
 
-//        Verification - match database teams to apiTeams and get team abv
+//        Verification - match database teams to apiTeams and get team abv in log
         for (Team team : databaseTeams) {
             boolean found = false;
             for (Teams apiTeam : apiTeams) {
@@ -54,7 +55,7 @@ class rapidapiDaoTest {
     }
 
     @Test
-    public void testGetTeamSchedulebyAbv() {
+    public void testGetTeamScheduleByAbv() {
         RapidapiDao dao = new RapidapiDao();
         List<Teams> apiTeams = dao.getTeams().getBody();
 
@@ -62,7 +63,7 @@ class rapidapiDaoTest {
         GenericDao<Team> teamDao = new GenericDao<>(Team.class);
         List<Team> databaseTeams = teamDao.getAll();
 
-        //        Verification - match database teams to apiTeams and get team abv
+        // Verification - match database teams to apiTeams. return the team name and  schedule in log
         for (Team team : databaseTeams) {
             boolean found = false;
             for (Teams apiTeam : apiTeams) {
@@ -70,11 +71,24 @@ class rapidapiDaoTest {
                     found = true;
                     logger.info("Found team in API: {}", team.getTeamName());
                     logger.info("and this is their schedule: {}", apiTeam.getTeamSchedule());
+
+                    // get team schedule map object from api and store Example response:("20250125_TOR@ATL", schedule object)
+                    Map<String, Map<String, Object>> schedule = (Map<String, Map<String, Object>>) apiTeam.getTeamSchedule();
+
+                    // for each schedule(for each team), get the game date, homeTeam, awayTeam, and game time
+                    for (Map.Entry<String, Map<String, Object>> gameEntry : schedule.entrySet()) {
+                        String gameDate = (String) gameEntry.getValue().get("gameDate");
+                        String homeTeam = (String) gameEntry.getValue().get("home");
+                        String awayTeam = (String) gameEntry.getValue().get("away");
+                        String gameTime = (String) gameEntry.getValue().get("gameTime");
+
+                        logger.info("Game Date: {}, Home Team: {}, Away Team: {}, Game Time: {}",
+                                gameDate, homeTeam, awayTeam, gameTime);
+                    }
+                    break;
                 }
             }
         }
-
-
     }
 
 }
