@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: rashadadams
@@ -42,13 +43,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                <%--access teamSchedule object from Teams --%>
-                <c:forEach var="gameEntry" items="${team.teamSchedule}">
+                <%--access teamSchedule object from Teams, and order by key (gameID) by comparison --%>
+                <%--new chronologicial schedule converted into sortedGames variable to be iteraited below --%>
+                <c:set var="sortedGames" value="${team.teamSchedule.entrySet().stream().sorted((a,b) -> a.key.compareTo(b.key)).toList()}"/>
+
+                <c:forEach var="game" items="${sortedGames}"> <%-- for each game in the new sortedGames schedule --%>
                     <tr>
-                        <td>${gameEntry.value.gameDate}</td>
-                        <td>${gameEntry.value.home}</td>
-                        <td>${gameEntry.value.away}</td>
-                        <td>${gameEntry.value.gameTime}</td>
+                        <td><fmt:parseDate value="${game.value.gameDate}" pattern="yyyyMMdd" var="parsedDate"/>
+                            <fmt:formatDate value="${parsedDate}" pattern="MMM d, yyyy"/></td>
+                        <td>${game.value.home}</td>
+                        <td>${game.value.away}</td>
+                        <td>${game.value.gameTime}</td>
                     </tr>
                 </c:forEach>
                 </tbody>

@@ -9,7 +9,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <%-- header jsp --%>
-<c:import url="head.jsp" />d
+<c:import url="head.jsp" />
 
 <body>
 <div id="wrap">

@@ -22,11 +22,14 @@ li { color: #036DA7; list-style-type: none; margin-bottom: 6px; }
 #footer a { color : #ddd; text-decoration: none; }
 .post-span {color:#ccc; font-size:12px;}
 .post-img{margin-top:10px;}
+
+
 .favorites-dashboard {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    width: 100%;
 }
 
 .team-card {
@@ -41,6 +44,9 @@ li { color: #036DA7; list-style-type: none; margin-bottom: 6px; }
 .team-card h3 {
     color: #555;
     margin-bottom: 10px;
+    flex: 1 1 200px;
+    max-width: calc(33.33% - 20px);
+    min-width: 200px;
 }
 
 .team-links {
@@ -72,4 +78,44 @@ li { color: #036DA7; list-style-type: none; margin-bottom: 6px; }
 
 .remove-btn:hover {
     background: #444;
+}
+
+.add-teams-section {
+    width: 100%; /* Full width to stay at bottom */
+    margin-top: 20px;
+    text-align: center;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.schedule-table th {
+    background: #222;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.schedule-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.schedule-table tr:hover {
+    background: #f5f5f5;
+}
+
+.schedule-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }

@@ -21,10 +21,6 @@ public class Schedule extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        // Get the user ID from the session
-        HttpSession session = req.getSession();
-        Integer userId = (Integer) session.getAttribute("userId");
-
         // get team_abv from database
         String teamAbv = req.getParameter("team_abv"); // jsp link passes team_abv from previous page as param
         logger.info("Received parameter for team abbreviation: {}", teamAbv);
