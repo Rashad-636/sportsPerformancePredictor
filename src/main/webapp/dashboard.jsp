@@ -43,7 +43,7 @@
         <div class="team-card">
           <h3>${favorite.team.teamName}</h3> <%-- access favorite teams, then teams ---%>
           <ul class="team-links">
-            <li><a href="schedule?teamId=${team.id}">Schedule</a></li>
+            <li><a href="schedule?team_abv=${favorite.team.teamAbv}">Schedule</a></li>
           </ul>
             <%-- option to remove favorite team ---%>
           <form action="removeFavorite" method="POST">

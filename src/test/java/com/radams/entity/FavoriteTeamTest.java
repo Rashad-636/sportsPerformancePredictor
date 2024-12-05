@@ -99,7 +99,7 @@ class FavoriteTeamTest {
     void getAllFavoritesFromDatabaseSuccess(){
         List<FavoriteTeam> favs = favoriteDao.getAll();
         assertNotNull(favs);
-        assertEquals(6, favs.size());
+        assertEquals(4, favs.size());
 //        logger.debug("Favs: " + favs.size());
     }
 

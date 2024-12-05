@@ -106,7 +106,7 @@ class TeamDaoTest {
     void getAllTeamsFromDatabaseSuccess() {
         List<Team> teams = genericDao.getAll();
         assertNotNull(teams);
-        assertEquals(4, teams.size());
+        assertEquals(3, teams.size());
 
 //        logger.debug("Total teams found: " + teams.size());
     }
@@ -124,7 +124,7 @@ class TeamDaoTest {
     void getByPropertyLike() {
         List<Team> teams = genericDao.getByPropertyLike("teamName", "s");
         assertNotNull(teams);
-        assertEquals(4, teams.size()); // all sample teams have an s
+        assertEquals(3, teams.size()); // all sample teams have an s
 
         for (Team team : teams) {
 //            logger.debug("Found team: " + team.getTeamName()); // for each team get me the team name

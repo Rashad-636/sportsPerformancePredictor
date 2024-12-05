@@ -1,7 +1,7 @@
 package com.radams.controller;
 
-import com.radams.entity.Team;
-import com.radams.persistence.GenericDao;
+import com.radams.persistence.RapidapiDao;
+import com.rapidapi.Tank01Team.Teams;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,24 +10,45 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet("/schedule")
+@WebServlet(
+        urlPatterns = {"/schedule"}
+)
 public class Schedule extends HttpServlet {
+
     private final Logger logger = LogManager.getLogger(this.getClass());
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws IOException, ServletException {
+        // Get the user ID from the session
+        HttpSession session = req.getSession();
+        Integer userId = (Integer) session.getAttribute("userId");
 
-        int teamId = Integer.parseInt(req.getParameter("teamId")); // Parsing Integer object
+        // get team_abv from database
+        String teamAbv = req.getParameter("team_abv");
+        logger.info("Received request for team abbreviation: {}", teamAbv);
 
-        // Get team ID
-        GenericDao<Team> teamDao = new GenericDao<>(Team.class);
-        Team team = teamDao.getById(teamId);
+        // get rapidapi connection and all teams
+        RapidapiDao dao = new RapidapiDao();
+        List<Teams> apiTeams = dao.getTeams().getBody();
 
-        // TODO: Add API call to get schedule
+        boolean found = false;
 
-        req.setAttribute("team", team);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/schedule.jsp");
-        dispatcher.forward(req, resp);
+        // match database and apiTeams team_abv and set into the team attribute
+        for (Teams team : apiTeams) {
+            if (team.getTeamAbv().equals(teamAbv)) {
+                req.setAttribute("team", team);
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            RequestDispatcher dispatcher = req.getRequestDispatcher("schedule.jsp");
+            dispatcher.forward(req, resp);
+        } else {
+            resp.sendRedirect("index.jsp"); // Redirect to the index page if team not found
+        }
     }
 }

@@ -37,6 +37,8 @@ public class Dashboard extends HttpServlet {
             req.setAttribute("favoriteTeams", favoriteTeams);
             RequestDispatcher dispatcher = req.getRequestDispatcher("/dashboard.jsp");
             dispatcher.forward(req, resp);
+        } else {
+            resp.sendRedirect("index.jsp"); // Redirect to the index page
         }
     }
 }

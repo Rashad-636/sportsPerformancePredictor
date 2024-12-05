@@ -2,6 +2,8 @@ package com.rapidapi.Tank01Team;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.List;
+
 public class Teams {
 
 	@JsonProperty("teamName")
@@ -59,7 +61,6 @@ public class Teams {
 	public void setTeamSchedule(Object teamSchedule) {
 		this.teamSchedule = teamSchedule;
 	}
-
 	public void setTeamName(String teamName){
 		this.teamName = teamName;
 	}

@@ -15,7 +15,7 @@ public class RapidapiDao {
 
     private final Logger logger = LogManager.getLogger(RapidapiDao.class);
 
-    Response getTeams() {
+    public Response getTeams() {
 
         Client client = ClientBuilder.newClient();
 
