@@ -28,7 +28,7 @@
 
         <div id="content">
             <h2>Mission Statement <span class="post-span"></span></h2>
-            <img src="images/sportsAnalytics.jpeg" class="post-img" alt="Bild" />
+            <img src="images/analytics.jpg" class="post-img" alt="Bild" />
             <p>Sports Analytics Pro empowers fans to track their favorite team's game schedules,
                 predictive analytics, and personalized statistics to enhance their engagement with professional sports.
                 While other features and sports are still in the works, feel free to create an account to start tracking your

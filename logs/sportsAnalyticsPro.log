@@ -1,0 +1,12 @@
+[INFO ] 2024-12-05 18:13:34.197 [RMI TCP Connection(2)-127.0.0.1] ApplicationStartup - Properties loaded successfully
+[INFO ] 2024-12-05 18:13:34.202 [RMI TCP Connection(2)-127.0.0.1] ApplicationStartup - ServletContext obtained
+[INFO ] 2024-12-05 18:13:34.202 [RMI TCP Connection(2)-127.0.0.1] ApplicationStartup - Properties set in ServletContext
+[INFO ] 2024-12-05 18:13:34.202 [RMI TCP Connection(2)-127.0.0.1] ApplicationStartup - Servlet initialization completed successfully
+[INFO ] 2024-12-05 18:14:09.909 [http-nio-8080-exec-2] LogIn - Client ID: 3mdue6fsnhmcqakufttrmk3a4e
+[INFO ] 2024-12-05 18:14:09.909 [http-nio-8080-exec-2] LogIn - Login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login
+[INFO ] 2024-12-05 18:14:09.909 [http-nio-8080-exec-2] LogIn - Redirect URL: https://sportsanalystpro-env.eba-h2xs6bpw.us-east-1.elasticbeanstalk.com/auth
+[DEBUG] 2024-12-05 18:14:09.912 [http-nio-8080-exec-2] LogIn - Complete login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=3mdue6fsnhmcqakufttrmk3a4e&redirect_uri=https://sportsanalystpro-env.eba-h2xs6bpw.us-east-1.elasticbeanstalk.com/auth
+[INFO ] 2024-12-05 18:34:06.178 [RMI TCP Connection(2)-127.0.0.1] ApplicationStartup - Properties loaded successfully
+[INFO ] 2024-12-05 18:34:06.183 [RMI TCP Connection(2)-127.0.0.1] ApplicationStartup - ServletContext obtained
+[INFO ] 2024-12-05 18:34:06.184 [RMI TCP Connection(2)-127.0.0.1] ApplicationStartup - Properties set in ServletContext
+[INFO ] 2024-12-05 18:34:06.184 [RMI TCP Connection(2)-127.0.0.1] ApplicationStartup - Servlet initialization completed successfully
