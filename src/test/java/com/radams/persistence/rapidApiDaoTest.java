@@ -20,7 +20,7 @@ class rapidApiDaoTest {
         RapidapiDao dao = new RapidapiDao();
         assertEquals("Magic", dao.getTeams().getBody().get(0).getTeamName());
 
-        logger.info("Magic schedule: {}", dao.getTeams().getBody().get(0).getTeamSchedule());
+//        logger.info("Magic schedule: {}", dao.getTeams().getBody().get(0).getTeamSchedule());
     }
 
     @Test
@@ -44,6 +44,7 @@ class rapidApiDaoTest {
                     break;
                 }
             }
+            assertTrue(found, "Team abbreviation " + team.getTeamAbv() + " not found in API");
         }
     }
 
@@ -55,6 +56,9 @@ class rapidApiDaoTest {
         // get all teams from database
         GenericDao<Team> teamDao = new GenericDao<>(Team.class);
         List<Team> databaseTeams = teamDao.getAll();
+
+        assertNotNull(databaseTeams.isEmpty(), "Database teams list should not be empty");
+        assertNotNull(apiTeams.isEmpty(), "API teams list should not be empty");
 
         // Verification - match database teams to apiTeams. return the team name and  schedule in log
         for (Team team : databaseTeams) {
@@ -68,7 +72,10 @@ class rapidApiDaoTest {
                     // get team schedule map object from api and store Example response:("20250125_TOR@ATL", schedule object)
                     Map<String, Map<String, Object>> schedule = (Map<String, Map<String, Object>>) apiTeam.getTeamSchedule();
 
+                    assertNotNull(schedule,"Schedule should not be null");
+
                     // for each schedule(for each team), get the game date, homeTeam, awayTeam, and game time
+                    // NOTE: gameDate needs to be sorted and formatted
                     for (Map.Entry<String, Map<String, Object>> gameEntry : schedule.entrySet()) {
                         String gameDate = (String) gameEntry.getValue().get("gameDate");
                         String homeTeam = (String) gameEntry.getValue().get("home");
@@ -81,6 +88,7 @@ class rapidApiDaoTest {
                     break;
                 }
             }
+            assertTrue(found, "Team " + team.getTeamName() + " should have a schedule");
         }
     }
 

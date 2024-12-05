@@ -3,6 +3,7 @@
   User: rashadadams
   Date: 12/2/24
   To change this template use File | Settings | File Templates.
+  all nba teams
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>

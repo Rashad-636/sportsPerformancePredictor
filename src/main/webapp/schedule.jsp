@@ -47,6 +47,7 @@
                 <%--new chronologicial schedule converted into sortedGames variable to be iteraited below --%>
                 <c:set var="sortedGames" value="${team.teamSchedule.entrySet().stream().sorted((a,b) -> a.key.compareTo(b.key)).toList()}"/>
 
+                <%--- loop through mapped list variable sortedGames like in our test --%>
                 <c:forEach var="game" items="${sortedGames}"> <%-- for each game in the new sortedGames schedule --%>
                     <tr>
                         <td><fmt:parseDate value="${game.value.gameDate}" pattern="yyyyMMdd" var="parsedDate"/>
