@@ -31,19 +31,33 @@
         <h1>Sports Analytics Pro</h1>
     </div>
     <div id="content">
-        <%-- show all teams that can be added to favorites list in card format ---%>
+        <%--- show all teams that can be added to favorites list in card format ---%>
         <div class="available-teams">
             <h2>Available Teams</h2>
-            <%-- loop to show all teams ---%>
+            <%--- loop to show all teams ---%>
             <c:forEach var="team" items="${allTeams}">
-                <div class="team-card">
-                    <h3>${team.teamName}</h3>
-                        <%-- option to add to list of favorites ---%>
-                    <form action="addFavorite" method="POST">
-                        <input type="hidden" name="teamId" value="${team.id}">
-                        <button type="submit">Add to Favorites</button>
-                    </form>
-                </div>
+                <%--- preset isAlreadyFavorite to false ---%>
+                <c:set var="isAlreadyFavorite" value="false"/>
+                <%--- loop through user favorite teams ---%>
+                <c:forEach var="favorite" items="${userFavorites}">
+                    <%--- if user favorite teamID equals the teamID ---%>
+                    <%--- set isAlreadyFavorite to true and do nothing ---%>
+                    <c:if test="${favorite.team.id == team.id}">
+                        <c:set var="isAlreadyFavorite" value="true"/>
+                    </c:if>
+                </c:forEach>
+
+                <%--- if they do not equal, show team card the page ---%>
+                <c:if test="${!isAlreadyFavorite}">
+                    <div class="team-card">
+                        <h3>${team.teamName}</h3>
+                            <%-- option to add to list of favorites ---%>
+                        <form action="addFavorite" method="POST">
+                            <input type="hidden" name="teamId" value="${team.id}">
+                            <button type="submit">Add to Favorites</button>
+                        </form>
+                    </div>
+                </c:if>
             </c:forEach>
         </div>
     </div>

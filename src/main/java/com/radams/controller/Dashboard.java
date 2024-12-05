@@ -25,8 +25,7 @@ public class Dashboard extends HttpServlet {
         Integer userId = (Integer) session.getAttribute("userId");
 
         if (userId != null) {
-            // get user object
-            // First get the User object
+            // get user object by the userID
             GenericDao<User> userDao = new GenericDao<>(User.class);
             User user = userDao.getById(userId);
 
@@ -34,6 +33,8 @@ public class Dashboard extends HttpServlet {
             GenericDao<FavoriteTeam> favoriteDao = new GenericDao<>(FavoriteTeam.class);
             List<FavoriteTeam> favoriteTeams = favoriteDao.getByPropertyEqual("user", user);
 
+            // set the user's favorite teams into favoriteTeams attribute
+            // to be accessed in JSP
             req.setAttribute("favoriteTeams", favoriteTeams);
             RequestDispatcher dispatcher = req.getRequestDispatcher("/dashboard.jsp");
             dispatcher.forward(req, resp);
