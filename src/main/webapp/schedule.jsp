@@ -42,7 +42,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                // access teamSchedule variable from rapiapi Teams
+                <%--access teamSchedule object from Teams --%>
                 <c:forEach var="gameEntry" items="${team.teamSchedule}">
                     <tr>
                         <td>${gameEntry.value.gameDate}</td>
