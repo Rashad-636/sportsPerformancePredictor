@@ -35,7 +35,7 @@ public class Schedule extends HttpServlet {
 
         boolean found = false;
 
-        // match database and apiTeams team_abv and set into the team attribute
+        // match database and apiTeams team_abv and set send each team through to jsp
         for (Teams team : apiTeams) {
             if (team.getTeamAbv().equals(teamAbv)) {
                 req.setAttribute("team", team);
