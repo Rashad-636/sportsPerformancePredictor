@@ -26,8 +26,8 @@ public class Schedule extends HttpServlet {
         Integer userId = (Integer) session.getAttribute("userId");
 
         // get team_abv from database
-        String teamAbv = req.getParameter("team_abv");
-        logger.info("Received request for team abbreviation: {}", teamAbv);
+        String teamAbv = req.getParameter("team_abv"); // jsp link passes team_abv from previous page as param
+        logger.info("Received parameter for team abbreviation: {}", teamAbv);
 
         // get rapidapi connection and all teams
         RapidapiDao dao = new RapidapiDao();

@@ -9,7 +9,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <%-- header jsp --%>
-<c:import url="head.jsp" />
+<c:import url="head.jsp" />d
 
 <body>
 <div id="wrap">
@@ -43,6 +43,7 @@
         <div class="team-card">
           <h3>${favorite.team.teamName}</h3> <%-- access favorite teams, then teams ---%>
           <ul class="team-links">
+              <%-- access and pass the favorite team's abv to be used in next servlet ---%>
             <li><a href="schedule?team_abv=${favorite.team.teamAbv}">Schedule</a></li>
           </ul>
             <%-- option to remove favorite team ---%>
