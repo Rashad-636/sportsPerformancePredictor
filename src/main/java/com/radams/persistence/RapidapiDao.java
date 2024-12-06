@@ -2,7 +2,8 @@ package com.radams.persistence;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.rapidapi.Tank01Team.Response;
+import com.rapidapi.Tank01Team.DailyScheduleResponse;
+import com.rapidapi.Tank01Team.TeamsResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,12 +11,15 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Properties;
 
 public class RapidapiDao implements PropertiesLoader {
 
     private final Logger logger = LogManager.getLogger(RapidapiDao.class);
     String API_URL;
+    String API_URL2;
     String API_KEY;
     String API_HOST;
 
@@ -32,9 +36,10 @@ public class RapidapiDao implements PropertiesLoader {
         API_URL = properties.getProperty("getNbaTeams");
         API_KEY = properties.getProperty("rapidApi-key-header");
         API_HOST = properties.getProperty("rapidApi-host-header");
+        API_URL2 = properties.getProperty("getDailySchedule");
     }
 
-    public Response getTeams() {
+    public TeamsResponse getTeams() {
         // load properties
         init();
 
@@ -51,9 +56,9 @@ public class RapidapiDao implements PropertiesLoader {
                 .get(String.class);
 
         ObjectMapper mapper = new ObjectMapper();
-        Response team = null;
+        TeamsResponse teams = null;
         try {
-            team = mapper.readValue(response, Response.class);
+            teams = mapper.readValue(response, TeamsResponse.class);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
             logger.error(e);
@@ -61,6 +66,33 @@ public class RapidapiDao implements PropertiesLoader {
 
 //        logger.debug("Teams and schedule returned: {}", team);
 
-        return team;
+        return teams;
+    }
+
+    public DailyScheduleResponse getDailySchedule() {
+        // load properties
+        init();
+
+        String todayDate = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+
+        Client client = ClientBuilder.newClient();
+        WebTarget target = client.target(API_URL2 + todayDate);
+
+        String response = target.request(MediaType.APPLICATION_JSON)
+                .header("x-rapidapi-host", API_HOST)
+                .header("x-rapidapi-key", API_KEY)
+                .get(String.class);
+
+        ObjectMapper mapper = new ObjectMapper();
+        DailyScheduleResponse schedule = null;
+        try {
+            schedule = mapper.readValue(response, DailyScheduleResponse.class);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            logger.error(e);
+        }
+
+        logger.debug(schedule);
+        return schedule;
     }
 }

@@ -1,5 +1,6 @@
 package com.radams.persistence;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.radams.entity.Team;
 import com.rapidapi.Tank01Team.Teams;
 import org.apache.logging.log4j.LogManager;
@@ -92,4 +93,9 @@ class rapidApiDaoTest {
         }
     }
 
+    @Test
+    public void getDailySchedule() throws JsonProcessingException {
+        RapidapiDao dao = new RapidapiDao();
+        logger.debug(dao.getDailySchedule().getBody());
+    }
 }
