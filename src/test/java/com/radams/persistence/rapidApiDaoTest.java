@@ -2,6 +2,7 @@ package com.radams.persistence;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.radams.entity.Team;
+import com.rapidapi.Tank01Team.DailySchedule;
 import com.rapidapi.Tank01Team.Teams;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -94,8 +95,19 @@ class rapidApiDaoTest {
     }
 
     @Test
-    public void getDailySchedule() throws JsonProcessingException {
+    public void getDailySchedule() {
         RapidapiDao dao = new RapidapiDao();
-        logger.debug(dao.getDailySchedule().getBody());
+        List<DailySchedule>dailySchedule = dao.getDailySchedule().getBody();
+
+        for (DailySchedule game : dailySchedule) {
+            String gameDate = game.getGameDate();
+            String homeTeam = game.getHome();
+            String awayTeam = game.getAway();
+
+            logger.debug("Game Date: {}", gameDate);
+            logger.debug("Home Team: {}", homeTeam);
+            logger.debug("Away Team: {}", awayTeam);
+        }
+        assertNotNull(dailySchedule, "Daily Schedule should not be null");
     }
 }

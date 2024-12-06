@@ -1,5 +1,21 @@
-[ERROR] 2024-12-06 14:37:26.467 [main] RapidapiDao - com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "gameID" (class com.rapidapi.Tank01Team.Teams), not marked as ignorable (16 known properties: "loss", "ppg", "teamName", "division", "nbaComLogo1", "nbaComLogo2", "teamSchedule", "wins", "oppg", "conferenceAbv", "espnLogo1", "conference", "teamCity", "currentStreak", "teamAbv", "teamID"])
- at [Source: (String)"{"statusCode": 200, "body": [{"gameID": "20241206_MIL@BOS", "teamIDAway": "17", "away": "MIL", "gameDate": "20241206", "teamIDHome": "2", "home": "BOS"}, {"gameID": "20241206_SAC@SA", "teamIDAway": "26", "away": "SAC", "gameDate": "20241206", "teamIDHome": "27", "home": "SA"}, {"gameID": "20241206_ORL@PHI", "teamIDAway": "22", "away": "ORL", "gameDate": "20241206", "teamIDHome": "23", "home": "PHI"}, {"gameID": "20241206_IND@CHI", "teamIDAway": "12", "away": "IND", "gameDate": "20241206", "teamI"[truncated 404 chars]; line: 1, column: 42] (through reference chain: com.rapidapi.Tank01Team.TeamsResponse["body"]->java.util.ArrayList[0]->com.rapidapi.Tank01Team.Teams["gameID"])
-[DEBUG] 2024-12-06 14:37:26.469 [main] RapidapiDao - null
-[DEBUG] 2024-12-06 14:40:51.398 [main] RapidapiDao - com.rapidapi.Tank01Team.DailyScheduleResponse@18acfe88
-[DEBUG] 2024-12-06 14:40:51.401 [main] rapidApiDaoTest - [com.rapidapi.Tank01Team.DailySchedule@19382338, com.rapidapi.Tank01Team.DailySchedule@66420549, com.rapidapi.Tank01Team.DailySchedule@15dc339f, com.rapidapi.Tank01Team.DailySchedule@6cd56321, com.rapidapi.Tank01Team.DailySchedule@34acbc60, com.rapidapi.Tank01Team.DailySchedule@42b28ff1, com.rapidapi.Tank01Team.DailySchedule@36061cf3]
+[DEBUG] 2024-12-06 15:35:41.237 [main] rapidApiDaoTest - Game Date: 20241206
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Home Team: BOS
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Away Team: MIL
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Game Date: 20241206
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Home Team: SA
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Away Team: SAC
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Game Date: 20241206
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Home Team: PHI
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Away Team: ORL
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Game Date: 20241206
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Home Team: CHI
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Away Team: IND
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Game Date: 20241206
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Home Team: POR
+[DEBUG] 2024-12-06 15:35:41.240 [main] rapidApiDaoTest - Away Team: UTA
+[DEBUG] 2024-12-06 15:35:41.241 [main] rapidApiDaoTest - Game Date: 20241206
+[DEBUG] 2024-12-06 15:35:41.241 [main] rapidApiDaoTest - Home Team: ATL
+[DEBUG] 2024-12-06 15:35:41.241 [main] rapidApiDaoTest - Away Team: LAL
+[DEBUG] 2024-12-06 15:35:41.241 [main] rapidApiDaoTest - Game Date: 20241206
+[DEBUG] 2024-12-06 15:35:41.241 [main] rapidApiDaoTest - Home Team: GS
+[DEBUG] 2024-12-06 15:35:41.241 [main] rapidApiDaoTest - Away Team: MIN

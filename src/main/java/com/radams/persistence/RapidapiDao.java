@@ -92,7 +92,7 @@ public class RapidapiDao implements PropertiesLoader {
             logger.error(e);
         }
 
-        logger.debug(schedule);
+//        logger.debug(schedule);
         return schedule;
     }
 }
