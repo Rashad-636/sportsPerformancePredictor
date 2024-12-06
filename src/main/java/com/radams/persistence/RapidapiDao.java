@@ -10,26 +10,44 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
+import java.util.Properties;
 
-public class RapidapiDao {
+public class RapidapiDao implements PropertiesLoader {
 
     private final Logger logger = LogManager.getLogger(RapidapiDao.class);
+    String API_URL;
+    String API_KEY;
+    String API_HOST;
+
+    public void init() {
+
+        Properties properties;
+
+        try {
+            properties = loadProperties("/tank01.properties");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        API_URL = properties.getProperty("getNbaTeams");
+        API_KEY = properties.getProperty("rapidApi-key-header");
+        API_HOST = properties.getProperty("rapidApi-host-header");
+    }
 
     public Response getTeams() {
+        // load properties
+        init();
 
         Client client = ClientBuilder.newClient();
-
-        WebTarget target = client.target("https://tank01-fantasy-stats.p.rapidapi.com/getNBATeams")
-                // needs to be read from a properties file?
+        WebTarget target = client.target(API_URL)
                 .queryParam("schedules", true)
                 .queryParam("rosters", false)
                 .queryParam("topPerformers", false)
                 .queryParam("teamStats", false);
 
         String response = target.request(MediaType.APPLICATION_JSON)
-                // needs to be read from a properties file?
-                .header("x-rapidapi-host", "tank01-fantasy-stats.p.rapidapi.com")
-                .header("x-rapidapi-key", "2675fa7793msh7dc98ee2c3c8b44p148f76jsn9e60568e447f")
+                .header("x-rapidapi-host", API_HOST)
+                .header("x-rapidapi-key", API_KEY)
                 .get(String.class);
 
         ObjectMapper mapper = new ObjectMapper();
@@ -41,7 +59,7 @@ public class RapidapiDao {
             logger.error(e);
         }
 
-//        logger.debug("Teams returned: {}", team);
+//        logger.debug("Teams and schedule returned: {}", team);
 
         return team;
     }
