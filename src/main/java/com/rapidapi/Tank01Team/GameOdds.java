@@ -2,7 +2,7 @@ package com.rapidapi.Tank01Team;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Odds {
+public class GameOdds {
 
     @JsonProperty("totalUnder")
     private String totalUnder;

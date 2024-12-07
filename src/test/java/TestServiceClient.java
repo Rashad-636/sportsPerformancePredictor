@@ -1,6 +1,5 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.radams.persistence.PropertiesLoader;
-import com.rapidapi.Tank01Team.DailyOddsResponse;
 import com.rapidapi.Tank01Team.DailyScheduleResponse;
 import com.rapidapi.Tank01Team.TeamsResponse;
 import org.junit.Test;
@@ -37,7 +36,6 @@ public class TestServiceClient implements PropertiesLoader {
         }
 
         API_URL = properties.getProperty("getNbaTeams");
-        API_URL2 = properties.getProperty("getDailySchedule");
         API_URL3 = properties.getProperty("getDailyOdds");
         API_KEY = properties.getProperty("rapidApi-key-header");
         API_HOST = properties.getProperty("rapidApi-host-header");
@@ -71,44 +69,24 @@ public class TestServiceClient implements PropertiesLoader {
     @Test
     public void testTank02JSON() throws Exception {
         init();
-
         String todayDate = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
 
         Client client = ClientBuilder.newClient();
-        WebTarget target = client.target(API_URL2 + todayDate);
+        WebTarget target = client.target(API_URL3)
+                .queryParam("gameDate", todayDate)
+                .queryParam("itemFormat", "list");;
 
         String response = target.request(MediaType.APPLICATION_JSON)
                 .header("x-rapidapi-host", API_HOST)
                 .header("x-rapidapi-key", API_KEY)
                 .get(String.class);
 
+        logger.info("Raw Response: " + response);
+
         ObjectMapper mapper = new ObjectMapper();
         DailyScheduleResponse data = mapper.readValue(response, DailyScheduleResponse.class);
 
-        logger.debug("Response: " + data.getBody().get(0));
-    }
-
-    @Test
-    public void testTank03JSON() throws Exception {
-        init();
-        String todayDate = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
-
-        Client client = ClientBuilder.newClient();
-        WebTarget target = client.target("https://tank01-fantasy-stats.p.rapidapi.com/getNBABettingOdds?gameDate=" + todayDate);
-
-        String response = target.request(MediaType.APPLICATION_JSON)
-                .header("x-rapidapi-host", "tank01-fantasy-stats.p.rapidapi.com")
-                .header("x-rapidapi-key", "2675fa7793msh7dc98ee2c3c8b44p148f76jsn9e60568e447f")
-                .get(String.class);
-
-        logger.info("Raw Response: " + response);
-        System.out.println("Raw Response: " + response);
-
-        ObjectMapper mapper = new ObjectMapper();
-        DailyOddsResponse data = mapper.readValue(response, DailyOddsResponse.class);
-
         logger.info("Parsed Response: " + data.getBody().get(0));
-        System.out.println("Parsed Response: " + data.getBody());
 
     }
 }

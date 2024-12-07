@@ -45,8 +45,8 @@
                 <tr>
                     <td><fmt:parseDate value="${game.gameDate}" pattern="yyyyMMdd" var="parsedDate"/>
                         <fmt:formatDate value="${parsedDate}" pattern="MMM d, yyyy"/></td>
-                    <td>${game.home}</td>
-                    <td>${game.away}</td>
+                    <td>${game.homeTeam}</td>
+                    <td>${game.awayTeam}</td>
                 </tr>
             </c:forEach>
             </tbody>

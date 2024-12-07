@@ -1,9 +1,8 @@
 package com.rapidapi.Tank01Team;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
 
-import java.util.List;
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Teams {
 
 	@JsonProperty("teamName")
@@ -15,17 +14,11 @@ public class Teams {
 	@JsonProperty("currentStreak")
 	private CurrentStreak currentStreak;
 
-	@JsonProperty("espnLogo1")
-	private String espnLogo1;
-
 	@JsonProperty("conference")
 	private String conference;
 
 	@JsonProperty("ppg")
 	private String ppg;
-
-	@JsonProperty("nbaComLogo1")
-	private String nbaComLogo1;
 
 	@JsonProperty("teamCity")
 	private String teamCity;
@@ -47,9 +40,6 @@ public class Teams {
 
 	@JsonProperty("teamID")
 	private String teamID;
-
-	@JsonProperty("nbaComLogo2")
-	private String nbaComLogo2;
 
 	@JsonProperty("teamSchedule")
 	private Object teamSchedule;
@@ -85,14 +75,6 @@ public class Teams {
 		return currentStreak;
 	}
 
-	public void setEspnLogo1(String espnLogo1){
-		this.espnLogo1 = espnLogo1;
-	}
-
-	public String getEspnLogo1(){
-		return espnLogo1;
-	}
-
 	public void setConference(String conference){
 		this.conference = conference;
 	}
@@ -107,14 +89,6 @@ public class Teams {
 
 	public String getPpg(){
 		return ppg;
-	}
-
-	public void setNbaComLogo1(String nbaComLogo1){
-		this.nbaComLogo1 = nbaComLogo1;
-	}
-
-	public String getNbaComLogo1(){
-		return nbaComLogo1;
 	}
 
 	public void setTeamCity(String teamCity){
@@ -173,24 +147,14 @@ public class Teams {
 		return teamID;
 	}
 
-	public void setNbaComLogo2(String nbaComLogo2){
-		this.nbaComLogo2 = nbaComLogo2;
-	}
-
-	public String getNbaComLogo2(){
-		return nbaComLogo2;
-	}
-
 	@Override
 	public String toString() {
 		return "Teams{" +
 				"teamName='" + teamName + '\'' +
 				", wins='" + wins + '\'' +
 				", currentStreak=" + currentStreak +
-				", espnLogo1='" + espnLogo1 + '\'' +
 				", conference='" + conference + '\'' +
 				", ppg='" + ppg + '\'' +
-				", nbaComLogo1='" + nbaComLogo1 + '\'' +
 				", teamCity='" + teamCity + '\'' +
 				", oppg='" + oppg + '\'' +
 				", teamAbv='" + teamAbv + '\'' +
@@ -198,7 +162,6 @@ public class Teams {
 				", loss='" + loss + '\'' +
 				", conferenceAbv='" + conferenceAbv + '\'' +
 				", teamID='" + teamID + '\'' +
-				", nbaComLogo2='" + nbaComLogo2 + '\'' +
 				", teamSchedule='" + teamSchedule + '\'' +
 				'}';
 	}

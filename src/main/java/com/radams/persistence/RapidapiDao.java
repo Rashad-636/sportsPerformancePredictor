@@ -19,7 +19,7 @@ public class RapidapiDao implements PropertiesLoader {
 
     private final Logger logger = LogManager.getLogger(RapidapiDao.class);
     String API_URL;
-    String API_URL2;
+    String API_URL3;
     String API_KEY;
     String API_HOST;
 
@@ -36,7 +36,7 @@ public class RapidapiDao implements PropertiesLoader {
         API_URL = properties.getProperty("getNbaTeams");
         API_KEY = properties.getProperty("rapidApi-key-header");
         API_HOST = properties.getProperty("rapidApi-host-header");
-        API_URL2 = properties.getProperty("getDailySchedule");
+        API_URL3 = properties.getProperty("getDailyOdds");
     }
 
     public TeamsResponse getTeams() {
@@ -76,7 +76,9 @@ public class RapidapiDao implements PropertiesLoader {
         String todayDate = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
 
         Client client = ClientBuilder.newClient();
-        WebTarget target = client.target(API_URL2 + todayDate);
+        WebTarget target = client.target(API_URL3)
+                .queryParam("gameDate", todayDate)
+                .queryParam("itemFormat", "list");
 
         String response = target.request(MediaType.APPLICATION_JSON)
                 .header("x-rapidapi-host", API_HOST)
