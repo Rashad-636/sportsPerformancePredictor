@@ -36,8 +36,8 @@
             <thead>
             <tr>
                 <th>Date</th>
-                <th>Away Team</th>
                 <th>Home Team</th>
+                <th>Away Team</th>
             </tr>
             </thead>
             <tbody>

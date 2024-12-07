@@ -2,6 +2,8 @@ package com.radams.persistence;
 
 import com.radams.entity.Team;
 import com.rapidapi.Tank01Team.DailySchedule;
+import com.rapidapi.Tank01Team.GameOdds;
+import com.rapidapi.Tank01Team.SportsBook;
 import com.rapidapi.Tank01Team.Teams;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -96,16 +98,20 @@ class rapidApiDaoTest {
     @Test
     public void getDailySchedule() {
         RapidapiDao dao = new RapidapiDao();
-        List<DailySchedule>dailySchedule = dao.getDailySchedule().getBody();
+        List<DailySchedule> dailySchedule = dao.getDailySchedule().getBody();
+
 
         for (DailySchedule game : dailySchedule) {
-            String gameDate = game.getGameDate();
-            String homeTeam = game.getHomeTeam();
-            String awayTeam = game.getAwayTeam();
+            logger.debug("Game: {} vs {}", game.getAwayTeam(), game.getHomeTeam());
 
-            logger.debug("Game Date: {}", gameDate);
-            logger.debug("Home Team: {}", homeTeam);
-            logger.debug("Away Team: {}", awayTeam);
+            // Access sportsbooks
+            for (SportsBook book : game.getSportsBooks()) {
+                logger.debug("Sportsbook: {}", book.getSportsBook());
+                GameOdds odds = book.getOdds();
+                logger.debug("  Spread: {} ({})", odds.getHomeTeamSpread(), odds.getHomeTeamSpreadOdds());
+                logger.debug("  Moneyline: {} / {}", odds.getHomeTeamMLOdds(), odds.getAwayTeamMLOdds());
+                logger.debug("  Total: {} O/U ({})", odds.getTotalOver(), odds.getTotalOverOdds());
+            }
         }
         assertNotNull(dailySchedule, "Daily Schedule should not be null");
     }
