@@ -10,7 +10,7 @@ public class DailySchedule {
     private String teamIDAway;
 
     @JsonProperty("away")
-    private String away;
+    private String awayTeam;
 
     @JsonProperty("gameDate")
     private String gameDate;
@@ -19,7 +19,7 @@ public class DailySchedule {
     private String teamIDHome;
 
     @JsonProperty("home")
-    private String home;
+    private String homeTeam;
 
     public String getGameID() {
         return gameID;
@@ -53,19 +53,19 @@ public class DailySchedule {
         this.teamIDHome = teamIDHome;
     }
 
-    public String getHome() {
-        return home;
+    public String getAwayTeam() {
+        return awayTeam;
     }
 
-    public void setHome(String home) {
-        this.home = home;
+    public void setAwayTeam(String awayTeam) {
+        this.awayTeam = awayTeam;
     }
 
-    public String getAway() {
-        return away;
+    public String getHomeTeam() {
+        return homeTeam;
     }
 
-    public void setAway(String away) {
-        this.away = away;
+    public void setHomeTeam(String homeTeam) {
+        this.homeTeam = homeTeam;
     }
 }

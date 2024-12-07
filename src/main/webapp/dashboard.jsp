@@ -18,6 +18,7 @@
       <c:choose>
         <c:when test="${sessionScope.userId == null}">
           <a href="logIn">Sign In</a>
+          <a href="dailySchedule">NBA Today</a>
         </c:when>
         <c:otherwise>
           <a href="index.jsp">Home</a>

@@ -1,6 +1,5 @@
 package com.radams.persistence;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.radams.entity.Team;
 import com.rapidapi.Tank01Team.DailySchedule;
 import com.rapidapi.Tank01Team.Teams;
@@ -101,8 +100,8 @@ class rapidApiDaoTest {
 
         for (DailySchedule game : dailySchedule) {
             String gameDate = game.getGameDate();
-            String homeTeam = game.getHome();
-            String awayTeam = game.getAway();
+            String homeTeam = game.getHomeTeam();
+            String awayTeam = game.getAwayTeam();
 
             logger.debug("Game Date: {}", gameDate);
             logger.debug("Home Team: {}", homeTeam);
