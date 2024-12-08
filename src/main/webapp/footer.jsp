@@ -9,5 +9,5 @@
         <a href="#" title="Sitemap"><img src="images/sitemap.gif" alt="Sitemap" /></a>
         <a href="#" title="Rss Feed"><img src="images/rss.png" alt="Rss Feed" /></a>
     </div>
-    Created on Sep 18, 2024 by Rashad Adams | LinkedIn profile ----> <a target="_blank" href="#">HERE</a>
+    Created on Sep 18, 2024 by Rashad Adams | Madison Area Technical College
 </div>

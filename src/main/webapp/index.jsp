@@ -18,6 +18,7 @@
                         </c:when>
                         <c:otherwise>
                             <a href="index.jsp">Home</a>
+                            <a href="dailySchedule">NBA Today</a>
                             <a href="dashboard">My Teams</a>
                             <a href="signout">Sign Out</a>
                             <span style="color: white;">${userName}</span>
@@ -30,21 +31,28 @@
         <div id="content">
             <h2>Mission Statement <span class="post-span"></span></h2>
             <img src="images/analytics.jpg" class="post-img" alt="Bild" />
-            <p>Sports Analytics Pro empowers fans to track their favorite team's game schedules,
+            <div class="features-section">
+                <p>Sports Analytics Pro empowers fans to track their favorite team's game schedules,
                 predictive analytics, and personalized statistics to enhance their engagement with professional sports.
-                While other features and sports are still in the works, feel free to create an account to start tracking your
-                favorite nba teams and their schedules!</p>
+                Check out the NBA Today link to view a list of today's games with odds updated in real time from BetMGM,
+                Bet365 and Fanduel. While other features and sports are still in the works, feel free to create an
+                account to start tracking your favorite nba teams and their schedules!</p>
+            </div>
 
-            <h2>NBA <span class="post-span">powered by: RapidApi</span></h2>
-            <img src="images/nba.jpeg" class="post-img" alt="Bild" />
-            Features coming soon
-            <ul>
-                <li>Top news and headlines</li>
-                <li>Fantasy point projections</li>
-                <li>Real time daily scoreboards </li>
-                <li>Team rosters and depth charts for team favorites</li>
-                <li>team injury reports</li>
-            </ul>
+            <div class="nba-section">
+                <h2>NBA <span class="post-span">powered by: RapidApi</span></h2>
+                <img src="images/nba.jpeg" class="post-img" alt="Bild" />
+                <div class="features-section">
+                    <p class="features-heading">Features coming soon:</p>
+                    <ul class="features-list">
+                        <li>Top news and headlines</li>
+                        <li>Fantasy point projections</li>
+                        <li>Real time daily scoreboards</li>
+                        <li>Team rosters and depth charts for team favorites</li>
+                        <li>Team injury reports</li>
+                    </ul>
+                </div>
+            </div>
 
             <h2>NFL <span class="post-span">powered by: RapidApi</span></h2>
             <img src="images/nfl.jpg" class="post-img" alt="Bild" />

@@ -23,6 +23,7 @@
                 </c:when>
                 <c:otherwise>
                     <a href="index.jsp">Home</a>
+                    <a href="dailySchedule">NBA Today</a>
                     <a href="dashboard">My Teams</a>
                     <a href="signout">Sign Out</a>
                     <span style="color: white;">${userName}</span>

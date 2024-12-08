@@ -12,38 +12,39 @@
 <c:import url="head.jsp" />
 
 <body>
-<div id="wrap">
-    <div id="header">
-        <div id="headerlinks">
-            <c:choose>
-                <c:when test="${sessionScope.userId == null}">
-                    <a href="index.jsp">Home</a>
-                    <a href="logIn">Sign In</a>
-                </c:when>
-                <c:otherwise>
-                    <a href="index.jsp">Home</a>
-                    <a href="dashboard">My Teams</a>
-                    <a href="signout">Sign Out</a>
-                    <span style="color: white;">${userName}</span>
-                </c:otherwise>
-            </c:choose>
+    <div id="wrap">
+        <div id="header">
+            <div id="headerlinks">
+                <c:choose>
+                    <c:when test="${sessionScope.userId == null}">
+                        <a href="index.jsp">Home</a>
+                        <a href="logIn">Sign In</a>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="index.jsp">Home</a>
+                        <a href="dashboard">My Teams</a>
+                        <a href="signout">Sign Out</a>
+                        <span style="color: white;">${userName}</span>
+                    </c:otherwise>
+                </c:choose>
+            </div>
+            <h1>Today's Games</h1>
         </div>
-        <h1>Today's Games</h1>
-    </div>
 
-    <div id="content">
-        <table class="schedule-table">
-            <thead>
-            <tr>
-                <th>Date</th>
-                <th>Game</th>
-                <th>BetMGM</th>
-                <th>Bet365</th>
-                <th>FanDuel</th>
-            </tr>
-            </thead>
-            <tbody>
-                <c:forEach var="game" items="${games}">
+        <div id="content">
+            <table class="schedule-table">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Game</th>
+                    <th>BetMGM</th>
+                    <th>Bet365</th>
+                    <th>FanDuel</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <%-- for each game, show the gameDate, away/home teams---%>
+                    <c:forEach var="game" items="${games}">
                     <tr>
                         <td>
                             <fmt:parseDate value="${game.gameDate}" pattern="yyyyMMdd" var="parsedDate"/>
@@ -52,7 +53,7 @@
                         <td class="matchup">
                                 ${game.awayTeam} @ ${game.homeTeam}
                         </td>
-
+                            <%-- for each game, get the first 3 sports books and their odds ---%>
                         <c:forEach var="book" items="${game.sportsBooks}" begin="0" end="2">
                             <td class="odds">
                                 <div class="odds-group">
@@ -76,12 +77,12 @@
                             </td>
                         </c:forEach>
                     </tr>
-                </c:forEach>
-            </tbody>
-        </table>
-    </div>
+                    </c:forEach>
+                </tbody>
+            </table>
+        </div>
 
-    <c:import url="footer.jsp" />
-</div>
+        <c:import url="footer.jsp" />
+    </div>
 </body>
 </html>

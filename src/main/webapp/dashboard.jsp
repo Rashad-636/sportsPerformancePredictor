@@ -22,6 +22,7 @@
         </c:when>
         <c:otherwise>
           <a href="index.jsp">Home</a>
+          <a href="dailySchedule">NBA Today</a>
           <a href="dashboard">My Teams</a>
           <a href="signout">Sign Out</a>
           <span style="color: white;">${userName}</span>
@@ -30,40 +31,36 @@
     </div>
     <h1>Sports Analytics Pro</h1>
   </div>
-  <div id="content">
+    <div id="content">
+      <div class="favorites-dashboard">
+        <h2>My Teams</h2>
 
-    <div class="favorites-dashboard">
-      <h2>My Teams</h2>
-      <%-- check if user has any favorite teams ---%>
-      <c:if test="${empty favoriteTeams}">
-        <p>No favorite teams added yet!</p>
-      </c:if>
-      <br>
-      <%-- loop and show each of the user's favorite teams in card format ---%>
-      <c:forEach var="favorite" items="${favoriteTeams}">
-        <div class="team-card">
-          <h3>${favorite.team.teamName}</h3> <%-- access favorite teams, then teams ---%>
-          <ul class="team-links">
-              <%-- access and pass the favorite team's abv to be used in next servlet ---%>
-            <li><a href="schedule?team_abv=${favorite.team.teamAbv}">Schedule</a></li>
-          </ul>
-            <%-- option to remove favorite team ---%>
-          <form action="removeFavorite" method="POST">
-            <input type="hidden" name="teamId" value="${favorite.team.id}"> <%-- access favorite teams, then teams ---%>
-            <button type="submit" class="remove-btn">Remove from Favorites</button>
-          </form>
-          <br>
+        <div class="team-cards-container">
+          <%-- check if user has any favorite teams ---%>
+          <c:if test="${empty favoriteTeams}">
+            <p>No favorite teams added yet!</p>
+          </c:if>
+
+          <%-- loop and show each of the user's favorite teams in card format ---%>
+          <c:forEach var="favorite" items="${favoriteTeams}">
+            <div class="team-card">
+              <h3>${favorite.team.teamName}</h3>
+              <ul class="team-links">
+                <li><a href="schedule?team_abv=${favorite.team.teamAbv}">Schedule</a></li>
+              </ul>
+              <form action="removeFavorite" method="POST">
+                <input type="hidden" name="teamId" value="${favorite.team.id}">
+                <button type="submit" class="remove-btn">Remove from Favorites</button>
+              </form>
+            </div>
+          </c:forEach>
         </div>
-      </c:forEach>
-      <br>
-      <br>
-      <%-- option to add favorite team ---%>
-      <div class="add-teams-section">
-        <a href="allTeams" class="add-teams-btn">Add More Teams to Favorite List</a>
+
+        <div class="add-teams-section">
+          <a href="allTeams" class="add-teams-btn">Add More Teams to Favorite List</a>
+        </div>
       </div>
     </div>
-
-  </div>
 
   <%-- footer jsp --%>
   <c:import url="footer.jsp" />
