@@ -100,17 +100,17 @@ class rapidApiDaoTest {
         RapidapiDao dao = new RapidapiDao();
         List<DailySchedule> dailySchedule = dao.getDailySchedule().getBody();
 
-
+        // get each game from the daily schedule
         for (DailySchedule game : dailySchedule) {
-            logger.debug("Game: {} vs {}", game.getAwayTeam(), game.getHomeTeam());
+//            logger.debug("Game: {} vs {}", game.getAwayTeam(), game.getHomeTeam());
 
-            // Access sportsbooks
+            // Access sportsbooks from each game
             for (SportsBook book : game.getSportsBooks()) {
-                logger.debug("Sportsbook: {}", book.getSportsBook());
-                GameOdds odds = book.getOdds();
-                logger.debug("  Spread: {} ({})", odds.getHomeTeamSpread(), odds.getHomeTeamSpreadOdds());
-                logger.debug("  Moneyline: {} / {}", odds.getHomeTeamMLOdds(), odds.getAwayTeamMLOdds());
-                logger.debug("  Total: {} O/U ({})", odds.getTotalOver(), odds.getTotalOverOdds());
+//                logger.debug("Sportsbook: {}", book.getSportsBook());
+//                GameOdds odds = book.getOdds();
+//                logger.debug("  Spread: {} ({})", odds.getHomeTeamSpread(), odds.getHomeTeamSpreadOdds());
+//                logger.debug("  Moneyline: {} / {}", odds.getHomeTeamMLOdds(), odds.getAwayTeamMLOdds());
+//                logger.debug("  Total: {} O/U ({})", odds.getTotalOver(), odds.getTotalOverOdds());
             }
         }
         assertNotNull(dailySchedule, "Daily Schedule should not be null");

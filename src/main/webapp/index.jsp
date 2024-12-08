@@ -37,7 +37,14 @@
 
             <h2>NBA <span class="post-span">powered by: RapidApi</span></h2>
             <img src="images/nba.jpeg" class="post-img" alt="Bild" />
-            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            Features coming soon
+            <ul>
+                <li>Top news and headlines</li>
+                <li>Fantasy point projections</li>
+                <li>Real time daily scoreboards </li>
+                <li>Team rosters and depth charts for team favorites</li>
+                <li>team injury reports</li>
+            </ul>
 
             <h2>NFL <span class="post-span">powered by: RapidApi</span></h2>
             <img src="images/nfl.jpg" class="post-img" alt="Bild" />
