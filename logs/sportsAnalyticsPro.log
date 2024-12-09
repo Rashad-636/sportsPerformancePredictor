@@ -63,3 +63,11 @@
 [INFO ] 2024-12-09 14:27:50.778 [http-nio-8080-exec-3] Schedule - Received parameter for team abbreviation: CHA
 [INFO ] 2024-12-09 14:29:25.083 [http-nio-8080-exec-5] Schedule - Received parameter for team abbreviation: CHA
 [INFO ] 2024-12-09 14:31:19.116 [http-nio-8080-exec-3] Schedule - Received parameter for team abbreviation: CHA
+[INFO ] 2024-12-09 14:34:40.511 [http-nio-8080-exec-2] LogIn - Client ID: 3mdue6fsnhmcqakufttrmk3a4e
+[INFO ] 2024-12-09 14:34:40.519 [http-nio-8080-exec-2] LogIn - Login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login
+[INFO ] 2024-12-09 14:34:40.519 [http-nio-8080-exec-2] LogIn - Redirect URL: https://sportsanalystpro-env.eba-h2xs6bpw.us-east-1.elasticbeanstalk.com/auth
+[DEBUG] 2024-12-09 14:34:40.522 [http-nio-8080-exec-2] LogIn - Complete login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=3mdue6fsnhmcqakufttrmk3a4e&redirect_uri=https://sportsanalystpro-env.eba-h2xs6bpw.us-east-1.elasticbeanstalk.com/auth
+[INFO ] 2024-12-09 14:38:52.791 [http-nio-8080-exec-4] LogIn - Client ID: 3mdue6fsnhmcqakufttrmk3a4e
+[INFO ] 2024-12-09 14:38:52.798 [http-nio-8080-exec-4] LogIn - Login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login
+[INFO ] 2024-12-09 14:38:52.799 [http-nio-8080-exec-4] LogIn - Redirect URL: https://sportsanalystpro-env.eba-h2xs6bpw.us-east-1.elasticbeanstalk.com/auth
+[DEBUG] 2024-12-09 14:38:52.801 [http-nio-8080-exec-4] LogIn - Complete login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=3mdue6fsnhmcqakufttrmk3a4e&redirect_uri=https://sportsanalystpro-env.eba-h2xs6bpw.us-east-1.elasticbeanstalk.com/auth
