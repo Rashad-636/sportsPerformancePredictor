@@ -1,0 +1,65 @@
+[DEBUG] 2024-12-09 11:50:16.038 [http-nio-8080-exec-9] SignOut - Redirecting to logout URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/logout?client_id=3mdue6fsnhmcqakufttrmk3a4e&logout_uri=https://sportsanalystpro-env.eba-h2xs6bpw.us-east-1.elasticbeanstalk.com/index.jsp
+[INFO ] 2024-12-09 11:51:57.599 [http-nio-8080-exec-7] LogIn - Client ID: 3mdue6fsnhmcqakufttrmk3a4e
+[INFO ] 2024-12-09 11:51:57.600 [http-nio-8080-exec-7] LogIn - Login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login
+[INFO ] 2024-12-09 11:51:57.600 [http-nio-8080-exec-7] LogIn - Redirect URL: http://localhost:8080/sportsAnalyticsPro_war/auth
+[DEBUG] 2024-12-09 11:51:57.600 [http-nio-8080-exec-7] LogIn - Complete login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=3mdue6fsnhmcqakufttrmk3a4e&redirect_uri=http://localhost:8080/sportsAnalyticsPro_war/auth
+[INFO ] 2024-12-09 11:52:12.329 [http-nio-8080-exec-2] LogIn - Client ID: 3mdue6fsnhmcqakufttrmk3a4e
+[INFO ] 2024-12-09 11:52:12.329 [http-nio-8080-exec-2] LogIn - Login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login
+[INFO ] 2024-12-09 11:52:12.329 [http-nio-8080-exec-2] LogIn - Redirect URL: http://localhost:8080/sportsAnalyticsPro_war/auth
+[DEBUG] 2024-12-09 11:52:12.329 [http-nio-8080-exec-2] LogIn - Complete login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=3mdue6fsnhmcqakufttrmk3a4e&redirect_uri=http://localhost:8080/sportsAnalyticsPro_war/auth
+[DEBUG] 2024-12-09 11:52:39.867 [http-nio-8080-exec-6] SignOut - Redirecting to logout URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/logout?client_id=3mdue6fsnhmcqakufttrmk3a4e&logout_uri=https://sportsanalystpro-env.eba-h2xs6bpw.us-east-1.elasticbeanstalk.com/index.jsp
+[DEBUG] 2024-12-09 11:55:22.954 [http-nio-8080-exec-9] SignOut - Redirecting to logout URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/logout?client_id=3mdue6fsnhmcqakufttrmk3a4e&logout_uri=https://sportsanalystpro-env.eba-h2xs6bpw.us-east-1.elasticbeanstalk.com/index.jsp
+[INFO ] 2024-12-09 11:55:44.178 [http-nio-8080-exec-3] LogIn - Client ID: 3mdue6fsnhmcqakufttrmk3a4e
+[INFO ] 2024-12-09 11:55:44.179 [http-nio-8080-exec-3] LogIn - Login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login
+[INFO ] 2024-12-09 11:55:44.179 [http-nio-8080-exec-3] LogIn - Redirect URL: http://localhost:8080/sportsAnalyticsPro_war/auth
+[DEBUG] 2024-12-09 11:55:44.179 [http-nio-8080-exec-3] LogIn - Complete login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=3mdue6fsnhmcqakufttrmk3a4e&redirect_uri=http://localhost:8080/sportsAnalyticsPro_war/auth
+[DEBUG] 2024-12-09 11:55:49.530 [http-nio-8080-exec-4] Auth - Loading JWKS
+[DEBUG] 2024-12-09 11:55:49.720 [http-nio-8080-exec-4] Auth - Keys are loaded. Here's e: AQAB
+[INFO ] 2024-12-09 11:55:49.720 [http-nio-8080-exec-4] Auth - inside the init
+[DEBUG] 2024-12-09 11:55:54.041 [http-nio-8080-exec-4] Auth - User already exists in mysql with email: Rashaddms@gmail.com
+[DEBUG] 2024-12-09 11:55:54.043 [http-nio-8080-exec-4] Auth - Stored user ID in session: 3
+[DEBUG] 2024-12-09 11:56:06.967 [http-nio-8080-exec-9] SignOut - Redirecting to logout URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/logout?client_id=3mdue6fsnhmcqakufttrmk3a4e&logout_uri=https://sportsanalystpro-env.eba-h2xs6bpw.us-east-1.elasticbeanstalk.com/index.jsp
+[DEBUG] 2024-12-09 11:56:16.550 [http-nio-8080-exec-7] SignOut - Redirecting to logout URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/logout?client_id=3mdue6fsnhmcqakufttrmk3a4e&logout_uri=https://sportsanalystpro-env.eba-h2xs6bpw.us-east-1.elasticbeanstalk.com/index.jsp
+[DEBUG] 2024-12-09 11:56:31.537 [http-nio-8080-exec-1] SignOut - Redirecting to logout URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/logout?client_id=3mdue6fsnhmcqakufttrmk3a4e&logout_uri=https://sportsanalystpro-env.eba-h2xs6bpw.us-east-1.elasticbeanstalk.com/index.jsp
+[INFO ] 2024-12-09 11:57:34.237 [http-nio-8080-exec-7] LogIn - Client ID: 3mdue6fsnhmcqakufttrmk3a4e
+[INFO ] 2024-12-09 11:57:34.238 [http-nio-8080-exec-7] LogIn - Login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login
+[INFO ] 2024-12-09 11:57:34.238 [http-nio-8080-exec-7] LogIn - Redirect URL: http://localhost:8080/sportsAnalyticsPro_war/auth
+[DEBUG] 2024-12-09 11:57:34.238 [http-nio-8080-exec-7] LogIn - Complete login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=3mdue6fsnhmcqakufttrmk3a4e&redirect_uri=http://localhost:8080/sportsAnalyticsPro_war/auth
+[DEBUG] 2024-12-09 11:57:40.985 [http-nio-8080-exec-8] Auth - User already exists in mysql with email: Rashaddms@gmail.com
+[DEBUG] 2024-12-09 11:57:40.986 [http-nio-8080-exec-8] Auth - Stored user ID in session: 3
+[DEBUG] 2024-12-09 11:59:19.060 [http-nio-8080-exec-7] DisplayAllTeams - [Team{id=5, name='Celtics', abv='BOS', sport=NBA}, Team{id=6, name='Nets', abv='BKN', sport=NBA}, Team{id=7, name='Hornets', abv='CHA', sport=NBA}, Team{id=8, name='Cavaliers', abv='CLE', sport=NBA}, Team{id=9, name='Mavericks', abv='DAL', sport=NBA}, Team{id=10, name='Nuggets', abv='DEN', sport=NBA}, Team{id=11, name='Pistons', abv='DET', sport=NBA}, Team{id=12, name='Warriors', abv='GS', sport=NBA}, Team{id=13, name='Rockets', abv='HOU', sport=NBA}, Team{id=14, name='Pacers', abv='IND', sport=NBA}, Team{id=15, name='Clippers', abv='LAC', sport=NBA}, Team{id=16, name='Lakers', abv='LAL', sport=NBA}, Team{id=17, name='Grizzlies', abv='MEM', sport=NBA}, Team{id=18, name='Heat', abv='MIA', sport=NBA}, Team{id=19, name='Bucks', abv='MIL', sport=NBA}, Team{id=20, name='Timberwolves', abv='MIN', sport=NBA}, Team{id=21, name='Pelicans', abv='NOP', sport=NBA}, Team{id=22, name='Knicks', abv='NYK', sport=NBA}, Team{id=23, name='Thunder', abv='OKC', sport=NBA}, Team{id=24, name='Magic', abv='ORL', sport=NBA}, Team{id=25, name='76ers', abv='PHI', sport=NBA}, Team{id=26, name='Suns', abv='PHX', sport=NBA}, Team{id=27, name='Trail Blazers', abv='POR', sport=NBA}, Team{id=28, name='Kings', abv='SAC', sport=NBA}, Team{id=29, name='Spurs', abv='SAS', sport=NBA}, Team{id=30, name='Raptors', abv='TOR', sport=NBA}, Team{id=31, name='Jazz', abv='UTA', sport=NBA}, Team{id=32, name='Wizards', abv='WAS', sport=NBA}, Team{id=33, name='Bulls', abv='CHI', sport=NBA}, Team{id=34, name='Hawks', abv='ATL', sport=NBA}]
+[INFO ] 2024-12-09 12:00:04.197 [http-nio-8080-exec-4] LogIn - Client ID: 3mdue6fsnhmcqakufttrmk3a4e
+[INFO ] 2024-12-09 12:00:04.197 [http-nio-8080-exec-4] LogIn - Login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login
+[INFO ] 2024-12-09 12:00:04.198 [http-nio-8080-exec-4] LogIn - Redirect URL: http://localhost:8080/sportsAnalyticsPro_war/auth
+[DEBUG] 2024-12-09 12:00:04.198 [http-nio-8080-exec-4] LogIn - Complete login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=3mdue6fsnhmcqakufttrmk3a4e&redirect_uri=http://localhost:8080/sportsAnalyticsPro_war/auth
+[INFO ] 2024-12-09 13:33:13.199 [http-nio-8080-exec-12] LogIn - Client ID: 3mdue6fsnhmcqakufttrmk3a4e
+[INFO ] 2024-12-09 13:33:13.206 [http-nio-8080-exec-12] LogIn - Login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login
+[INFO ] 2024-12-09 13:33:13.206 [http-nio-8080-exec-12] LogIn - Redirect URL: http://localhost:8080/sportsAnalyticsPro_war/auth
+[DEBUG] 2024-12-09 13:33:13.207 [http-nio-8080-exec-12] LogIn - Complete login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=3mdue6fsnhmcqakufttrmk3a4e&redirect_uri=http://localhost:8080/sportsAnalyticsPro_war/auth
+[DEBUG] 2024-12-09 13:33:25.786 [http-nio-8080-exec-15] Auth - Loading JWKS
+[DEBUG] 2024-12-09 13:33:25.926 [http-nio-8080-exec-15] Auth - Keys are loaded. Here's e: AQAB
+[INFO ] 2024-12-09 13:33:25.926 [http-nio-8080-exec-15] Auth - inside the init
+[DEBUG] 2024-12-09 13:33:29.251 [http-nio-8080-exec-15] Auth - User already exists in mysql with email: Rashaddms@gmail.com
+[DEBUG] 2024-12-09 13:33:29.251 [http-nio-8080-exec-15] Auth - Stored user ID in session: 3
+[INFO ] 2024-12-09 13:33:38.805 [http-nio-8080-exec-20] Schedule - Received parameter for team abbreviation: CHA
+[INFO ] 2024-12-09 13:33:51.941 [http-nio-8080-exec-24] Schedule - Received parameter for team abbreviation: ATL
+[INFO ] 2024-12-09 14:01:52.117 [http-nio-8080-exec-3] LogIn - Client ID: 3mdue6fsnhmcqakufttrmk3a4e
+[INFO ] 2024-12-09 14:01:52.129 [http-nio-8080-exec-3] LogIn - Login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login
+[INFO ] 2024-12-09 14:01:52.130 [http-nio-8080-exec-3] LogIn - Redirect URL: http://localhost:8080/sportsAnalyticsPro_war/auth
+[DEBUG] 2024-12-09 14:01:52.132 [http-nio-8080-exec-3] LogIn - Complete login URL: https://sports-analyst-pro.auth.us-east-1.amazoncognito.com/login?response_type=code&client_id=3mdue6fsnhmcqakufttrmk3a4e&redirect_uri=http://localhost:8080/sportsAnalyticsPro_war/auth
+[DEBUG] 2024-12-09 14:01:55.584 [http-nio-8080-exec-4] Auth - Loading JWKS
+[DEBUG] 2024-12-09 14:01:55.771 [http-nio-8080-exec-4] Auth - Keys are loaded. Here's e: AQAB
+[INFO ] 2024-12-09 14:01:55.771 [http-nio-8080-exec-4] Auth - inside the init
+[DEBUG] 2024-12-09 14:01:59.980 [http-nio-8080-exec-4] Auth - User already exists in mysql with email: Rashaddms@gmail.com
+[DEBUG] 2024-12-09 14:01:59.980 [http-nio-8080-exec-4] Auth - Stored user ID in session: 3
+[INFO ] 2024-12-09 14:02:09.413 [http-nio-8080-exec-1] Schedule - Received parameter for team abbreviation: BKN
+[INFO ] 2024-12-09 14:04:27.471 [http-nio-8080-exec-1] Schedule - Received parameter for team abbreviation: BKN
+[INFO ] 2024-12-09 14:05:45.486 [http-nio-8080-exec-2] Schedule - Received parameter for team abbreviation: CHA
+[INFO ] 2024-12-09 14:09:21.518 [http-nio-8080-exec-3] Schedule - Received parameter for team abbreviation: CHA
+[INFO ] 2024-12-09 14:11:56.187 [http-nio-8080-exec-9] Schedule - Received parameter for team abbreviation: CHA
+[INFO ] 2024-12-09 14:23:34.214 [http-nio-8080-exec-8] Schedule - Received parameter for team abbreviation: CHA
+[INFO ] 2024-12-09 14:23:37.115 [http-nio-8080-exec-9] Schedule - Received parameter for team abbreviation: CHA
+[INFO ] 2024-12-09 14:27:42.849 [http-nio-8080-exec-6] Schedule - Received parameter for team abbreviation: CHA
+[INFO ] 2024-12-09 14:27:50.778 [http-nio-8080-exec-3] Schedule - Received parameter for team abbreviation: CHA
+[INFO ] 2024-12-09 14:29:25.083 [http-nio-8080-exec-5] Schedule - Received parameter for team abbreviation: CHA
+[INFO ] 2024-12-09 14:31:19.116 [http-nio-8080-exec-3] Schedule - Received parameter for team abbreviation: CHA

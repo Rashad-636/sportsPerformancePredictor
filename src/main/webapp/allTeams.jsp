@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: rashadadams
@@ -5,7 +6,6 @@
   To change this template use File | Settings | File Templates.
   all nba teams
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -14,24 +14,9 @@
 
 <body>
 <div id="wrap">
-    <div id="header">
-        <div id="headerlinks">
-            <%-- checking session scope for which links to show---%>
-            <c:choose>
-                <c:when test="${sessionScope.userId == null}">
-                    <a href="logIn">Sign In</a>
-                </c:when>
-                <c:otherwise>
-                    <a href="index.jsp">Home</a>
-                    <a href="dailySchedule">NBA Today</a>
-                    <a href="dashboard">My Teams</a>
-                    <a href="signout">Sign Out</a>
-                    <span style="color: white;">${userName}</span>
-                </c:otherwise>
-            </c:choose>
-        </div>
-        <h1>Sports Analytics Pro</h1>
-    </div>
+
+    <c:import url="header.jsp" />
+
     <div id="content">
         <%--- show all teams that can be added to favorites list in card format ---%>
         <div class="available-teams">

@@ -13,26 +13,11 @@
 
 <body>
     <div id="wrap">
-        <div id="header">
-            <div id="headerlinks">
-                <c:choose>
-                    <c:when test="${sessionScope.userId == null}">
-                        <a href="index.jsp">Home</a>
-                        <a href="logIn">Sign In</a>
-                    </c:when>
-                    <c:otherwise>
-                        <a href="index.jsp">Home</a>
-                        <a href="dashboard">My Teams</a>
-                        <a href="signout">Sign Out</a>
-                        <span style="color: white;">${userName}</span>
-                    </c:otherwise>
-                </c:choose>
-            </div>
-            <h1>Today's Games</h1>
-        </div>
+
+        <c:import url="header.jsp" />
 
         <div id="content">
-            <table class="schedule-table">
+            <table class="schedule-table" id="scheduleTable">
                 <thead>
                 <tr>
                     <th>Date</th>
@@ -80,6 +65,11 @@
                     </c:forEach>
                 </tbody>
             </table>
+            <script>
+                $(document).ready(function() {
+                    $('#schedule-table').DataTable();
+                });
+            </script>
         </div>
 
         <c:import url="footer.jsp" />

@@ -8,25 +8,8 @@
 
     <body>
         <div id="wrap">
-        <%-- sidebar jsp --%>
-            <div id="header">
-                <div id="headerlinks">
-                    <c:choose>
-                        <c:when test="${sessionScope.userId == null}">
-                            <a href="logIn">Sign In</a>
-                            <a href="dailySchedule">NBA Today</a>
-                        </c:when>
-                        <c:otherwise>
-                            <a href="index.jsp">Home</a>
-                            <a href="dailySchedule">NBA Today</a>
-                            <a href="dashboard">My Teams</a>
-                            <a href="signout">Sign Out</a>
-                            <span style="color: white;">${userName}</span>
-                        </c:otherwise>
-                    </c:choose>
-                </div>
-                <h1>Sports Analytics Pro</h1>
-            </div>
+
+            <c:import url="header.jsp" />
 
         <div id="content">
             <h2>Mission Statement <span class="post-span"></span></h2>
